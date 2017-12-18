@@ -1,9 +1,11 @@
 #ifndef REPAIRTOOLS_H
 #define REPAIRTOOLS_H
 
-#include <QWidget>
+#include <DMainWindow>
 
-class RepairTools : public QWidget
+DWIDGET_USE_NAMESPACE
+
+class RepairTools : public DMainWindow
 {
     Q_OBJECT
 

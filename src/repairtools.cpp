@@ -4,10 +4,15 @@
 #include <QScreen>
 #include <QKeyEvent>
 
+#include <DTitlebar>
+
 RepairTools::RepairTools(QWidget *parent)
-    : QWidget(parent)
+    : DMainWindow(parent)
 {
-    setFixedSize(800, 600);
+    auto *tbar = titlebar();
+    tbar->setTitle(QString());
+
+    resize(800, 600);
     move(qApp->primaryScreen()->geometry().center() - rect().center());
 }
 
