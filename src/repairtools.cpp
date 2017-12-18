@@ -1,4 +1,5 @@
 #include "repairtools.h"
+#include "toolspage.h"
 
 #include <QApplication>
 #include <QScreen>
@@ -14,6 +15,9 @@ RepairTools::RepairTools(QWidget *parent)
 
     resize(800, 600);
     move(qApp->primaryScreen()->geometry().center() - rect().center());
+
+    ToolsPage *p = new ToolsPage;
+    setCentralWidget(p);
 }
 
 void RepairTools::keyPressEvent(QKeyEvent *e)
