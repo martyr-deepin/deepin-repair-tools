@@ -1,6 +1,10 @@
 #ifndef REPAIRTOOLS_H
 #define REPAIRTOOLS_H
 
+#include "toolsmodel.h"
+
+#include <QPointer>
+
 #include <DMainWindow>
 
 DWIDGET_USE_NAMESPACE
@@ -14,6 +18,9 @@ public:
 
 private:
     void keyPressEvent(QKeyEvent *e);
+
+private:
+    QPointer<ToolsModel> m_toolsModel;
 };
 
 #endif // REPAIRTOOLS_H

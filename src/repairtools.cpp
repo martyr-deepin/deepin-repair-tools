@@ -9,6 +9,7 @@
 
 RepairTools::RepairTools(QWidget *parent)
     : DMainWindow(parent)
+    , m_toolsModel(new ToolsModel(this))
 {
     auto *tbar = titlebar();
     tbar->setTitle(QString());

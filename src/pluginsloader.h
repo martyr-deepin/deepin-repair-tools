@@ -9,6 +9,13 @@ class PluginsLoader : public QObject
 
 public:
     explicit PluginsLoader(QObject *parent = nullptr);
+
+public slots:
+    void load();
+
+signals:
+    void pluginFound(const QString &path) const;
+    void finished() const;
 };
 
 #endif // PLUGINSLOADER_H
