@@ -18,6 +18,8 @@ RepairTools::RepairTools(QWidget *parent)
     move(qApp->primaryScreen()->geometry().center() - rect().center());
 
     ToolsPage *p = new ToolsPage;
+    p->setModel(m_toolsModel);
+
     setCentralWidget(p);
 }
 
