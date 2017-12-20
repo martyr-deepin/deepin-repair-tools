@@ -10,9 +10,10 @@ find_package(PkgConfig REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 
 add_definitions(-DQT_PLUGIN)
+add_definitions(${QT_DEFINITIONS})
 add_library(${PLUGIN_NAME} SHARED ${SRCS})
 set_target_properties(${PLUGIN_NAME} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../)
-target_link_libraries(${PLUGIN_NAME}
+target_link_libraries(${PLUGIN_NAME} PRIVATE
     ${DtkWidget_LIBRARIES}
     ${Qt5Widgets_LIBRARIES}
     ${Qt5Concurrent_LIBRARIES}

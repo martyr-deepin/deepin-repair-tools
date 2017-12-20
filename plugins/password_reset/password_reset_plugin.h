@@ -6,8 +6,8 @@
 class PasswordReset : public QObject, public RepairToolsInterface
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID ModuleInterface_iid FILE "password-reset.json")
     Q_INTERFACES(RepairToolsInterface)
-    Q_PLUGIN_METADATA(IID "com.deepin.dock.PluginsItemInterface" FILE "password-reset.json")
 
 public:
     QWidget *centralWidget();

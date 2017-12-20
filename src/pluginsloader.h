@@ -3,6 +3,7 @@
 
 #include <QObject>
 
+class RepairToolsInterface;
 class PluginsLoader : public QObject
 {
     Q_OBJECT
@@ -14,7 +15,7 @@ public slots:
     void load();
 
 signals:
-    void pluginFounded(const QString &path) const;
+    void pluginLoaded(RepairToolsInterface *plugin) const;
     void finished() const;
 };
 

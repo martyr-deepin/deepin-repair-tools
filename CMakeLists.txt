@@ -4,8 +4,8 @@ project(deepin-repair-tools
         VERSION 1.0.0)
 
 set(BIN_NAME deepin-repair-tools)
-# set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -34,7 +34,7 @@ pkg_check_modules(DtkWidget REQUIRED dtkwidget)
 # driver-manager
 add_executable(${BIN_NAME} ${SRCS})
 target_include_directories(${BIN_NAME} PUBLIC ${DtkWidget_INCLUDE_DIRS})
-target_link_libraries(${BIN_NAME}
+target_link_libraries(${BIN_NAME} PRIVATE
     ${DtkWidget_LIBRARIES}
     ${Qt5Widgets_LIBRARIES}
     ${Qt5Concurrent_LIBRARIES}

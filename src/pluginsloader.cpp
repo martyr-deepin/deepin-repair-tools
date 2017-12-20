@@ -1,8 +1,11 @@
 #include "pluginsloader.h"
+#include "repairtoolsinterface.h"
 
 #include <QDebug>
 #include <QDir>
 #include <QLibrary>
+#include <QPluginLoader>
+#include <QApplication>
 
 PluginsLoader::PluginsLoader(QObject *parent)
     : QObject(parent)
@@ -12,8 +15,10 @@ PluginsLoader::PluginsLoader(QObject *parent)
 
 void PluginsLoader::load()
 {
+    QDir pluginsDir(qApp->applicationDirPath());
+
 #ifdef QT_DEBUG
-    const QDir pluginsDir("plugins");
+    pluginsDir.cd("plugins");
 #else
     const QDir pluginsDir("../lib/deepin-repair-tools/plugins");
 #endif
@@ -24,9 +29,19 @@ void PluginsLoader::load()
         if (!QLibrary::isLibrary(file))
             continue;
 
-        qDebug() << "pluginFounded: " << file;
+        const QString &filePath = pluginsDir.absoluteFilePath(file);
+        QPluginLoader loader(filePath, this);
+        qDebug() << "plugin founded:" << filePath << loader.metaData();
 
-        emit pluginFounded(pluginsDir.absoluteFilePath(file));
+        RepairToolsInterface *pluginInter = qobject_cast<RepairToolsInterface *>(loader.instance());
+        if (!pluginInter)
+        {
+            qWarning() << loader.errorString();
+            loader.unload();
+            continue;
+        }
+
+        emit pluginLoaded(pluginInter);
     }
 
     emit finished();

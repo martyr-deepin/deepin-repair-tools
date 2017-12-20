@@ -13,6 +13,7 @@ class ToolsModel : public QAbstractListModel
 
 public:
     explicit ToolsModel(QObject *parent = nullptr);
+    ~ToolsModel();
 
     enum ToolsRole
     {
@@ -21,6 +22,9 @@ public:
 
     int rowCount(const QModelIndex &index) const;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+
+private slots:
+    void onPluginLoaded(RepairToolsInterface *plugin);
 
 private:
     QPointer<PluginsLoader> m_pluginLoader;
