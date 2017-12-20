@@ -14,7 +14,7 @@ public slots:
     void load();
 
 signals:
-    void pluginFound(const QString &path) const;
+    void pluginFounded(const QString &path) const;
     void finished() const;
 };
 
