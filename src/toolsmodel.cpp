@@ -13,14 +13,18 @@ int ToolsModel::rowCount(const QModelIndex &index) const
 {
     Q_UNUSED(index);
 
-    return 0;
+    return m_plugins.size();
 }
 
 QVariant ToolsModel::data(const QModelIndex &index, int role) const
 {
+    Q_ASSERT(index.isValid());
+
+    RepairToolsInterface *plugin = m_plugins[index.row()];
+
     switch (role)
     {
-    case ToolsName:     return QString::number(index.row());
+    case ToolsName:     return plugin->name();
     default:;
     }
 

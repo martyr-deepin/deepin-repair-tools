@@ -22,6 +22,9 @@ endif ()
 # Sources files
 file(GLOB SRCS "src/*.h" "src/*.cpp")
 
+# Plugins
+add_subdirectory("plugins")
+
 # Find the library
 find_package(PkgConfig REQUIRED)
 find_package(Qt5Widgets REQUIRED)

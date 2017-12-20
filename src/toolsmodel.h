@@ -2,6 +2,7 @@
 #define TOOLSMODEL_H
 
 #include "pluginsloader.h"
+#include "repairtoolsinterface.h"
 
 #include <QAbstractListModel>
 #include <QPointer>
@@ -23,6 +24,7 @@ public:
 
 private:
     QPointer<PluginsLoader> m_pluginLoader;
+    QList<RepairToolsInterface *> m_plugins;
 };
 
 #endif // TOOLSMODEL_H
