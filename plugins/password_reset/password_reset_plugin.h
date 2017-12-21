@@ -2,6 +2,9 @@
 #define PASSWORD_RESET_PLUGIN_H
 
 #include "../../src/repairtoolsinterface.h"
+#include "passwordresetwidget.h"
+
+#include <QPointer>
 
 class PasswordReset : public QObject, public RepairToolsInterface
 {
@@ -10,8 +13,14 @@ class PasswordReset : public QObject, public RepairToolsInterface
     Q_INTERFACES(RepairToolsInterface)
 
 public:
-    QWidget *centralWidget();
-    QString name();
+    explicit PasswordReset();
+
+    void init();
+    QWidget *centralWidget() { return m_centralWidget.data(); }
+    const QString name() const { return tr("Password Reset"); }
+
+private:
+    QPointer<PasswordResetWidget> m_centralWidget;
 };
 
 #endif // PASSWORD_RESET_PLUGIN_H

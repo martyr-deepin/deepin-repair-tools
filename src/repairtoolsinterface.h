@@ -8,8 +8,9 @@ class RepairToolsInterface
 public:
     virtual ~RepairToolsInterface() {}
 
+    virtual void init() = 0;
     virtual QWidget *centralWidget() = 0;
-    virtual QString name() = 0;
+    virtual const QString name() const = 0;
 };
 
 QT_BEGIN_NAMESPACE

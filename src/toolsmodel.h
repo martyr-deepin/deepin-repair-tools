@@ -18,6 +18,8 @@ public:
     enum ToolsRole
     {
         ToolsName = Qt::DisplayRole,
+
+        ToolsWidget = Qt::UserRole,
     };
 
     int rowCount(const QModelIndex &index) const;

@@ -32,7 +32,8 @@ QVariant ToolsModel::data(const QModelIndex &index, int role) const
 
     switch (role)
     {
-    case ToolsName:     return plugin->name();
+    case ToolsName:         return plugin->name();
+    case ToolsWidget:       return QVariant::fromValue(plugin->centralWidget());
     default:;
     }
 
@@ -42,6 +43,8 @@ QVariant ToolsModel::data(const QModelIndex &index, int role) const
 void ToolsModel::onPluginLoaded(RepairToolsInterface *plugin)
 {
     qDebug() << "plugin got:" << plugin->name();
+
+    plugin->init();
 
     const int pluginCount = m_plugins.size();
     beginInsertRows(QModelIndex(), pluginCount, pluginCount);

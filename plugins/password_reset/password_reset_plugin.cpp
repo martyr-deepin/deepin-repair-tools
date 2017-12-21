@@ -1,11 +1,12 @@
 #include "password_reset_plugin.h"
 
-QWidget *PasswordReset::centralWidget()
+PasswordReset::PasswordReset()
 {
-    return nullptr;
+
 }
 
-QString PasswordReset::name()
+void PasswordReset::init()
 {
-    return tr("Password Reset");
+    Q_ASSERT(m_centralWidget.isNull());
+    m_centralWidget = new PasswordResetWidget;
 }

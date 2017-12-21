@@ -1,11 +1,12 @@
 #include "disk_clean_plugin.h"
 
-QWidget *DiskClean::centralWidget()
+DiskClean::DiskClean()
 {
-    return nullptr;
+
 }
 
-QString DiskClean::name()
+void DiskClean::init()
 {
-    return tr("Disk Clean");
+    Q_ASSERT(m_centralWidget.isNull());
+    m_centralWidget = new DiskCleanWidget;
 }
