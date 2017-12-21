@@ -15,26 +15,27 @@ ToolsPage::ToolsPage(QWidget *parent)
     m_navigationLayout->setMargin(0);
     m_navigationLayout->setSpacing(10);
 
-    QVBoxLayout *rightPanelLayout = new QVBoxLayout;
-    rightPanelLayout->setMargin(0);
-    rightPanelLayout->setSpacing(0);
-    rightPanelLayout->addLayout(m_pluginsLayout);
-
     QWidget *navWidget = new QFrame;
+    navWidget->setObjectName("NavWidget");
     navWidget->setLayout(m_navigationLayout);
-    navWidget->setStyleSheet("QFrame {"
-                             "border: solid #eee;"
-                             "border-right-width: 1px;"
-                             "}");
+
+    QWidget *pluginWidget = new QWidget;
+    pluginWidget->setObjectName("PluginWidget");
+    pluginWidget->setLayout(m_pluginsLayout);
 
     QHBoxLayout *centralLayout = new QHBoxLayout;
     centralLayout->setMargin(0);
-    centralLayout->setSpacing(1);
+    centralLayout->setSpacing(0);
     centralLayout->addWidget(navWidget);
-    centralLayout->addLayout(rightPanelLayout);
+    centralLayout->addWidget(pluginWidget);
 
     setLayout(centralLayout);
-    setStyleSheet("QPushButton {"
+    setStyleSheet("#NavWidget {"
+                  "border: solid #eee;"
+                  "border-right-width: 1px;"
+                  "}"
+                  ""
+                  "#NavWidget > QPushButton {"
                   "margin: 0;"
                   "text-align: left;"
                   "padding: 10px 15px;"
@@ -42,12 +43,22 @@ ToolsPage::ToolsPage(QWidget *parent)
                   "border-right: 3px solid transparent;"
                   "}"
                   ""
-                  "QPushButton:checked {"
+                  "#NavWidget > QPushButton:checked {"
                   "color: #1779bd;"
                   "background-color: #d5edfe;"
-                  "border: 1px solid #279bed;"
+                  "border: 1px solid #72bef4;"
                   "border-right: 3px solid #279bed;"
                   "border-left: none;"
+                  "}"
+                  ""
+                  "#PluginWidget QPushButton {"
+                  "padding: 10px 0;"
+                  "width: 180px;"
+                  "color: #1779bd;"
+                  "}"
+                  ""
+                  "#PluginWidget QPushButton:hover {"
+                  "color: white;"
                   "}");
 }
 

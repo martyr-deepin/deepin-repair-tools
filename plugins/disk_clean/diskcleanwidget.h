@@ -2,6 +2,7 @@
 #define DISKCLEANWIDGET_H
 
 #include <QWidget>
+#include <QPushButton>
 
 class DiskCleanWidget : public QWidget
 {
@@ -11,7 +12,9 @@ public:
     explicit DiskCleanWidget(QWidget *parent = nullptr);
 
 private:
-    void paintEvent(QPaintEvent *e);
+    QPushButton *m_cleanButton;
+    QPushButton *m_cancelButton;
+    QPushButton *m_okButton;
 };
 
 #endif // DISKCLEANWIDGET_H
