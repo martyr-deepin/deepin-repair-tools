@@ -27,4 +27,25 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     centralLayout->addLayout(buttonsLayout);
 
     setLayout(centralLayout);
+
+    connect(m_cleanButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanStart);
+    connect(m_cancelButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanCancel);
+}
+
+void DiskCleanWidget::cleanStart()
+{
+    m_cleanButton->setVisible(false);
+    m_cancelButton->setVisible(true);
+}
+
+void DiskCleanWidget::cleanCancel()
+{
+    m_cancelButton->setVisible(false);
+    m_cleanButton->setVisible(true);
+}
+
+void DiskCleanWidget::cleanEnd()
+{
+    m_cancelButton->setVisible(false);
+    m_okButton->setVisible(true);
 }
