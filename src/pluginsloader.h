@@ -15,7 +15,7 @@ public slots:
     void load();
 
 signals:
-    void pluginLoaded(RepairToolsInterface *plugin) const;
+    void pluginLoaded(RepairToolsInterface *plugin, const QJsonObject &metaData) const;
     void finished() const;
 };
 

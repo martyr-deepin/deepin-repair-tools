@@ -31,7 +31,8 @@ void PluginsLoader::load()
 
         const QString &filePath = pluginsDir.absoluteFilePath(file);
         QPluginLoader loader(filePath, this);
-        qDebug() << "plugin founded:" << filePath << loader.metaData();
+        const QJsonObject &metaData = loader.metaData();
+        qDebug() << "plugin founded:" << filePath << metaData;
 
         RepairToolsInterface *pluginInter = qobject_cast<RepairToolsInterface *>(loader.instance());
         if (!pluginInter)
@@ -41,7 +42,7 @@ void PluginsLoader::load()
             continue;
         }
 
-        emit pluginLoaded(pluginInter);
+        emit pluginLoaded(pluginInter, metaData);
     }
 
     emit finished();

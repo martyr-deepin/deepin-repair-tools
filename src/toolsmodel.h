@@ -26,7 +26,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
 private slots:
-    void onPluginLoaded(RepairToolsInterface *plugin);
+    void onPluginLoaded(RepairToolsInterface *plugin, const QJsonObject &metaData);
 
 private:
     QPointer<PluginsLoader> m_pluginLoader;
