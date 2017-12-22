@@ -16,8 +16,15 @@ class PasswordResetWidget : public QWidget
 public:
     explicit PasswordResetWidget(QWidget *parent = nullptr);
 
-private:
+private slots:
     void onResetClicked();
+    void onPasswdSubmitted();
+
+private:
+    void onPasswordEmpty() { showErrorTips(m_passwordEdit, tr("Password can't be empty")); }
+    void onPasswordRepeatEmpty() { showErrorTips(m_passwordRepeat, tr("Password can't be empty")); }
+    void onPasswordNotMatch() { showErrorTips(m_passwordRepeat, tr("Password not match")); }
+    void showErrorTips(DLineEdit * const edit, const QString &text) { edit->showAlertMessage(text); }
 
 private:
     QLabel *m_normalTips;

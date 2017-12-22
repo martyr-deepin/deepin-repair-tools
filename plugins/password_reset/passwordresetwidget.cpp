@@ -39,6 +39,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     setLayout(centralLayout);
 
     connect(m_resetButton, &QPushButton::clicked, this, &PasswordResetWidget::onResetClicked);
+    connect(m_confirmButton, &QPushButton::clicked, this, &PasswordResetWidget::onPasswdSubmitted);
 }
 
 void PasswordResetWidget::onResetClicked()
@@ -48,4 +49,24 @@ void PasswordResetWidget::onResetClicked()
 
     m_passwordEdit->setVisible(true);
     m_passwordRepeat->setVisible(true);
+}
+
+void PasswordResetWidget::onPasswdSubmitted()
+{
+    const QString &pwd1 = m_passwordEdit->text();
+    if (pwd1.isEmpty())
+        return onPasswordEmpty();
+
+    const QString &pwd2 = m_passwordRepeat->text();
+    if (pwd2.isEmpty())
+        return onPasswordRepeatEmpty();
+
+    if (pwd1 != pwd2)
+        return onPasswordNotMatch();
+
+    m_confirmButton->setVisible(false);
+    m_okButton->setVisible(true);
+
+    m_passwordEdit->setVisible(false);
+    m_passwordRepeat->setVisible(false);
 }
