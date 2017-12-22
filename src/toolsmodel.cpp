@@ -50,9 +50,9 @@ void ToolsModel::onPluginLoaded(RepairToolsInterface *plugin, const QJsonObject 
     static const QStringList pluginsOrderList = {
         "1c13875d-2b33-43ee-9629-e7945c3c729f",     // disk_clean
         "2934612b-31ee-40a3-a1ab-6ec70adae478",     // dpkg_repair
+        "037a8825-fab1-4dd0-9076-1c8268123af4",     // grub_repair
+        "f5cc897b-dffd-44d5-9a4b-88c045d0bf15",     // permissions_repair
         "3a84c482-343b-4b7f-bbbc-41fc9b15234f",     // password_reset
-//        "037a8825-fab1-4dd0-9076-1c8268123af4",
-//        "f5cc897b-dffd-44d5-9a4b-88c045d0bf15",
     };
     static QSet<QString> loadedPlugins;
 
@@ -68,9 +68,12 @@ void ToolsModel::onPluginLoaded(RepairToolsInterface *plugin, const QJsonObject 
             ++insert_index;
     }
 
+    // append to loaded list
+    loadedPlugins << uuid;
+
     // init plugin before insert
     plugin->init();
     beginInsertRows(QModelIndex(), insert_index, insert_index);
-    m_plugins << plugin;
+    m_plugins.insert(insert_index, plugin);
     endInsertRows();
 }

@@ -59,7 +59,13 @@ ToolsPage::ToolsPage(QWidget *parent)
                   ""
                   "#PluginWidget QPushButton:hover {"
                   "color: white;"
-                  "}");
+                  "}"
+                  ""
+                  "#PluginWidget QLineEdit {"
+                  "width: 210px;"
+                  "height: 25px;"
+                  "}"
+                  "");
 }
 
 ToolsPage::~ToolsPage()
