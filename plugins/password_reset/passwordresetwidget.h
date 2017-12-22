@@ -21,10 +21,10 @@ private slots:
     void onPasswdSubmitted();
 
 private:
-    void onPasswordEmpty() { showErrorTips(m_passwordEdit, tr("Password can't be empty")); }
-    void onPasswordRepeatEmpty() { showErrorTips(m_passwordRepeat, tr("Password can't be empty")); }
-    void onPasswordNotMatch() { showErrorTips(m_passwordRepeat, tr("Password not match")); }
-    void showErrorTips(DLineEdit * const edit, const QString &text) { edit->showAlertMessage(text); }
+    inline void onPasswordEmpty() { showErrorTips(m_passwordEdit, tr("Password can't be empty")); }
+    inline void onPasswordRepeatEmpty() { showErrorTips(m_passwordRepeat, tr("Password can't be empty")); }
+    inline void onPasswordNotMatch() { showErrorTips(m_passwordRepeat, tr("Password not match")); }
+    inline void showErrorTips(DLineEdit * const edit, const QString &text) { edit->showAlertMessage(text); }
 
 private:
     QLabel *m_normalTips;
