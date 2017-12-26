@@ -4,6 +4,7 @@
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QDebug>
+#include <QApplication>
 
 ToolsPage::ToolsPage(QWidget *parent)
     : QWidget(parent)
@@ -80,6 +81,21 @@ void ToolsPage::setModel(const QPointer<ToolsModel> &model)
     connect(model, &ToolsModel::pluginsLoadFinished, this, &ToolsPage::refreshNavBar);
 
     m_model->initPlugins(this);
+}
+
+void ToolsPage::ping()
+{
+    qDebug() << "pong";
+}
+
+QVariant ToolsPage::data(const RepairToolsProxy::RepairToolsRole role)
+{
+    switch (role)
+    {
+    case ToolsVersionRole:      return qApp->applicationVersion();
+    }
+
+    return QVariant();
 }
 
 void ToolsPage::refreshNavBar()

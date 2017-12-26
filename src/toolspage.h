@@ -3,6 +3,7 @@
 
 #include "repairtoolsproxy.h"
 #include "toolsmodel.h"
+#include "diskutils.h"
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -20,12 +21,18 @@ public:
     ~ToolsPage();
 
     void setModel(const QPointer<ToolsModel> &model);
+    void setDiskUtils(const QPointer<DiskUtils> &diskUtils) { m_diskUtils = diskUtils; }
+
+public:
+    void ping();
+    QVariant data(const RepairToolsRole role);
 
 private slots:
     void refreshNavBar();
     void onNavButtonClicked(const int index);
 
 private:
+    QPointer<DiskUtils> m_diskUtils;
     QPointer<ToolsModel> m_model;
     QButtonGroup *m_navButtonsGroup;
     QVBoxLayout *m_navigationLayout;

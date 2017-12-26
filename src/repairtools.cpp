@@ -9,6 +9,7 @@
 
 RepairTools::RepairTools(QWidget *parent)
     : DMainWindow(parent)
+    , m_diskUtils(new DiskUtils(this))
     , m_toolsModel(new ToolsModel(this))
 {
     auto *tbar = titlebar();
@@ -18,6 +19,7 @@ RepairTools::RepairTools(QWidget *parent)
     move(qApp->primaryScreen()->geometry().center() - rect().center());
 
     ToolsPage *p = new ToolsPage;
+    p->setDiskUtils(m_diskUtils);
     p->setModel(m_toolsModel);
 
     setCentralWidget(p);

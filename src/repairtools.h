@@ -2,6 +2,7 @@
 #define REPAIRTOOLS_H
 
 #include "toolsmodel.h"
+#include "diskutils.h"
 
 #include <QPointer>
 
@@ -20,6 +21,7 @@ private:
     void keyPressEvent(QKeyEvent *e);
 
 private:
+    QPointer<DiskUtils> m_diskUtils;
     QPointer<ToolsModel> m_toolsModel;
 };
 
