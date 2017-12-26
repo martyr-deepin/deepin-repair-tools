@@ -16,11 +16,10 @@ PluginsLoader::PluginsLoader(QObject *parent)
 void PluginsLoader::load()
 {
     QDir pluginsDir(qApp->applicationDirPath());
-
 #ifdef QT_DEBUG
     pluginsDir.cd("plugins");
 #else
-    const QDir pluginsDir("../lib/deepin-repair-tools/plugins");
+    pluginsDir.cd("../lib/deepin-repair-tools/plugins");
 #endif
     const QStringList plugins = pluginsDir.entryList(QDir::Files);
 
