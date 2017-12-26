@@ -5,8 +5,9 @@ DPKGRepair::DPKGRepair()
 
 }
 
-void DPKGRepair::init()
+void DPKGRepair::init(RepairToolsProxy *toolsProxy)
 {
     Q_ASSERT(m_centralWidget.isNull());
+    m_toolsProxy = toolsProxy;
     m_centralWidget = new DPKGRepairWidget;
 }

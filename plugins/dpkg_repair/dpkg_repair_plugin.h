@@ -2,6 +2,7 @@
 #define DPKG_REPAIR_PLUGIN_H
 
 #include "../../src/repairtoolsinterface.h"
+#include "../../src/repairtoolsproxy.h"
 #include "dpkgrepairwidget.h"
 
 #include <QPointer>
@@ -15,7 +16,7 @@ class DPKGRepair : public QObject, public RepairToolsInterface
 public:
     explicit DPKGRepair();
 
-    void init();
+    void init(RepairToolsProxy *toolsProxy);
     QWidget *centralWidget() { return m_centralWidget.data(); }
     const QString name() const { return tr("DPKG Repair"); }
 

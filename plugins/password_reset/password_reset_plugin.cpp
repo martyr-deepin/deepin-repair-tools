@@ -5,8 +5,9 @@ PasswordReset::PasswordReset()
 
 }
 
-void PasswordReset::init()
+void PasswordReset::init(RepairToolsProxy *toolsProxy)
 {
     Q_ASSERT(m_centralWidget.isNull());
+    m_toolsProxy = toolsProxy;
     m_centralWidget = new PasswordResetWidget;
 }

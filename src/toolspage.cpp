@@ -77,7 +77,9 @@ void ToolsPage::setModel(const QPointer<ToolsModel> &model)
 {
     m_model = model;
 
-    QTimer::singleShot(1, this, &ToolsPage::refreshNavBar);
+    connect(model, &ToolsModel::pluginsLoadFinished, this, &ToolsPage::refreshNavBar);
+
+    m_model->initPlugins(this);
 }
 
 void ToolsPage::refreshNavBar()

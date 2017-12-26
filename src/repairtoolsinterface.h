@@ -3,14 +3,18 @@
 
 #include <QWidget>
 
+class RepairToolsProxy;
 class RepairToolsInterface
 {
 public:
     virtual ~RepairToolsInterface() {}
 
-    virtual void init() = 0;
+    virtual void init(RepairToolsProxy *toolsProxy) = 0;
     virtual QWidget *centralWidget() = 0;
     virtual const QString name() const = 0;
+
+protected:
+    RepairToolsProxy *m_toolsProxy;
 };
 
 QT_BEGIN_NAMESPACE

@@ -6,11 +6,7 @@
 
 ToolsModel::ToolsModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_pluginLoader(new PluginsLoader(this))
 {
-    connect(m_pluginLoader, &PluginsLoader::pluginLoaded, this, &ToolsModel::onPluginLoaded);
-
-    QTimer::singleShot(1, m_pluginLoader, &PluginsLoader::load);
 }
 
 ToolsModel::~ToolsModel()
@@ -72,8 +68,21 @@ void ToolsModel::onPluginLoaded(RepairToolsInterface *plugin, const QJsonObject 
     loadedPlugins << uuid;
 
     // init plugin before insert
-    plugin->init();
+    plugin->init(m_pluginsProxyInter);
     beginInsertRows(QModelIndex(), insert_index, insert_index);
     m_plugins.insert(insert_index, plugin);
     endInsertRows();
+}
+
+void ToolsModel::initPlugins(RepairToolsProxy *toolsProxy)
+{
+    m_pluginsProxyInter = toolsProxy;
+
+    PluginsLoader *ploader = new PluginsLoader;
+
+    connect(ploader, &PluginsLoader::pluginLoaded, this, &ToolsModel::onPluginLoaded);
+    connect(ploader, &PluginsLoader::finished, this, &ToolsModel::pluginsLoadFinished);
+    connect(ploader, &PluginsLoader::finished, ploader, &PluginsLoader::deleteLater);
+
+    QTimer::singleShot(1, ploader, &PluginsLoader::load);
 }

@@ -7,9 +7,12 @@
 #include <QAbstractListModel>
 #include <QPointer>
 
+class ToolsPage;
 class ToolsModel : public QAbstractListModel
 {
     Q_OBJECT
+
+    friend class ToolsPage;
 
 public:
     explicit ToolsModel(QObject *parent = nullptr);
@@ -25,11 +28,16 @@ public:
     int rowCount(const QModelIndex &index) const;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
-private slots:
     void onPluginLoaded(RepairToolsInterface *plugin, const QJsonObject &metaData);
 
+signals:
+    void pluginsLoadFinished() const;
+
+private slots:
+    void initPlugins(RepairToolsProxy *toolsProxy);
+
 private:
-    QPointer<PluginsLoader> m_pluginLoader;
+    RepairToolsProxy *m_pluginsProxyInter;
     QList<RepairToolsInterface *> m_plugins;
 };
 

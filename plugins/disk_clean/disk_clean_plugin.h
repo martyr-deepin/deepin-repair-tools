@@ -2,6 +2,7 @@
 #define DISK_CLEAN_PLUGIN_H
 
 #include "../../src/repairtoolsinterface.h"
+#include "../../src/repairtoolsproxy.h"
 #include "diskcleanwidget.h"
 
 #include <QPointer>
@@ -16,7 +17,7 @@ class DiskClean : public QObject, public RepairToolsInterface
 public:
     explicit DiskClean();
 
-    void init();
+    void init(RepairToolsProxy *toolsProxy);
     QWidget *centralWidget() { return m_centralWidget.data(); }
     const QString name() const { return tr("Disk Clean"); }
 

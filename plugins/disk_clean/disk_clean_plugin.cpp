@@ -5,8 +5,9 @@ DiskClean::DiskClean()
 
 }
 
-void DiskClean::init()
+void DiskClean::init(RepairToolsProxy *toolsProxy)
 {
     Q_ASSERT(m_centralWidget.isNull());
+    m_toolsProxy = toolsProxy;
     m_centralWidget = new DiskCleanWidget;
 }
