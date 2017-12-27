@@ -1,22 +1,17 @@
 #ifndef REPAIRTOOLSPROXY_H
 #define REPAIRTOOLSPROXY_H
 
-#include <QVariant>
+#include "diskinfo.h"
+
+#include <QList>
 
 class RepairToolsProxy
 {
 public:
-
-    enum RepairToolsRole
-    {
-        ToolsVersionRole,
-    };
-
-
     virtual ~RepairToolsProxy() {}
 
     virtual void ping() = 0;
-    virtual QVariant data(const RepairToolsRole role) = 0;
+    virtual const QList<DiskInfo> diskInfos() const = 0;
 };
 
 #endif // REPAIRTOOLSPROXY_H

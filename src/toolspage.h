@@ -25,7 +25,7 @@ public:
 
 public:
     void ping();
-    QVariant data(const RepairToolsRole role);
+    const QList<DiskInfo> diskInfos() const { return m_diskUtils->diskInfos(); }
 
 private slots:
     void refreshNavBar();

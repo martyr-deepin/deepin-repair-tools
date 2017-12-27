@@ -88,16 +88,6 @@ void ToolsPage::ping()
     qDebug() << "pong";
 }
 
-QVariant ToolsPage::data(const RepairToolsProxy::RepairToolsRole role)
-{
-    switch (role)
-    {
-    case ToolsVersionRole:      return qApp->applicationVersion();
-    }
-
-    return QVariant();
-}
-
 void ToolsPage::refreshNavBar()
 {
     // TODO:

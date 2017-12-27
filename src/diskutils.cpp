@@ -1,9 +1,10 @@
 #include "diskutils.h"
-#include "diskinfo.h"
 
 #include <QFile>
 #include <QDebug>
 #include <QDir>
+
+#include <random>
 
 #include <sys/stat.h>
 
@@ -17,8 +18,39 @@ inline bool is_block_device(const QString &path)
     return stat(path.toStdString().c_str(), &sb) || S_ISBLK(sb.st_mode);
 }
 
+const QString generate_mount_dir()
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(10000, 10000000);
+
+    do {
+        const QString path(QString("/tmp/mount-%1").arg(dis(gen)));
+
+        if (!QFile(path).exists())
+            return path;
+    } while(true);
+
+    Q_UNREACHABLE();
+}
+
+void mount_block_devices()
+{
+    QDir block_dir(BLOCK_DEVS_PATH);
+
+    for (const auto &info : block_dir.entryList(QDir::NoDotAndDotDot))
+    {
+        const QString &path = block_dir.absoluteFilePath(info);
+        const QString &mount_point = generate_mount_dir();
+
+        qDebug() << path << mount_point;
+    }
+}
+
 QList<DiskInfo> list_mounted_devices()
 {
+    mount_block_devices();
+
     QFile mounts(MOUNTS_PATH);
     if (!mounts.open(QIODevice::ReadOnly))
         return QList<DiskInfo>();
@@ -43,26 +75,17 @@ QList<DiskInfo> list_mounted_devices()
     return mount_info_list;
 }
 
-void mount_block_devices()
-{
-    QDir block_dir(BLOCK_DEVS_PATH);
-
-    for (const auto &info : block_dir.entryList(QDir::NoDotAndDotDot))
-    {
-        qDebug() << block_dir.absoluteFilePath(info);
-    }
-}
-
 DiskUtils::DiskUtils(QObject *parent)
     : QObject(parent)
 
-    , m_scanFinished(false)
+    , m_scannerRunning(true)
 {
 
 }
 
 void DiskUtils::initilize()
 {
-    mount_block_devices();
-    qDebug() << list_mounted_devices();
+    m_diskInfos = list_mounted_devices();
+
+    emit scanFinished();
 }

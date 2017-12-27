@@ -1,6 +1,8 @@
 #ifndef DISKUTILS_H
 #define DISKUTILS_H
 
+#include "diskinfo.h"
+
 #include <QObject>
 
 class DiskUtils : public QObject
@@ -10,13 +12,19 @@ class DiskUtils : public QObject
 public:
     explicit DiskUtils(QObject *parent = nullptr);
 
-    bool scanFinished() const { return m_scanFinished; }
+    bool scannerRunning() const { return m_scannerRunning; }
+
+    const QList<DiskInfo> diskInfos() const { return m_diskInfos; }
+
+signals:
+    void scanFinished() const;
 
 public slots:
     void initilize();
 
 private:
-    bool m_scanFinished;
+    bool m_scannerRunning;
+    QList<DiskInfo> m_diskInfos;
 };
 
 #endif // DISKUTILS_H
