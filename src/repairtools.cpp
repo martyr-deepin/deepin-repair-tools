@@ -12,6 +12,8 @@ RepairTools::RepairTools(QWidget *parent)
     , m_diskUtils(new DiskUtils(this))
     , m_toolsModel(new ToolsModel(this))
 {
+    m_diskUtils->initilize();
+
     auto *tbar = titlebar();
     tbar->setTitle(QString());
 

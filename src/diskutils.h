@@ -10,8 +10,13 @@ class DiskUtils : public QObject
 public:
     explicit DiskUtils(QObject *parent = nullptr);
 
+    bool scanFinished() const { return m_scanFinished; }
+
 public slots:
     void initilize();
+
+private:
+    bool m_scanFinished;
 };
 
 #endif // DISKUTILS_H
