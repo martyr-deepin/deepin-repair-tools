@@ -2,12 +2,12 @@
 #define DISK_CLEAN_PLUGIN_H
 
 #include "../../src/repairtoolsinterface.h"
-#include "../../src/repairtoolsproxy.h"
 #include "diskcleanwidget.h"
 
 #include <QPointer>
 #include <QDebug>
 
+class RepairToolsProxy;
 class DiskClean : public QObject, public RepairToolsInterface
 {
     Q_OBJECT

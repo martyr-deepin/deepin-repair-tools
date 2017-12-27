@@ -2,6 +2,7 @@
 
 #include <QPainter>
 #include <QHBoxLayout>
+#include <QDebug>
 
 DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     : QWidget(parent)
@@ -36,6 +37,11 @@ void DiskCleanWidget::cleanStart()
 {
     m_cleanButton->setVisible(false);
     m_cancelButton->setVisible(true);
+
+    for (const auto &info : m_toolsProxy->diskInfos())
+    {
+        qDebug() << info.diskPath << info.mountPoint << info.format;
+    }
 }
 
 void DiskCleanWidget::cleanCancel()

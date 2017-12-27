@@ -1,7 +1,7 @@
 #ifndef DISKUTILS_H
 #define DISKUTILS_H
 
-#include "diskinfo.h"
+#include "repairtoolsproxy.h"
 
 #include <QObject>
 

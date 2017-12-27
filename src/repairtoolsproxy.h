@@ -1,9 +1,15 @@
 #ifndef REPAIRTOOLSPROXY_H
 #define REPAIRTOOLSPROXY_H
 
-#include "diskinfo.h"
-
 #include <QList>
+
+class DiskInfo
+{
+public:
+    QString diskPath;
+    QString mountPoint;
+    QString format;
+};
 
 class RepairToolsProxy
 {
