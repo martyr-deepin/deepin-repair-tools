@@ -2,7 +2,7 @@
 Name=Deepin Repair Tools
 GenericName=Deepin Repair Tools
 Comment=Deepin Repair Tools
-Exec=pkexec deepin-repair-tools %f
+Exec=/usr/bin/deepin-repair-tools-pkexec %u
 Icon=deepin-repair-tools
 Terminal=false
 Type=Application

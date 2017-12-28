@@ -52,3 +52,7 @@ install(TARGETS ${BIN_NAME} DESTINATION sbin)
 
 # desktop
 install(FILES deepin-repair-tools.desktop DESTINATION share/applications)
+
+# policy kit
+install(FILES com.deepin.repair-tools.policy
+        DESTINATION share/polkit-1/actions/)
