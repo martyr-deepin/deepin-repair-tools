@@ -6,7 +6,6 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QPointer>
-#include <QProcess>
 
 class DiskCleanWidget : public QWidget
 {
@@ -23,7 +22,6 @@ private slots:
     void cleanEnd();
 
 private:
-    QPointer<QProcess> m_process;
     RepairToolsProxy *m_toolsProxy;
     QPushButton *m_cleanButton;
     QPushButton *m_cancelButton;

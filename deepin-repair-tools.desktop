@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Deepin Repair Tools
+GenericName=Deepin Repair Tools
+Comment=Deepin Repair Tools
+Exec=pkexec deepin-repair-tools %f
+Icon=deepin-repair-tools
+Terminal=false
+Type=Application
+Categories=System;
+StartupNotify=true
+Keywords=system;clean

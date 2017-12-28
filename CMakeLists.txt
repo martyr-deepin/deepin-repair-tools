@@ -46,4 +46,9 @@ if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 endif ()
 
 # bin
-install(TARGETS ${BIN_NAME} DESTINATION bin)
+install(FILES deepin-repair-tools-pkexec DESTINATION bin
+        PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+install(TARGETS ${BIN_NAME} DESTINATION sbin)
+
+# desktop
+install(FILES deepin-repair-tools.desktop DESTINATION share/applications)
