@@ -4,6 +4,9 @@
 #include <DApplication>
 #include <DLog>
 #include <QSettings>
+#include <QMessageBox>
+
+#include <unistd.h>
 
 DWIDGET_USE_NAMESPACE
 DCORE_USE_NAMESPACE
@@ -15,13 +18,25 @@ inline void apply_system_dpi_settings()
     setenv("QT_SCALE_FACTOR", const_cast<char *>(ratio.toStdString().c_str()), 1);
 }
 
+inline bool root_check()
+{
+#ifndef QT_DEBUG
+    if (!geteuid())
+#endif
+        return true;
+
+    QMessageBox::warning(nullptr, QApplication::translate("main", "Deepin Repair Tools"),
+                                  QApplication::translate("main", "Must Run as ROOT"));
+    return false;
+}
+
 int main(int argc, char *argv[])
 {
     apply_system_dpi_settings();
 
     DApplication::loadDXcbPlugin();
     DApplication app(argc, argv);
-    if (!app.setSingleInstance("deepin-repair-tools"))
+    if (!root_check() || !app.setSingleInstance("deepin-repair-tools"))
         return -1;
 
     app.setOrganizationName("deepin");
