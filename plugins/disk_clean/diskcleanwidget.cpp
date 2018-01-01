@@ -1,4 +1,5 @@
 #include "diskcleanwidget.h"
+#include "diskcleanthread.h"
 
 #include <QPainter>
 #include <QHBoxLayout>
@@ -46,12 +47,17 @@ void DiskCleanWidget::cleanStart()
     m_cleanButton->setVisible(false);
     m_cancelButton->setVisible(true);
 
+    DiskCleanThread *thrd = new DiskCleanThread;
     for (const auto &info : m_toolsProxy->diskInfos())
     {
-        qDebug() << info.diskPath << info.mountPoint << info.format;
+        if (info.osName.contains("deepin", Qt::CaseInsensitive))
+            thrd->appendDir(info);
     }
 
-    cleanEnd();
+    connect(thrd, &DiskCleanThread::finished, thrd, &DiskCleanThread::deleteLater);
+    connect(thrd, &DiskCleanThread::finished, this, &DiskCleanWidget::cleanEnd);
+
+    thrd->start();
 }
 
 void DiskCleanWidget::cleanCancel()

@@ -158,11 +158,11 @@ QList<DiskInfo> list_mounted_devices()
 
         const QString &drivePath = QDir(info[0]).canonicalPath();
         const QString &mountPath = info[1];
-        const QString os_name = os_names.value(drivePath, mountPath == "/" ? host_info() : QString());
+        const QString os_name = mountPath == "/" ? host_info() : os_names.value(drivePath);
 
         DiskInfo d { drivePath, mountPath, info[2], os_name };
 
-        qDebug() << d.diskPath << d.mountPoint << d.format << d.os_name;
+        qDebug() << d.diskPath << d.mountPoint << d.format << d.osName;
         mount_info_list << std::move(d);
     }
 
