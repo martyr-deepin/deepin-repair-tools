@@ -2,6 +2,7 @@
 #include "dpkgrepairthread.h"
 
 #include <QVBoxLayout>
+#include <QDebug>
 
 DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
     : QWidget(parent)
@@ -25,8 +26,15 @@ void DPKGRepairWidget::onRepairClicked()
 
     DPKGRepairThread *thrd = new DPKGRepairThread;
 
+    for (const auto &info : m_toolsProxy->diskInfos())
+    {
+        if (info.osName.contains("deepin", Qt::CaseInsensitive))
+            thrd->appendRoot(info.mountPoint);
+    }
+
     connect(thrd, &DPKGRepairThread::finished, thrd, &DPKGRepairThread::deleteLater);
     connect(thrd, &DPKGRepairThread::finished, this, &DPKGRepairWidget::onRepairFinished);
+    connect(thrd, &DPKGRepairThread::processInfo, this, [=](const QString &info) { qDebug() << info; });
 
     thrd->start();
 }
