@@ -2,6 +2,7 @@
 #define DPKGREPAIRWIDGET_H
 
 #include <QWidget>
+#include <QPushButton>
 
 class DPKGRepairWidget : public QWidget
 {
@@ -9,6 +10,13 @@ class DPKGRepairWidget : public QWidget
 
 public:
     explicit DPKGRepairWidget(QWidget *parent = nullptr);
+
+private slots:
+    void onRepairClicked();
+    void onRepairFinished();
+
+private:
+    QPushButton *m_repairButton;
 };
 
 #endif // DPKGREPAIRWIDGET_H
