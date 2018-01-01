@@ -28,6 +28,7 @@ add_subdirectory("plugins")
 # Find the library
 find_package(PkgConfig REQUIRED)
 find_package(Qt5Widgets REQUIRED)
+find_package(Qt5Concurrent REQUIRED)
 
 pkg_check_modules(DtkWidget REQUIRED dtkwidget)
 

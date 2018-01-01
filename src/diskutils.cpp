@@ -8,6 +8,8 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QSettings>
+#include <QtConcurrent>
+#include <QFutureWatcher>
 
 #include <random>
 
@@ -191,7 +193,21 @@ DiskUtils::~DiskUtils()
 
 void DiskUtils::initilize()
 {
-    m_diskInfos = list_mounted_devices();
+    auto future = QtConcurrent::run(list_mounted_devices);
+    auto *watcher = new QFutureWatcher<QList<DiskInfo>>();
+    watcher->setFuture(future);
+
+    connect(watcher, &QFutureWatcher<QList<DiskInfo>>::finished, this, &DiskUtils::onInitFinished);
+}
+
+void DiskUtils::onInitFinished()
+{
+    QFutureWatcher<QList<DiskInfo>> *watcher = static_cast<QFutureWatcher<QList<DiskInfo>> *>(sender());
+    if (!watcher)
+        return;
+
+    m_diskInfos = watcher->result();
+    watcher->deleteLater();
 
     emit scanFinished();
 }

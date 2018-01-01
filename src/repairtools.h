@@ -20,6 +20,9 @@ public:
 private:
     void keyPressEvent(QKeyEvent *e);
 
+private slots:
+    void onDiskInitilized();
+
 private:
     QPointer<DiskUtils> m_diskUtils;
     QPointer<ToolsModel> m_toolsModel;

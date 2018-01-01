@@ -12,19 +12,15 @@ RepairTools::RepairTools(QWidget *parent)
     , m_diskUtils(new DiskUtils(this))
     , m_toolsModel(new ToolsModel(this))
 {
-    m_diskUtils->initilize();
-
     auto *tbar = titlebar();
     tbar->setTitle(QString());
 
     resize(800, 600);
     move(qApp->primaryScreen()->geometry().center() - rect().center());
 
-    ToolsPage *p = new ToolsPage;
-    p->setDiskUtils(m_diskUtils);
-    p->setModel(m_toolsModel);
+    connect(m_diskUtils, &DiskUtils::scanFinished, this, &RepairTools::onDiskInitilized);
 
-    setCentralWidget(p);
+    m_diskUtils->initilize();
 }
 
 void RepairTools::keyPressEvent(QKeyEvent *e)
@@ -38,4 +34,15 @@ void RepairTools::keyPressEvent(QKeyEvent *e)
     }
 
     return QWidget::keyPressEvent(e);
+}
+
+void RepairTools::onDiskInitilized()
+{
+    delete centralWidget();
+
+    ToolsPage *p = new ToolsPage;
+    p->setDiskUtils(m_diskUtils);
+    p->setModel(m_toolsModel);
+
+    setCentralWidget(p);
 }

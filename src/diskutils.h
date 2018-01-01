@@ -22,6 +22,7 @@ signals:
 
 public slots:
     void initilize();
+    void onInitFinished();
 
 private:
     bool m_scannerRunning;
