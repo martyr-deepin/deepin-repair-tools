@@ -1,5 +1,5 @@
 
-set(PLUGIN_NAME "password_reset")
+set(PLUGIN_NAME "password-reset")
 
 project(${PLUGIN_NAME})
 

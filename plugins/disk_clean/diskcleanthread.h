@@ -18,6 +18,7 @@ public:
 
 signals:
     void finished() const;
+    void processInfo(const QString &info) const;
 
 private:
     QList<DiskInfo> m_diskList;

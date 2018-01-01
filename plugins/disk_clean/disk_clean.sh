@@ -10,7 +10,9 @@ else
     exit 1
 fi
 
-echo "apt -f install" | tee $DIR/script.sh
+echo "
+apt-get clean
+" | tee $DIR/script.sh
 chmod +x $DIR/script.sh
 
 if [ "$DIR" = "" ]; then

@@ -56,6 +56,7 @@ void DiskCleanWidget::cleanStart()
 
     connect(thrd, &DiskCleanThread::finished, thrd, &DiskCleanThread::deleteLater);
     connect(thrd, &DiskCleanThread::finished, this, &DiskCleanWidget::cleanEnd);
+    connect(thrd, &DiskCleanThread::processInfo, this, [&](const QString &info) { qDebug() << info; });
 
     thrd->start();
 }
