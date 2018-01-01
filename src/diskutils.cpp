@@ -3,13 +3,25 @@
 #include <QFile>
 #include <QDebug>
 #include <QDir>
+#include <QProcess>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
 
 #include <random>
 
+#include <mntent.h>
 #include <sys/stat.h>
 
 #define MOUNTS_PATH     "/proc/mounts"
 #define BLOCK_DEVS_PATH "/dev/block"
+
+class OSProberInfo
+{
+public:
+    QString mountPoint;
+    QString osName;
+};
 
 inline bool is_block_device(const QString &path)
 {
@@ -24,31 +36,91 @@ const QString generate_mount_dir()
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(10000, 10000000);
 
+    const QDir baseDir("/tmp");
     do {
-        const QString path(QString("/tmp/mount-%1").arg(dis(gen)));
-
-        if (!QFile(path).exists())
-            return path;
+        const QString mountName = QString("mount-%1").arg(dis(gen));
+        if (!baseDir.exists(mountName) && baseDir.mkpath(mountName))
+            return baseDir.absoluteFilePath(mountName);
     } while(true);
 
     Q_UNREACHABLE();
 }
 
+QSet<QString> mounted_drives()
+{
+    QSet<QString> r;
+
+    auto *p = setmntent("/etc/mtab", "r");
+    if (!p)
+        return r;
+
+    mntent *mnt;
+    while ((mnt = getmntent(p)) != nullptr)
+    {
+        const QString &fs_name = mnt->mnt_fsname;
+        if (fs_name.startsWith("/dev/"))
+            r << fs_name;
+    }
+
+    endmntent(p);
+    return r;
+}
+
 void mount_block_devices()
 {
-    QDir block_dir(BLOCK_DEVS_PATH);
+    QProcess process;
+    process.start("lsblk", QStringList() << "-J");
+    process.waitForFinished(-1);
 
-    for (const auto &info : block_dir.entryList(QDir::NoDotAndDotDot))
+    const auto &mountInfo = process.readAll();
+    const auto &devInfo = QJsonDocument::fromJson(mountInfo).object();
+    const auto &blockDevs = devInfo.value("blockdevices").toArray();
+
+    for (const auto &dev : blockDevs)
     {
-        const QString &path = block_dir.absoluteFilePath(info);
-        const QString &mount_point = generate_mount_dir();
+        const auto &children = dev.toObject().value("children").toArray();
+        for (const auto &child : children)
+        {
+            const auto &info = child.toObject();
+            if (!info.value("mountpoint").toString().isEmpty())
+                continue;
 
-        qDebug() << path << mount_point;
+            const QString &devPath = QString("/dev/%1").arg(info.value("name").toString());
+            const QString &mount_point = generate_mount_dir();
+
+            // do mount
+            qDebug() << "mounting" << devPath << "to" << mount_point;
+            QProcess process;
+            process.start("mount", QStringList() << devPath << mount_point);
+            process.waitForFinished(-1);
+        }
     }
+}
+
+QList<OSProberInfo> list_os_info()
+{
+    QProcess process;
+    process.start("os-prober");
+    process.waitForFinished(-1);
+
+    QList<OSProberInfo> r;
+    for (const QString &line : process.readAllStandardOutput().split('\n'))
+    {
+        const QStringList &info = line.split(':');
+        if (info.size() != 4)
+            continue;
+
+        r << OSProberInfo { info[0], info[1] };
+    }
+
+    return r;
 }
 
 QList<DiskInfo> list_mounted_devices()
 {
+    QMap<QString, QString> os_names;
+    for (const auto &info : list_os_info())
+        os_names.insert(info.mountPoint, info.osName);
     mount_block_devices();
 
     QFile mounts(MOUNTS_PATH);
@@ -69,7 +141,12 @@ QList<DiskInfo> list_mounted_devices()
         if (!is_block_device(info.first()))
             continue;
 
-        mount_info_list << std::move(DiskInfo { info[0], info[1], info[2] });
+        const QString &drivePath = QDir(info[0]).canonicalPath();
+        const QString os_name = os_names.value(drivePath, QString());
+
+        DiskInfo d { drivePath, info[1], info[2], os_name };
+        qDebug() << d.diskPath << d.mountPoint << d.format << d.os_name;
+        mount_info_list << std::move(d);
     }
 
     return mount_info_list;

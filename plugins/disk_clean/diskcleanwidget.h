@@ -17,6 +17,7 @@ public:
     void setToolsProxy(RepairToolsProxy *proxy) { m_toolsProxy = proxy; }
 
 private slots:
+    void reset();
     void cleanStart();
     void cleanCancel();
     void cleanEnd();

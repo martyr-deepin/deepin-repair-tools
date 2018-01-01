@@ -9,6 +9,7 @@ public:
     QString diskPath;
     QString mountPoint;
     QString format;
+    QString os_name;
 };
 
 class RepairToolsProxy
