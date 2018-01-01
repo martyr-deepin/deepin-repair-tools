@@ -1,5 +1,6 @@
 #include "repairtools.h"
 #include "toolspage.h"
+#include "scanningpage.h"
 
 #include <QApplication>
 #include <QScreen>
@@ -17,6 +18,7 @@ RepairTools::RepairTools(QWidget *parent)
 
     resize(800, 600);
     move(qApp->primaryScreen()->geometry().center() - rect().center());
+    setCentralWidget(new ScanningPage);
 
     connect(m_diskUtils, &DiskUtils::scanFinished, this, &RepairTools::onDiskInitilized);
 
