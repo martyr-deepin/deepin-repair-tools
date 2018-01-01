@@ -7,6 +7,7 @@
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>
+#include <QSettings>
 
 #include <random>
 
@@ -116,6 +117,20 @@ QList<OSProberInfo> list_os_info()
     return r;
 }
 
+QString host_info()
+{
+    QSettings os_info("/etc/lsb-release", QSettings::IniFormat);
+
+    const QString &id = os_info.value("DISTRIB_ID").toString();
+    const QString &version = os_info.value("DISTRIB_RELEASE").toString();
+    const QString &info = QString("%1 %2").arg(id).arg(version);
+
+    if (!info.isEmpty())
+        return info;
+    else
+        return "known";
+}
+
 QList<DiskInfo> list_mounted_devices()
 {
     QMap<QString, QString> os_names;
@@ -142,9 +157,11 @@ QList<DiskInfo> list_mounted_devices()
             continue;
 
         const QString &drivePath = QDir(info[0]).canonicalPath();
-        const QString os_name = os_names.value(drivePath, QString());
+        const QString &mountPath = info[1];
+        const QString os_name = os_names.value(drivePath, mountPath == "/" ? host_info() : QString());
 
-        DiskInfo d { drivePath, info[1], info[2], os_name };
+        DiskInfo d { drivePath, mountPath, info[2], os_name };
+
         qDebug() << d.diskPath << d.mountPoint << d.format << d.os_name;
         mount_info_list << std::move(d);
     }
