@@ -11,6 +11,7 @@ class DiskUtils : public QObject
 
 public:
     explicit DiskUtils(QObject *parent = nullptr);
+    ~DiskUtils();
 
     bool scannerRunning() const { return m_scannerRunning; }
 

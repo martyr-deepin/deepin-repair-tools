@@ -14,6 +14,7 @@
 #include <mntent.h>
 #include <sys/stat.h>
 
+#define MOUNT_PREFIX    "/tmp"
 #define MOUNTS_PATH     "/proc/mounts"
 #define BLOCK_DEVS_PATH "/dev/block"
 
@@ -37,7 +38,7 @@ const QString generate_mount_dir()
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(10000, 10000000);
 
-    const QDir baseDir("/tmp");
+    const QDir baseDir(MOUNT_PREFIX);
     do {
         const QString mountName = QString("mount-%1").arg(dis(gen));
         if (!baseDir.exists(mountName) && baseDir.mkpath(mountName))
@@ -175,6 +176,17 @@ DiskUtils::DiskUtils(QObject *parent)
     , m_scannerRunning(true)
 {
 
+}
+
+DiskUtils::~DiskUtils()
+{
+    for (const auto &info : m_diskInfos)
+    {
+        if (!info.mountPoint.startsWith(MOUNT_PREFIX))
+            continue;
+
+        QProcess::startDetached("umount", QStringList() << info.mountPoint);
+    }
 }
 
 void DiskUtils::initilize()

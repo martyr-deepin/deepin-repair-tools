@@ -40,7 +40,7 @@ QVariant ToolsModel::data(const QModelIndex &index, int role) const
 void ToolsModel::onPluginLoaded(RepairToolsInterface *plugin, const QJsonObject &metaData)
 {
     const QString &uuid = metaData.value("MetaData").toObject().value("uuid").toString();
-    qDebug() << "plugin got:" << plugin->name() << uuid;
+//    qDebug() << "plugin got:" << plugin->name() << uuid;
 
     // preset order list
     static const QStringList pluginsOrderList = {
