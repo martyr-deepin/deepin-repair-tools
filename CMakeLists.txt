@@ -54,6 +54,10 @@ install(TARGETS ${BIN_NAME} DESTINATION sbin)
 # desktop
 install(FILES deepin-repair-tools.desktop DESTINATION share/applications)
 
+# scripts
+file(GLOB SCRIPTS "src/*.sh")
+install(FILES ${SCRIPTS} DESTINATION lib/deepin-repair-tools)
+
 # policy kit
 install(FILES com.deepin.repair-tools.policy
         DESTINATION share/polkit-1/actions/)

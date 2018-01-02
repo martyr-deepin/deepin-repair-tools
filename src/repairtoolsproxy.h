@@ -3,6 +3,13 @@
 
 #include <QList>
 
+class UserInfo
+{
+public:
+    QString name;
+    QString homeDir;
+};
+
 class DiskInfo
 {
 public:
@@ -10,6 +17,7 @@ public:
     QString mountPoint;
     QString format;
     QString osName;
+    QList<UserInfo> userList;
 };
 
 class RepairToolsProxy

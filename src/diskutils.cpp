@@ -134,7 +134,31 @@ QString host_info()
         return "known";
 }
 
-QList<DiskInfo> list_mounted_devices()
+QList<UserInfo> list_os_user_info(const QString &rootPath)
+{
+    const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
+    const QString list_users_script = "/usr/lib/deepin-repair-tools/list_user_info.sh";
+
+    QList<UserInfo> r;
+
+    QProcess process;
+    process.start("/bin/sh", QStringList() << chroot_hook_script << rootPath << list_users_script);
+    process.waitForFinished(-1);
+
+    const QString &output = process.readAllStandardOutput();
+    for (const QString &line : output.split('\n'))
+    {
+        const QStringList &info = line.split(' ');
+        if (info.size() < 2)
+            continue;
+
+        r << UserInfo { info[0], info[1] };
+    }
+
+    return r;
+}
+
+QList<DiskInfo> list_mounted_devices_info()
 {
     QMap<QString, QString> os_names;
     for (const auto &info : list_os_info())
@@ -162,8 +186,9 @@ QList<DiskInfo> list_mounted_devices()
         const QString &drivePath = QDir(info[0]).canonicalPath();
         const QString &mountPath = info[1];
         const QString os_name = mountPath == "/" ? host_info() : os_names.value(drivePath);
+        const auto &userInfos = !os_name.isEmpty() ? list_os_user_info(mountPath) : QList<UserInfo>();
 
-        DiskInfo d { drivePath, mountPath, info[2], os_name };
+        DiskInfo d { drivePath, mountPath, info[2], os_name, userInfos };
 
         qDebug() << d.diskPath << d.mountPoint << d.format << d.osName;
         mount_info_list << std::move(d);
@@ -193,7 +218,7 @@ DiskUtils::~DiskUtils()
 
 void DiskUtils::initilize()
 {
-    auto future = QtConcurrent::run(list_mounted_devices);
+    auto future = QtConcurrent::run(list_mounted_devices_info);
     auto *watcher = new QFutureWatcher<QList<DiskInfo>>();
     watcher->setFuture(future);
 
