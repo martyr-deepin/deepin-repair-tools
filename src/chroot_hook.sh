@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $# -eq 2 ]; then
+if [ $# -ge 2 ]; then
     if [ $1 = "/" ]; then
         DIR=""
     else
@@ -11,13 +11,16 @@ else
     exit 1
 fi
 
+shift
+shift
+
 cp $SCRIPT $DIR/script.sh
 chmod +x $DIR/script.sh
 
 if [ "$DIR" = "" ]; then
-    /script.sh
+    /script.sh "$@"
 else
-    chroot $DIR ./script.sh
+    chroot $DIR ./script.sh "$@"
 fi
 
 rm $DIR/script.sh

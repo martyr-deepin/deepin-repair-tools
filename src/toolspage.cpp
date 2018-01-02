@@ -7,15 +7,22 @@
 #include <QApplication>
 #include <QProcess>
 
-const RunResult execAsChrootAynchronous(const QString &root, const QString &script)
+const RunResult execAsChrootAynchronous(const QString &root, const QString &script, const QStringList &args)
 {
     const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
 
     QProcess process;
-    process.start("/bin/sh", QStringList() << chroot_hook_script << root << script);
+    process.start("/bin/sh", QStringList() << chroot_hook_script << root << script << args);
     process.waitForFinished(-1);
 
-    return RunResult { process.exitCode(), process.readAllStandardOutput(), process.readAllStandardError() };
+    const RunResult r { process.exitCode(), process.readAllStandardOutput(), process.readAllStandardError() };
+
+    qInfo() << Q_FUNC_INFO
+            << "exitCode =" << r.exitCode
+            << "output =" << r.standardOutput
+            << "error =" << r.standardError;
+
+    return r;
 }
 
 ToolsPage::ToolsPage(QWidget *parent)

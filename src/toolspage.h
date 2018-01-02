@@ -12,7 +12,7 @@
 #include <QStackedLayout>
 #include <QButtonGroup>
 
-const RunResult execAsChrootAynchronous(const QString &root, const QString &script);
+const RunResult execAsChrootAynchronous(const QString &root, const QString &script, const QStringList &args);
 
 class ToolsPage : public QWidget, public RepairToolsProxy
 {
@@ -26,8 +26,8 @@ public:
     void setDiskUtils(const QPointer<DiskUtils> &diskUtils) { m_diskUtils = diskUtils; }
 
 public:
-    const RunResult execAsChrootAynchronous(const QString &root, const QString &script) const
-    { return ::execAsChrootAynchronous(root, script); }
+    const RunResult execAsChrootAynchronous(const QString &root, const QString &script, const QStringList &args = QStringList()) const
+    { return ::execAsChrootAynchronous(root, script, args); }
     const QList<DiskInfo> diskInfos() const { return m_diskUtils->diskInfos(); }
 
 private slots:

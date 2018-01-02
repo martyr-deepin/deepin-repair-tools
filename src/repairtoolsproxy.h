@@ -34,7 +34,7 @@ public:
     virtual ~RepairToolsProxy() {}
 
     virtual const QList<DiskInfo> diskInfos() const = 0;
-    virtual const RunResult execAsChrootAynchronous(const QString &root, const QString &script) const = 0;
+    virtual const RunResult execAsChrootAynchronous(const QString &root, const QString &script, const QStringList &args = QStringList()) const = 0;
 };
 
 #endif // REPAIRTOOLSPROXY_H
