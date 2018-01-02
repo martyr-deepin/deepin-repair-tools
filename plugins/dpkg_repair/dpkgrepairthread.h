@@ -1,6 +1,8 @@
 #ifndef DPKGREPAIRTHREAD_H
 #define DPKGREPAIRTHREAD_H
 
+#include "../../src/repairtoolsproxy.h"
+
 #include <QThread>
 
 class DPKGRepairThread : public QThread
@@ -10,15 +12,16 @@ class DPKGRepairThread : public QThread
 public:
     explicit DPKGRepairThread(QObject *parent = nullptr);
 
+    void setToolsProxy(RepairToolsProxy *proxy) { m_toolsProxy = proxy; }
     void appendRoot(const QString &root) { m_rootList << root; }
 
     void run();
 
 signals:
     void finished();
-    void processInfo(const QString &info) const;
 
 private:
+    RepairToolsProxy *m_toolsProxy;
     QStringList m_rootList;
 };
 

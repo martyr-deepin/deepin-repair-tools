@@ -11,6 +11,11 @@ const RunResult execAsChrootAynchronous(const QString &root, const QString &scri
 {
     const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
 
+    qInfo() << Q_FUNC_INFO
+            << root
+            << script
+            << args;
+
     QProcess process;
     process.start("/bin/sh", QStringList() << chroot_hook_script << root << script << args);
     process.waitForFinished(-1);

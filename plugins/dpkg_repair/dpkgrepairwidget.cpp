@@ -25,6 +25,7 @@ void DPKGRepairWidget::onRepairClicked()
     m_repairButton->setVisible(false);
 
     DPKGRepairThread *thrd = new DPKGRepairThread;
+    thrd->setToolsProxy(m_toolsProxy);
 
     for (const auto &info : m_toolsProxy->diskInfos())
     {
@@ -34,7 +35,6 @@ void DPKGRepairWidget::onRepairClicked()
 
     connect(thrd, &DPKGRepairThread::finished, thrd, &DPKGRepairThread::deleteLater);
     connect(thrd, &DPKGRepairThread::finished, this, &DPKGRepairWidget::onRepairFinished);
-    connect(thrd, &DPKGRepairThread::processInfo, this, [=](const QString &info) { qDebug() << info; });
 
     thrd->start();
 }
