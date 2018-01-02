@@ -1,7 +1,9 @@
 #include "passwordresetwidget.h"
+#include "passwordresetthread.h"
 
 #include <QVBoxLayout>
 #include <QTimer>
+#include <QDebug>
 
 PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     : QWidget(parent)
@@ -16,13 +18,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
 {
     m_resetButton->setText(tr("Password Reset"));
     m_confirmButton->setText(tr("Confirm"));
-    m_confirmButton->setVisible(false);
     m_okButton->setText(tr("OK"));
-    m_okButton->setVisible(false);
-
-    m_userChooseBox->setVisible(false);
-    m_passwordEdit->setVisible(false);
-    m_passwordRepeat->setVisible(false);
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;
     btnsLayout->addWidget(m_resetButton);
@@ -42,9 +38,11 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     centralLayout->addLayout(btnsLayout);
 
     setLayout(centralLayout);
+    resetUI();
 
     connect(m_resetButton, &QPushButton::clicked, this, &PasswordResetWidget::onResetClicked);
     connect(m_confirmButton, &QPushButton::clicked, this, &PasswordResetWidget::onPasswdSubmitted);
+    connect(m_okButton, &QPushButton::clicked, this, &PasswordResetWidget::resetUI);
 
     QTimer::singleShot(1, this, &PasswordResetWidget::initUserInfo);
 }
@@ -73,11 +71,32 @@ void PasswordResetWidget::onPasswdSubmitted()
         return onPasswordNotMatch();
 
     m_confirmButton->setVisible(false);
-    m_okButton->setVisible(true);
+    m_okButton->setVisible(false);
 
     m_userChooseBox->setVisible(false);
     m_passwordEdit->setVisible(false);
     m_passwordRepeat->setVisible(false);
+
+    resetUserPassword();
+}
+
+void PasswordResetWidget::resetUserPassword()
+{
+    const auto data = m_userChooseBox->currentData().value<QPair<QString, QString>>();
+
+    PasswordResetThread *thrd = new PasswordResetThread;
+    thrd->setToolsProxy(m_toolsProxy);
+    thrd->setTaskInfo(data.first, data.second, m_passwordEdit->text());
+
+    connect(thrd, &PasswordResetThread::finished, thrd, &PasswordResetThread::deleteLater);
+    connect(thrd, &PasswordResetThread::finished, this, &PasswordResetWidget::onResetPasswordFinished);
+
+    thrd->start();
+}
+
+void PasswordResetWidget::onResetPasswordFinished()
+{
+    m_okButton->setVisible(true);
 }
 
 void PasswordResetWidget::initUserInfo()
@@ -90,8 +109,22 @@ void PasswordResetWidget::initUserInfo()
         const QString &disk = diskInfo.diskPath;
         for (const auto &userInfo : diskInfo.userList)
         {
-            const QString text = tr("%1 (on %2)").arg(userInfo.name).arg(disk);
-            m_userChooseBox->addItem(text);
+            const QString &text = tr("%1 (on %2)").arg(userInfo.name).arg(disk);
+            const QVariant &data = QVariant::fromValue(QPair<QString, QString>(diskInfo.mountPoint, userInfo.name));
+            m_userChooseBox->addItem(text, data);
         }
     }
+}
+
+void PasswordResetWidget::resetUI()
+{
+    m_passwordEdit->clear();
+    m_passwordRepeat->clear();
+
+    m_resetButton->setVisible(true);
+    m_confirmButton->setVisible(false);
+    m_okButton->setVisible(false);
+    m_userChooseBox->setVisible(false);
+    m_passwordEdit->setVisible(false);
+    m_passwordRepeat->setVisible(false);
 }

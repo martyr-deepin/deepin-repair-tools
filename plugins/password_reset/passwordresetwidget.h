@@ -23,8 +23,11 @@ public:
 
 private slots:
     void initUserInfo();
+    void resetUI();
+    void resetUserPassword();
     void onResetClicked();
     void onPasswdSubmitted();
+    void onResetPasswordFinished();
 
 private:
     inline void onPasswordEmpty() { showErrorTips(m_passwordEdit, tr("Password can't be empty")); }
