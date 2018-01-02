@@ -1,0 +1,13 @@
+Source: deepin-repair-tools
+Section: utils
+Priority: optional
+Maintainer: 石博文 <sbw@sbw.so>
+Build-Depends: debhelper (>= 9), cmake, pkg-config, libqt5widgets5, libqt5concurrent5, libdtkwidget-dev 
+Standards-Version: 3.9.8
+Homepage: https://www.deepin.com/
+
+Package: deepin-repair-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: deepin repair tools
+ Deepin Repair Tools is a useful tools for system repair & clean.
