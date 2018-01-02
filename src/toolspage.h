@@ -12,6 +12,8 @@
 #include <QStackedLayout>
 #include <QButtonGroup>
 
+RunResult execAsChrootAynchronous(const QString &root, const QString &script);
+
 class ToolsPage : public QWidget, public RepairToolsProxy
 {
     Q_OBJECT
@@ -24,7 +26,8 @@ public:
     void setDiskUtils(const QPointer<DiskUtils> &diskUtils) { m_diskUtils = diskUtils; }
 
 public:
-    void ping();
+    const RunResult execAsChrootAynchronous(const QString &root, const QString &script) const
+    { return ::execAsChrootAynchronous(root, script); }
     const QList<DiskInfo> diskInfos() const { return m_diskUtils->diskInfos(); }
 
 private slots:

@@ -5,6 +5,18 @@
 #include <QPushButton>
 #include <QDebug>
 #include <QApplication>
+#include <QProcess>
+
+RunResult execAsChrootAynchronous(const QString &root, const QString &script)
+{
+    const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
+
+    QProcess process;
+    process.start("/bin/sh", QStringList() << chroot_hook_script << root << script);
+    process.waitForFinished(-1);
+
+    return RunResult { process.exitCode(), process.readAllStandardOutput(), process.readAllStandardError() };
+}
 
 ToolsPage::ToolsPage(QWidget *parent)
     : QWidget(parent)
@@ -85,11 +97,6 @@ void ToolsPage::setModel(const QPointer<ToolsModel> &model)
     connect(model, &ToolsModel::pluginsLoadFinished, this, &ToolsPage::refreshNavBar);
 
     m_model->initPlugins(this);
-}
-
-void ToolsPage::ping()
-{
-    qDebug() << "pong";
 }
 
 void ToolsPage::refreshNavBar()

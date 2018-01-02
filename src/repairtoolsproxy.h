@@ -20,13 +20,21 @@ public:
     QList<UserInfo> userList;
 };
 
+class RunResult
+{
+public:
+    int exitCode;
+    QString standardOutput;
+    QString standardError;
+};
+
 class RepairToolsProxy
 {
 public:
     virtual ~RepairToolsProxy() {}
 
-    virtual void ping() = 0;
     virtual const QList<DiskInfo> diskInfos() const = 0;
+    virtual const RunResult execAsChrootAynchronous(const QString &root, const QString &script) const = 0;
 };
 
 #endif // REPAIRTOOLSPROXY_H
