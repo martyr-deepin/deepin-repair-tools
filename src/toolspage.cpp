@@ -7,7 +7,7 @@
 #include <QApplication>
 #include <QProcess>
 
-RunResult execAsChrootAynchronous(const QString &root, const QString &script)
+const RunResult execAsChrootAynchronous(const QString &root, const QString &script)
 {
     const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
 

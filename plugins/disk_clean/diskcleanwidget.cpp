@@ -48,6 +48,7 @@ void DiskCleanWidget::cleanStart()
     m_cancelButton->setVisible(true);
 
     DiskCleanThread *thrd = new DiskCleanThread;
+    thrd->setToolsProxy(m_toolsProxy);
     for (const auto &info : m_toolsProxy->diskInfos())
     {
         if (info.osName.contains("deepin", Qt::CaseInsensitive))

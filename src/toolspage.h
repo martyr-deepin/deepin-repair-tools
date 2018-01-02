@@ -12,7 +12,7 @@
 #include <QStackedLayout>
 #include <QButtonGroup>
 
-RunResult execAsChrootAynchronous(const QString &root, const QString &script);
+const RunResult execAsChrootAynchronous(const QString &root, const QString &script);
 
 class ToolsPage : public QWidget, public RepairToolsProxy
 {

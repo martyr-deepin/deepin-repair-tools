@@ -1,5 +1,7 @@
 #include "diskcleanthread.h"
 
+#include "../../src/repairtoolsproxy.h"
+
 #include <QDebug>
 #include <QProcess>
 
@@ -16,13 +18,10 @@ void DiskCleanThread::run()
     for (const auto &p : m_diskList)
     {
         qDebug() << "cleaning:" << p.diskPath << p.mountPoint << p.osName;
+        const auto r = m_toolsProxy->execAsChrootAynchronous(p.mountPoint, sh);
 
-        QProcess process;
-        connect(&process, &QProcess::readyReadStandardOutput, this, [&] { emit processInfo(process.readAllStandardOutput()); });
-        connect(&process, &QProcess::readyReadStandardError, this, [&] { emit processInfo(process.readAllStandardError()); });
-
-        process.start("/bin/sh", QStringList() << sh << p.mountPoint);
-        process.waitForFinished(-1);
+        emit processInfo(r.standardOutput);
+        emit processInfo(r.standardError);
     }
 
     emit finished();
