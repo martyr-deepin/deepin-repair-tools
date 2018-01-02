@@ -1,9 +1,12 @@
 #ifndef PASSWORDRESETWIDGET_H
 #define PASSWORDRESETWIDGET_H
 
+#include "../../src/repairtoolsproxy.h"
+
 #include <QWidget>
 #include <QPushButton>
 #include <QLabel>
+#include <QComboBox>
 
 #include <dpasswordedit.h>
 
@@ -16,7 +19,10 @@ class PasswordResetWidget : public QWidget
 public:
     explicit PasswordResetWidget(QWidget *parent = nullptr);
 
+    void setToolsProxy(RepairToolsProxy *proxy) { m_toolsProxy = proxy; }
+
 private slots:
+    void initUserInfo();
     void onResetClicked();
     void onPasswdSubmitted();
 
@@ -27,11 +33,13 @@ private:
     inline void showErrorTips(DLineEdit * const edit, const QString &text) { edit->showAlertMessage(text); }
 
 private:
+    RepairToolsProxy *m_toolsProxy;
     QLabel *m_normalTips;
     QLabel *m_successTips;
     QPushButton *m_resetButton;
     QPushButton *m_confirmButton;
     QPushButton *m_okButton;
+    QComboBox *m_userChooseBox;
     DPasswordEdit *m_passwordEdit;
     DPasswordEdit *m_passwordRepeat;
 };
