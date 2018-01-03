@@ -19,7 +19,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     centralLayout->addWidget(m_repairButton);
     centralLayout->setAlignment(m_repairButton, Qt::AlignHCenter);
     centralLayout->setSpacing(0);
-    centralLayout->setContentsMargins(0, 60, 0, 0);
+    centralLayout->setContentsMargins(0, 60, 0, 40);
 
     setLayout(centralLayout);
 

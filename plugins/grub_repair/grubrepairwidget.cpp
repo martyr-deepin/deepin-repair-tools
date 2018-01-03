@@ -39,7 +39,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     centralLayout->addWidget(m_loadingIndicator);
     centralLayout->setAlignment(m_loadingIndicator, Qt::AlignHCenter);
     centralLayout->setSpacing(0);
-    centralLayout->setContentsMargins(0, 60, 0, 0);
+    centralLayout->setContentsMargins(0, 60, 0, 40);
 
     setLayout(centralLayout);
 

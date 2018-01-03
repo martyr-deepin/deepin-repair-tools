@@ -49,10 +49,10 @@ ToolsPage::ToolsPage(QWidget *parent)
     pluginWidget->setLayout(m_pluginsLayout);
 
     QHBoxLayout *centralLayout = new QHBoxLayout;
-    centralLayout->setMargin(0);
-    centralLayout->setSpacing(0);
     centralLayout->addWidget(navWidget);
     centralLayout->addWidget(pluginWidget);
+    centralLayout->setSpacing(0);
+    centralLayout->setMargin(0);
 
     setLayout(centralLayout);
     setStyleSheet("#NavWidget {"

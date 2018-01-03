@@ -33,7 +33,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     centralLayout->addWidget(m_icon);
     centralLayout->addLayout(buttonsLayout);
     centralLayout->setSpacing(0);
-    centralLayout->setContentsMargins(0, 60, 0, 0);
+    centralLayout->setContentsMargins(0, 60, 0, 40);
 
     setLayout(centralLayout);
 

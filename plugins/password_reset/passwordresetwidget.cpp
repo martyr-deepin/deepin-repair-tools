@@ -42,7 +42,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     centralLayout->setAlignment(m_passwordRepeat, Qt::AlignHCenter);
     centralLayout->addLayout(btnsLayout);
     centralLayout->setSpacing(0);
-    centralLayout->setContentsMargins(0, 60, 0, 0);
+    centralLayout->setContentsMargins(0, 60, 0, 40);
 
     setLayout(centralLayout);
     resetUI();
