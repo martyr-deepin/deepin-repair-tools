@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>repair_dpkg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="96.4132254%" id="linearGradient-1">
+            <stop stop-color="#606060" offset="0%"></stop>
+            <stop stop-color="#393939" offset="1.94161551%"></stop>
+            <stop stop-color="#232323" offset="100%"></stop>
+        </linearGradient>
+        <path d="M46.0322038,-9.55924424e-08 L43.7750259,13.5672165 L48.4246387,16.9481782 L43.258342,28.6222047 L43.258342,31.4846502 L43.7750259,29.0833482 L53.9469992,14.5201909 L49.5554294,10.9532422 L52.0933555,-9.55924406e-08 L86,-9.55924406e-08 C88.209139,-9.5592441e-08 90,1.79086091 90,3.9999999 L90,102 C90,104.209139 88.209139,106 86,106 L4,106 C1.790861,106 2.705415e-16,104.209139 0,102 L0,3.9999999 C-2.705415e-16,1.79086091 1.790861,-9.55924402e-08 4,-9.55924406e-08 L46.0322038,-9.55924406e-08 Z" id="path-2"></path>
+        <filter x="-11.7%" y="-7.1%" width="123.3%" height="119.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="repair_dpkg">
+            <g id="Group-2" transform="translate(19.000000, 11.000000)">
+                <g id="Group">
+                    <g id="Combined-Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <text id="DPKG" font-family="SourceHanSansSC-Light, Source Han Sans SC" font-size="19" font-weight="300" letter-spacing="5.80000019">
+                        <tspan x="12.2899997" y="47" fill="#00A8FF">D</tspan>
+                        <tspan x="30.8579999" y="47" fill="#FF5353">P</tspan>
+                        <tspan x="48.2860001" y="47" fill="#D7FA59">K</tspan>
+                        <tspan x="65.9230003" y="47" fill="#C536E5">G</tspan>
+                    </text>
+                    <path d="M17.66,13.36 C17.7000002,13.3866668 17.7366665,13.4199998 17.77,13.46 C17.8033335,13.5000002 17.82,13.5599996 17.82,13.64 C17.82,13.6933336 17.8133334,13.7633329 17.8,13.85 C17.7866666,13.9366671 17.7666668,14.0199996 17.74,14.1 L10.88,18.08 C10.8399998,18.1200002 10.786667,18.14 10.72,18.14 C10.6133328,18.14 10.5000006,18.0666674 10.38,17.92 C10.2599994,17.7733326 10.1466672,17.4866688 10.04,17.06 L15.92,13.76 L10.22,10.7 C10.1399996,10.6466664 10.1,10.5466674 10.1,10.4 C10.1,10.1066652 10.2399986,9.7666686 10.52,9.38 L17.66,13.36 Z M18.92,20.58 C18.8933332,20.4599994 18.88,20.3466672 18.88,20.24 L18.88,19.96 C18.88,19.693332 18.9099997,19.5100005 18.97,19.41 C19.0300003,19.3099995 19.1133328,19.26 19.22,19.26 L26.9,19.26 C26.9400002,19.5000012 26.96,19.7066658 26.96,19.88 C26.96,20.146668 26.926667,20.3299995 26.86,20.43 C26.793333,20.5300005 26.7066672,20.58 26.6,20.58 L18.92,20.58 Z" id="&gt;_" fill="#FFFFFF"></path>
+                    <text id="##-##-###-####-#####" font-family="SourceHanSansSC-Normal, Source Han Sans SC" font-size="4" font-weight="normal" fill="#ADADAD">
+                        <tspan x="10" y="59">## ## ### #### ######### ### #### ###</tspan>
+                        <tspan x="10" y="65">#### ## #### ######## ######### #    </tspan>
+                        <tspan x="10" y="71">####### ## ###                       </tspan>
+                        <tspan x="10" y="77">###### ########## #### ## ####       </tspan>
+                        <tspan x="10" y="83">######## # ## ### #####              </tspan>
+                        <tspan x="10" y="89">##### ###### ### ### ##########      </tspan>
+                        <tspan x="10" y="95">## ##### # # ## #####                </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

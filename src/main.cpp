@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
     app.setProductName(QApplication::translate("main", "Deepin Repair Tools"));
     app.setApplicationDescription(QApplication::translate("main", "Deepin Repair Tools"));
     app.setTheme("light");
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     DLogManager::registerConsoleAppender();
 

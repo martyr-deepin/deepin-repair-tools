@@ -5,6 +5,7 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QLabel>
 
 class DPKGRepairWidget : public QWidget
 {
@@ -20,8 +21,9 @@ private slots:
     void onRepairFinished();
 
 private:
-    QPushButton *m_repairButton;
     RepairToolsProxy *m_toolsProxy;
+    QLabel *m_icon;
+    QPushButton *m_repairButton;
 };
 
 #endif // DPKGREPAIRWIDGET_H

@@ -4,8 +4,6 @@
 #include <QVBoxLayout>
 #include <QDebug>
 
-#include <DSvgRenderer>
-
 GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     : QWidget(parent)
 
@@ -16,11 +14,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     , m_okButton(new QPushButton)
     , m_loadingIndicator(new DLoadingIndicator)
 {
-    const auto ratio = devicePixelRatioF();
-    QPixmap iconPix = DSvgRenderer::render(":/resources/repair_grub.svg", QSize(128, 128) * ratio);
-    iconPix.setDevicePixelRatio(ratio);
-
-    m_icon->setPixmap(iconPix);
+    m_icon->setPixmap(QIcon(":/resources/repair_grub.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
     m_repairButton->setText(tr("Repair"));
     m_centerTips->setText(tr("Cannot find boot menu"));
