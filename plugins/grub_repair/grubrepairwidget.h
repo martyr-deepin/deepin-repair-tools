@@ -5,6 +5,11 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QLabel>
+
+#include <dloadingindicator.h>
+
+DWIDGET_USE_NAMESPACE
 
 class GrubRepairWidget : public QWidget
 {
@@ -18,10 +23,16 @@ public:
 private slots:
     void onRepairClicked();
     void onRepairFinished();
+    void resetUi();
 
 private:
-    QPushButton *m_repairButton;
     RepairToolsProxy *m_toolsProxy;
+    QLabel *m_icon;
+    QLabel *m_centerTips;
+    QLabel *m_statusTips;
+    QPushButton *m_repairButton;
+    QPushButton *m_okButton;
+    DLoadingIndicator *m_loadingIndicator;
 };
 
 #endif // GRUBREPAIRWIDGET_H
