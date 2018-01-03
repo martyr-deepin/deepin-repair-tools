@@ -1,5 +1,5 @@
-#ifndef DPKG_REPAIR_PLUGIN_H
-#define DPKG_REPAIR_PLUGIN_H
+#ifndef GRUB_REPAIR_PLUGIN_H
+#define GRUB_REPAIR_PLUGIN_H
 
 #include "../../src/repairtoolsinterface.h"
 #include "../../src/repairtoolsproxy.h"
@@ -24,4 +24,4 @@ private:
     QPointer<GrubRepairWidget> m_centralWidget;
 };
 
-#endif // DPKG_REPAIR_PLUGIN_H
+#endif // GRUB_REPAIR_PLUGIN_H

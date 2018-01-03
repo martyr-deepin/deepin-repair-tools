@@ -1,5 +1,5 @@
-#ifndef DPKGREPAIRWIDGET_H
-#define DPKGREPAIRWIDGET_H
+#ifndef GRUBREPAIRWIDGET_H
+#define GRUBREPAIRWIDGET_H
 
 #include "../../src/repairtoolsproxy.h"
 
@@ -24,4 +24,4 @@ private:
     RepairToolsProxy *m_toolsProxy;
 };
 
-#endif // DPKGREPAIRWIDGET_H
+#endif // GRUBREPAIRWIDGET_H

@@ -1,5 +1,5 @@
-#ifndef DPKG_REPAIR_PLUGIN_H
-#define DPKG_REPAIR_PLUGIN_H
+#ifndef PERMISSIONS_REPAIR_PLUGIN_H
+#define PERMISSIONS_REPAIR_PLUGIN_H
 
 #include "../../src/repairtoolsinterface.h"
 #include "../../src/repairtoolsproxy.h"
@@ -24,4 +24,4 @@ private:
     QPointer<PermissionsRepairWidget> m_centralWidget;
 };
 
-#endif // DPKG_REPAIR_PLUGIN_H
+#endif // PERMISSIONS_REPAIR_PLUGIN_H

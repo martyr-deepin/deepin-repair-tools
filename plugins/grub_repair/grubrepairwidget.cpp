@@ -27,12 +27,6 @@ void GrubRepairWidget::onRepairClicked()
     GrubRepairThread *thrd = new GrubRepairThread;
     thrd->setToolsProxy(m_toolsProxy);
 
-    for (const auto &info : m_toolsProxy->diskInfos())
-    {
-        if (info.osName.contains("deepin", Qt::CaseInsensitive))
-            thrd->appendRoot(info.mountPoint);
-    }
-
     connect(thrd, &GrubRepairThread::finished, thrd, &GrubRepairThread::deleteLater);
     connect(thrd, &GrubRepairThread::finished, this, &GrubRepairWidget::onRepairFinished);
 

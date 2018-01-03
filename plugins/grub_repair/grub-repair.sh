@@ -1,4 +1,5 @@
 #!/bin/sh
 
-apt -f install
-dpkg -a --configure
+if [ $# -eq 1 ]; then
+    grub-install --force --recheck $1
+fi

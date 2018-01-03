@@ -1,5 +1,5 @@
-#ifndef DPKGREPAIRTHREAD_H
-#define DPKGREPAIRTHREAD_H
+#ifndef GRUBREPAIRTHREAD_H
+#define GRUBREPAIRTHREAD_H
 
 #include "../../src/repairtoolsproxy.h"
 
@@ -13,7 +13,6 @@ public:
     explicit GrubRepairThread(QObject *parent = nullptr);
 
     void setToolsProxy(RepairToolsProxy *proxy) { m_toolsProxy = proxy; }
-    void appendRoot(const QString &root) { m_rootList << root; }
 
     void run();
 
@@ -21,8 +20,10 @@ signals:
     void finished();
 
 private:
+    QPair<QString, QString> primarySystemRoot();
+
+private:
     RepairToolsProxy *m_toolsProxy;
-    QStringList m_rootList;
 };
 
-#endif // DPKGREPAIRTHREAD_H
+#endif // GRUBREPAIRTHREAD_H
