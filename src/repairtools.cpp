@@ -16,7 +16,7 @@ RepairTools::RepairTools(QWidget *parent)
     auto *tbar = titlebar();
     tbar->setTitle(QString());
 
-    resize(700, 450);
+    setFixedSize(700, 450);
     move(qApp->primaryScreen()->geometry().center() - rect().center());
     setCentralWidget(new ScanningPage);
 
