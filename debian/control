@@ -8,6 +8,6 @@ Homepage: https://www.deepin.com/
 
 Package: deepin-repair-tools
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, os-prober
 Description: deepin system repair tools
  Deepin Repair Tools is a useful tools for system repair & clean.
