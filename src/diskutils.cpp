@@ -134,12 +134,16 @@ QString host_info()
         return "known";
 }
 
-QList<UserInfo> list_os_user_info(const QString &rootPath)
+QList<UserInfo> list_os_user_info(const QString &rootPath, const QString &osName)
 {
+    QList<UserInfo> r;
+
+    // NOTE(sbw): We only check deepin OS now, but I think we should works for any linux distro.
+    if (osName.isEmpty() || !osName.contains("deepin", Qt::CaseInsensitive))
+        return r;
+
     const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
     const QString list_users_script = "/usr/lib/deepin-repair-tools/list_user_info.sh";
-
-    QList<UserInfo> r;
 
     QProcess process;
     process.start("/bin/sh", QStringList() << chroot_hook_script << rootPath << list_users_script);
@@ -186,7 +190,7 @@ QList<DiskInfo> list_mounted_devices_info()
         const QString &drivePath = QDir(info[0]).canonicalPath();
         const QString &mountPath = info[1];
         const QString os_name = mountPath == "/" ? host_info() : os_names.value(drivePath);
-        const auto &userInfos = !os_name.isEmpty() ? list_os_user_info(mountPath) : QList<UserInfo>();
+        const auto &userInfos = list_os_user_info(mountPath, os_name);
 
         DiskInfo d { drivePath, mountPath, info[2], os_name, userInfos };
 
