@@ -1,4 +1,5 @@
 #include "permissionsrepairwidget.h"
+#include "permissionsrepairthread.h"
 
 #include <QVBoxLayout>
 #include <QDebug>
@@ -20,5 +21,16 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
 }
 
 void PermissionsRepairWidget::onRepairButtonClicked()
+{
+    PermissionsRepairThread *thrd = new PermissionsRepairThread;
+    thrd->setToolsProxy(m_toolsProxy);
+
+    connect(thrd, &PermissionsRepairThread::finished, thrd, &PermissionsRepairThread::deleteLater);
+    connect(thrd, &PermissionsRepairThread::finished, this, &PermissionsRepairWidget::onRepairFinished);
+
+    thrd->start();
+}
+
+void PermissionsRepairWidget::onRepairFinished()
 {
 }

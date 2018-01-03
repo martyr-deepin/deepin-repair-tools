@@ -4,7 +4,7 @@ project(deepin-repair-tools
         VERSION 1.0.0)
 
 set(BIN_NAME deepin-repair-tools)
-set(CMAKE_VERBOSE_MAKEFILE ON)
+#set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)

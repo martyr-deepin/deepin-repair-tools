@@ -20,9 +20,7 @@ inline void apply_system_dpi_settings()
 
 inline bool root_check()
 {
-#ifndef QT_DEBUG
     if (!geteuid())
-#endif
         return true;
 
     QMessageBox::warning(nullptr, QApplication::translate("main", "Deepin Repair Tools"),
@@ -36,8 +34,11 @@ int main(int argc, char *argv[])
 
     DApplication::loadDXcbPlugin();
     DApplication app(argc, argv);
+
+#ifndef QT_DEBUG
     if (!root_check() || !app.setSingleInstance("deepin-repair-tools"))
         return -1;
+#endif
 
     app.setOrganizationName("deepin");
     app.setApplicationName("deepin-repair-tools");
