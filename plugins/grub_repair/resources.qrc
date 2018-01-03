@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/repair_grub.svg</file>
+    </qresource>
+</RCC>
