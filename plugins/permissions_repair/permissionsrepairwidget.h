@@ -19,10 +19,12 @@ public:
 private slots:
     void onRepairButtonClicked();
     void onRepairFinished();
+    void resetUi();
 
 private:
     RepairToolsProxy *m_toolsProxy;
     QLabel *m_icon;
+    QPushButton *m_okButton;
     QPushButton *m_repairButton;
 };
 
