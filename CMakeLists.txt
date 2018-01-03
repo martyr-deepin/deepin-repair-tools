@@ -29,8 +29,7 @@ add_subdirectory("plugins")
 find_package(PkgConfig REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Concurrent REQUIRED)
-
-pkg_check_modules(DtkWidget REQUIRED dtkwidget)
+find_package(Dtk REQUIRED Widget)
 
 # driver-manager
 add_executable(${BIN_NAME} ${SRCS})

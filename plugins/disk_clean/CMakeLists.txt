@@ -6,8 +6,8 @@ project(${PLUGIN_NAME})
 # Sources files
 file(GLOB SRCS "*.h" "*.cpp")
 
-find_package(PkgConfig REQUIRED)
 find_package(Qt5Widgets REQUIRED)
+find_package(Dtk REQUIRED Widget)
 
 add_definitions(-DQT_PLUGIN)
 add_definitions(${QT_DEFINITIONS})

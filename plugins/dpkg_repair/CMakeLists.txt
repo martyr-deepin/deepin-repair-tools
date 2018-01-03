@@ -8,8 +8,7 @@ file(GLOB SRCS "*.h" "*.cpp")
 
 find_package(PkgConfig REQUIRED)
 find_package(Qt5Widgets REQUIRED)
-
-pkg_check_modules(DtkWidget REQUIRED dtkwidget)
+find_package(Dtk REQUIRED Widget)
 
 add_definitions(-DQT_PLUGIN)
 add_definitions(${QT_DEFINITIONS})
