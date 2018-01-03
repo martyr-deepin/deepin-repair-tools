@@ -5,6 +5,7 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QLabel>
 
 class PermissionsRepairWidget : public QWidget
 {
@@ -21,6 +22,7 @@ private slots:
 
 private:
     RepairToolsProxy *m_toolsProxy;
+    QLabel *m_icon;
     QPushButton *m_repairButton;
 };
 

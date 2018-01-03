@@ -7,6 +7,8 @@
 
 PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     : QWidget(parent)
+
+    , m_icon(new QLabel)
     , m_normalTips(new QLabel)
     , m_successTips(new QLabel)
     , m_resetButton(new QPushButton)
@@ -16,6 +18,8 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     , m_passwordEdit(new DPasswordEdit)
     , m_passwordRepeat(new DPasswordEdit)
 {
+    m_icon->setPixmap(QIcon(":/resources/repair_password.svg").pixmap(128, 128));
+    m_icon->setAlignment(Qt::AlignHCenter);
     m_resetButton->setText(tr("Password Reset"));
     m_confirmButton->setText(tr("Confirm"));
     m_okButton->setText(tr("OK"));
@@ -29,6 +33,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     btnsLayout->setAlignment(m_okButton, Qt::AlignHCenter);
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
+    centralLayout->addWidget(m_icon);
     centralLayout->addWidget(m_userChooseBox);
     centralLayout->setAlignment(m_userChooseBox, Qt::AlignHCenter);
     centralLayout->addWidget(m_passwordEdit);
@@ -36,6 +41,8 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     centralLayout->addWidget(m_passwordRepeat);
     centralLayout->setAlignment(m_passwordRepeat, Qt::AlignHCenter);
     centralLayout->addLayout(btnsLayout);
+    centralLayout->setSpacing(0);
+    centralLayout->setContentsMargins(0, 60, 0, 0);
 
     setLayout(centralLayout);
     resetUI();

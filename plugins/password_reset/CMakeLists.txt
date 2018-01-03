@@ -12,7 +12,7 @@ find_package(Dtk REQUIRED Widget)
 
 add_definitions(-DQT_PLUGIN)
 add_definitions(${QT_DEFINITIONS})
-add_library(${PLUGIN_NAME} SHARED ${SRCS})
+add_library(${PLUGIN_NAME} SHARED ${SRCS} resources.qrc)
 set_target_properties(${PLUGIN_NAME} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../)
 target_include_directories(${PLUGIN_NAME} PUBLIC ${DtkWidget_INCLUDE_DIRS})
 target_link_libraries(${PLUGIN_NAME} PRIVATE

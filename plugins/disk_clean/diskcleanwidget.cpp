@@ -7,10 +7,14 @@
 
 DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     : QWidget(parent)
+
+    , m_icon(new QLabel)
     , m_cleanButton(new QPushButton)
     , m_cancelButton(new QPushButton)
     , m_okButton(new QPushButton)
 {
+    m_icon->setPixmap(QIcon::fromTheme("drive-harddisk").pixmap(128, 128));
+    m_icon->setAlignment(Qt::AlignHCenter);
     m_cleanButton->setText(tr("Clean"));
     m_cancelButton->setText(tr("Cancel"));
     m_cancelButton->setVisible(false);
@@ -26,7 +30,10 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     buttonsLayout->setAlignment(m_okButton, Qt::AlignHCenter);
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
+    centralLayout->addWidget(m_icon);
     centralLayout->addLayout(buttonsLayout);
+    centralLayout->setSpacing(0);
+    centralLayout->setContentsMargins(0, 60, 0, 0);
 
     setLayout(centralLayout);
 
