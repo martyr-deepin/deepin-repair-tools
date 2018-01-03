@@ -17,7 +17,10 @@ void DiskCleanThread::run()
 
     for (const auto &p : m_diskList)
     {
+        if (p.osName.isEmpty() || !p.osName.contains("deepin", Qt::CaseInsensitive))
+            continue;
         qDebug() << "cleaning:" << p.diskPath << p.mountPoint << p.osName;
+
         const auto r = m_toolsProxy->execAsChrootAynchronous(p.mountPoint, sh);
 
         emit processInfo(r.standardOutput);
