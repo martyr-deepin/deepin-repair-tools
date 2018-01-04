@@ -94,9 +94,11 @@ void mount_block_devices()
 
             // do mount
             qDebug() << "mounting" << devPath << "to" << mount_point;
-            QProcess process;
-            process.start("mount", QStringList() << devPath << mount_point);
-            process.waitForFinished(-1);
+            QProcess procMount;
+            procMount.start("mount", QStringList() << devPath << mount_point);
+            procMount.waitForFinished(-1);
+
+            qDebug() << "mount" << procMount.exitCode() << procMount.readAllStandardOutput() << procMount.readAllStandardError();
         }
     }
 }

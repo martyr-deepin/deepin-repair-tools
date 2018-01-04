@@ -1,4 +1,5 @@
 #include "toolspage.h"
+#include "chrootbindguard.h"
 
 #include <QTimer>
 #include <QHBoxLayout>
@@ -16,6 +17,11 @@ const RunResult execAsChrootAynchronous(const QString &root, const QString &scri
                       << script
                       << args;
 
+    // bind
+    ChrootBindGuard _bind_guard(root);
+    Q_UNUSED(_bind_guard);
+
+    // run target script
     QProcess process;
     process.start("/bin/sh", QStringList() << chroot_hook_script << root << script << args);
     process.waitForFinished(-1);
