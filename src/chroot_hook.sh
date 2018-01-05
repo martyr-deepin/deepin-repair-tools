@@ -24,3 +24,4 @@ else
 fi
 
 rm $DIR/script.sh
+sync

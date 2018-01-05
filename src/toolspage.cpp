@@ -7,9 +7,13 @@
 #include <QDebug>
 #include <QApplication>
 #include <QProcess>
+#include <QThread>
 
 const RunResult execAsChrootAynchronous(const QString &root, const QString &script, const QStringList &args)
 {
+    // waitting for previus operate done
+    QThread::sleep(1);
+
     const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
 
     qInfo().noquote() << Q_FUNC_INFO

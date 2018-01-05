@@ -1,4 +1,4 @@
 #!/bin/sh
 
-apt -f install
+apt -f install --yes
 dpkg -a --configure
