@@ -15,6 +15,15 @@ class ScanningPage : public QWidget
 public:
     explicit ScanningPage(QWidget *parent = nullptr);
 
+public slots:
+    void startScan();
+
+signals:
+    void scanDone() const;
+
+private slots:
+    void onScanFinsihed();
+
 private:
     DSpinner *m_spinner;
     QLabel *m_icon;

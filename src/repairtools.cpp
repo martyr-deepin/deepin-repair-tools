@@ -16,11 +16,14 @@ RepairTools::RepairTools(QWidget *parent)
     auto *tbar = titlebar();
     tbar->setTitle(QString());
 
+    ScanningPage *sp = new ScanningPage;
+
     setFixedSize(700, 450);
     move(qApp->primaryScreen()->geometry().center() - rect().center());
-    setCentralWidget(new ScanningPage);
+    setCentralWidget(sp);
 
-    connect(m_diskUtils, &DiskUtils::scanFinished, this, &RepairTools::onDiskInitilized);
+    connect(m_diskUtils, &DiskUtils::scanFinished, sp, &ScanningPage::startScan);
+    connect(sp, &ScanningPage::scanDone, this, &RepairTools::onScanDone);
 
     m_diskUtils->initilize();
 }
@@ -38,7 +41,7 @@ void RepairTools::keyPressEvent(QKeyEvent *e)
     return QWidget::keyPressEvent(e);
 }
 
-void RepairTools::onDiskInitilized()
+void RepairTools::onScanDone()
 {
     delete centralWidget();
 
