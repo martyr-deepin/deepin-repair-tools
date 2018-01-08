@@ -39,7 +39,7 @@ void DPKGRepairWidget::onRepairClicked()
             thrd->appendRoot(info.mountPoint);
     }
 
-    connect(thrd, &DPKGRepairThread::finished, thrd, &DPKGRepairThread::deleteLater);
+    connect(thrd, &DPKGRepairThread::finished, thrd, &DPKGRepairThread::deleteLater, Qt::QueuedConnection);
     connect(thrd, &DPKGRepairThread::finished, this, &DPKGRepairWidget::onRepairFinished);
 
     thrd->start();

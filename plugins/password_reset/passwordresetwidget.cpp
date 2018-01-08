@@ -95,7 +95,7 @@ void PasswordResetWidget::resetUserPassword()
     thrd->setToolsProxy(m_toolsProxy);
     thrd->setTaskInfo(data.first, data.second, m_passwordEdit->text());
 
-    connect(thrd, &PasswordResetThread::finished, thrd, &PasswordResetThread::deleteLater);
+    connect(thrd, &PasswordResetThread::finished, thrd, &PasswordResetThread::deleteLater, Qt::QueuedConnection);
     connect(thrd, &PasswordResetThread::finished, this, &PasswordResetWidget::onResetPasswordFinished);
 
     thrd->start();

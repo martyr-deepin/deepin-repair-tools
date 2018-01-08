@@ -42,7 +42,7 @@ void PermissionsRepairWidget::onRepairButtonClicked()
     PermissionsRepairThread *thrd = new PermissionsRepairThread;
     thrd->setToolsProxy(m_toolsProxy);
 
-    connect(thrd, &PermissionsRepairThread::finished, thrd, &PermissionsRepairThread::deleteLater);
+    connect(thrd, &PermissionsRepairThread::finished, thrd, &PermissionsRepairThread::deleteLater, Qt::QueuedConnection);
     connect(thrd, &PermissionsRepairThread::finished, this, &PermissionsRepairWidget::onRepairFinished);
 
     thrd->start();

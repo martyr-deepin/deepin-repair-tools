@@ -54,7 +54,7 @@ void GrubRepairWidget::onRepairClicked()
     GrubRepairThread *thrd = new GrubRepairThread;
     thrd->setToolsProxy(m_toolsProxy);
 
-    connect(thrd, &GrubRepairThread::finished, thrd, &GrubRepairThread::deleteLater);
+    connect(thrd, &GrubRepairThread::finished, thrd, &GrubRepairThread::deleteLater, Qt::QueuedConnection);
     connect(thrd, &GrubRepairThread::finished, this, &GrubRepairWidget::onRepairFinished);
 
     thrd->start();
