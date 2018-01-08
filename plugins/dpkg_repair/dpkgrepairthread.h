@@ -17,6 +17,9 @@ public:
 
     void run();
 
+signals:
+    void outputPrinted(const QString &output);
+
 private:
     RepairToolsProxy *m_toolsProxy;
     QStringList m_rootList;
