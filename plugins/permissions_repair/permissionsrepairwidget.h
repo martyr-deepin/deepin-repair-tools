@@ -7,6 +7,10 @@
 #include <QPushButton>
 #include <QLabel>
 
+#include <DSpinner>
+
+DWIDGET_USE_NAMESPACE
+
 class PermissionsRepairWidget : public QWidget
 {
     Q_OBJECT
@@ -24,6 +28,9 @@ private slots:
 private:
     RepairToolsProxy *m_toolsProxy;
     QLabel *m_icon;
+    QLabel *m_tips;
+    QLabel *m_status;
+    DSpinner *m_spinner;
     QPushButton *m_okButton;
     QPushButton *m_repairButton;
 };

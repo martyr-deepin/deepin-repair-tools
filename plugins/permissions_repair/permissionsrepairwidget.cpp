@@ -3,19 +3,27 @@
 
 #include <QVBoxLayout>
 #include <QDebug>
+#include <QTimer>
 
 PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     : QWidget(parent)
 
     , m_icon(new QLabel)
+    , m_tips(new QLabel)
+    , m_status(new QLabel)
+    , m_spinner(new DSpinner)
     , m_okButton(new QPushButton)
     , m_repairButton(new QPushButton)
 {
     m_icon->setPixmap(QIcon(":/resources/repair_permission.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
+    m_tips->setAlignment(Qt::AlignHCenter);
+    m_tips->setText(tr("Permission error"));
+    m_status->setAlignment(Qt::AlignHCenter);
     m_repairButton->setText(tr("Permissions Repair"));
     m_okButton->setText(tr("Finish"));
     m_okButton->setVisible(false);
+    m_spinner->setFixedSize(32, 32);
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;
     btnsLayout->addStretch();
@@ -25,6 +33,12 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_icon);
+    centralLayout->addWidget(m_tips);
+    centralLayout->addStretch();
+    centralLayout->addWidget(m_spinner);
+    centralLayout->setAlignment(m_spinner, Qt::AlignHCenter);
+    centralLayout->addWidget(m_status);
+    centralLayout->addSpacing(5);
     centralLayout->addLayout(btnsLayout);
     centralLayout->setSpacing(0);
     centralLayout->setContentsMargins(0, 60, 0, 40);
@@ -33,10 +47,14 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
 
     connect(m_repairButton, &QPushButton::clicked, this, &PermissionsRepairWidget::onRepairButtonClicked);
     connect(m_okButton, &QPushButton::clicked, this, &PermissionsRepairWidget::resetUi);
+
+    QTimer::singleShot(1, this, &PermissionsRepairWidget::resetUi);
 }
 
 void PermissionsRepairWidget::onRepairButtonClicked()
 {
+    m_spinner->setVisible(true);
+    m_spinner->start();
     m_repairButton->setVisible(false);
 
     PermissionsRepairThread *thrd = new PermissionsRepairThread;
@@ -50,11 +68,18 @@ void PermissionsRepairWidget::onRepairButtonClicked()
 
 void PermissionsRepairWidget::onRepairFinished()
 {
+    m_status->setText(tr("Repair Finished"));
+    m_status->setStyleSheet("color: green;");
+    m_status->setVisible(true);
     m_okButton->setVisible(true);
+    m_spinner->stop();
+    m_spinner->setVisible(false);
 }
 
 void PermissionsRepairWidget::resetUi()
 {
+    m_status->setVisible(false);
     m_okButton->setVisible(false);
     m_repairButton->setVisible(true);
+    m_spinner->setVisible(false);
 }
