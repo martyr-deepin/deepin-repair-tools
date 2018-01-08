@@ -16,6 +16,9 @@ public:
 
     void run();
 
+signals:
+    void outputPrinted(const QString &output) const;
+
 private:
     QPair<QString, QString> primarySystemRoot();
 

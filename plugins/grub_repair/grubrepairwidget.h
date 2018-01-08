@@ -6,8 +6,10 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QLabel>
+#include <QTextEdit>
 
-#include <dloadingindicator.h>
+#include <DSpinner>
+#include <dlinkbutton.h>
 
 DWIDGET_USE_NAMESPACE
 
@@ -24,15 +26,21 @@ private slots:
     void onRepairClicked();
     void onRepairFinished();
     void resetUi();
+    void showDetail();
+    void hideDetail();
+    void appendOutput(const QString &output);
 
 private:
     RepairToolsProxy *m_toolsProxy;
     QLabel *m_icon;
     QLabel *m_centerTips;
     QLabel *m_statusTips;
+    DSpinner *m_spinner;
+    QTextEdit *m_output;
+    DLinkButton *m_showDetail;
+    DLinkButton *m_hideDetail;
     QPushButton *m_repairButton;
     QPushButton *m_okButton;
-    DLoadingIndicator *m_loadingIndicator;
 };
 
 #endif // GRUBREPAIRWIDGET_H

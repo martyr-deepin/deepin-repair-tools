@@ -35,7 +35,10 @@ void GrubRepairThread::run()
         }
 
         const auto &mountPath = primary_info.first;
-        m_toolsProxy->execAsChrootAynchronous(primary_info.second, sh, QStringList() << mountPath);
+        const auto &r = m_toolsProxy->execAsChrootAynchronous(primary_info.second, sh, QStringList() << mountPath);
+
+        emit outputPrinted(r.standardOutput);
+        emit outputPrinted(r.standardError);
 
     } while (false);
 }
