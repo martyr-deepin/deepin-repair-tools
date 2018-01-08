@@ -2,6 +2,7 @@
 #define DISKCLEANWIDGET_H
 
 #include "../../src/repairtoolsproxy.h"
+#include "diskcleanthread.h"
 
 #include <QWidget>
 #include <QPushButton>
@@ -24,8 +25,10 @@ private slots:
     void cleanEnd(const quint64 clearedSize);
 
 private:
+    QPointer<DiskCleanThread> m_worker;
     RepairToolsProxy *m_toolsProxy;
     QLabel *m_icon;
+    QLabel *m_tips;
     QPushButton *m_cleanButton;
     QPushButton *m_cancelButton;
     QPushButton *m_okButton;
