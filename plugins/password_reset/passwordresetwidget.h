@@ -38,8 +38,8 @@ private:
 private:
     RepairToolsProxy *m_toolsProxy;
     QLabel *m_icon;
-    QLabel *m_normalTips;
-    QLabel *m_successTips;
+    QLabel *m_tips;
+    QLabel *m_status;
     QPushButton *m_resetButton;
     QPushButton *m_confirmButton;
     QPushButton *m_okButton;
