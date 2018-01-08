@@ -63,8 +63,7 @@ void DiskCleanWidget::cleanStart()
     }
 
     connect(thrd, &DiskCleanThread::finished, thrd, &DiskCleanThread::deleteLater, Qt::QueuedConnection);
-    connect(thrd, &DiskCleanThread::finished, this, &DiskCleanWidget::cleanEnd);
-    connect(thrd, &DiskCleanThread::processInfo, this, [&](const QString &info) { qDebug() << info; });
+    connect(thrd, &DiskCleanThread::processDone, this, &DiskCleanWidget::cleanEnd);
 
     thrd->start();
 }
@@ -75,8 +74,13 @@ void DiskCleanWidget::cleanCancel()
     m_cleanButton->setVisible(true);
 }
 
-void DiskCleanWidget::cleanEnd()
+void DiskCleanWidget::cleanEnd(const quint64 clearedSize)
 {
     m_cancelButton->setVisible(false);
     m_okButton->setVisible(true);
+
+    const double sizeMb = double(clearedSize) / 1024 / 1024;
+    const QString sizeStr = QString("%1MB").arg(sizeMb, 0, 'f', 2);
+
+    qDebug() << sizeStr;
 }

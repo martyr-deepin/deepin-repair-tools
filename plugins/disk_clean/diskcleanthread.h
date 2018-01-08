@@ -18,10 +18,14 @@ public:
     void run();
 
 signals:
-    void finished() const;
+    void processDone(const quint64 cleared) const;
     void processInfo(const QString &info) const;
 
 private:
+    void recordClearedSize(const QString &log);
+
+private:
+    quint64 m_totalClearedSize;
     RepairToolsProxy *m_toolsProxy;
     QList<DiskInfo> m_diskList;
 };

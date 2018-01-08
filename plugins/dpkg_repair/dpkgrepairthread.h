@@ -17,9 +17,6 @@ public:
 
     void run();
 
-signals:
-    void finished();
-
 private:
     RepairToolsProxy *m_toolsProxy;
     QStringList m_rootList;

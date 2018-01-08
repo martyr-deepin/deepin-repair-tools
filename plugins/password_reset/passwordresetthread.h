@@ -18,9 +18,6 @@ public:
 
     void run();
 
-signals:
-    void finished() const;
-
 private:
     RepairToolsProxy *m_toolsProxy;
     QString m_root;

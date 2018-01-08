@@ -20,6 +20,4 @@ void DPKGRepairThread::run()
 
         m_toolsProxy->execAsChrootAynchronous(info.mountPoint, sh);
     }
-
-    emit finished();
 }

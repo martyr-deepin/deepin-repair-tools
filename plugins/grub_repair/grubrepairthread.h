@@ -16,9 +16,6 @@ public:
 
     void run();
 
-signals:
-    void finished();
-
 private:
     QPair<QString, QString> primarySystemRoot();
 

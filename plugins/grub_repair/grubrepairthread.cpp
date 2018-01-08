@@ -38,8 +38,6 @@ void GrubRepairThread::run()
         m_toolsProxy->execAsChrootAynchronous(primary_info.second, sh, QStringList() << mountPath);
 
     } while (false);
-
-    emit finished();
 }
 
 QPair<QString, QString> GrubRepairThread::primarySystemRoot()

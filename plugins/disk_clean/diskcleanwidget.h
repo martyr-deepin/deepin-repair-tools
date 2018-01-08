@@ -21,7 +21,7 @@ private slots:
     void reset();
     void cleanStart();
     void cleanCancel();
-    void cleanEnd();
+    void cleanEnd(const quint64 clearedSize);
 
 private:
     RepairToolsProxy *m_toolsProxy;

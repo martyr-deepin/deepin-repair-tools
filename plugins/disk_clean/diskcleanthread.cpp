@@ -4,9 +4,27 @@
 
 #include <QDebug>
 #include <QProcess>
+#include <QRegularExpression>
+
+unsigned long sizeUnit(const QString &unit)
+{
+    if (!unit.compare("b", Qt::CaseInsensitive))
+        return 1ul;
+    if (!unit.compare("k", Qt::CaseInsensitive))
+        return 1024ul;
+    if (!unit.compare("m", Qt::CaseInsensitive))
+        return 1024ul * 1024;
+    if (!unit.compare("g", Qt::CaseInsensitive))
+        return 1024ul * 1024 * 1024;
+
+    // t
+    return 1024ul * 1024 * 1024 * 1024;
+}
 
 DiskCleanThread::DiskCleanThread(QObject *parent)
     : QThread(parent)
+
+    , m_totalClearedSize(0)
 {
 
 }
@@ -23,9 +41,26 @@ void DiskCleanThread::run()
 
         const auto r = m_toolsProxy->execAsChrootAynchronous(p.mountPoint, sh);
 
+        for (const QString &line : r.standardOutput.split('\n'))
+            if (line.startsWith("DiskClean:"))
+                recordClearedSize(line);
+
         emit processInfo(r.standardOutput);
         emit processInfo(r.standardError);
     }
 
-    emit finished();
+    emit processDone(m_totalClearedSize);
+}
+
+void DiskCleanThread::recordClearedSize(const QString &log)
+{
+    QRegularExpression sizeExp("([\\.\\d]+)([kKbBmMgGtT])");
+    const auto match = sizeExp.match(log);
+    if (!match.isValid())
+        return;
+
+    const double nums = match.captured(1).toDouble();
+    const int mul = sizeUnit(match.captured(2));
+
+    m_totalClearedSize += nums * mul;
 }

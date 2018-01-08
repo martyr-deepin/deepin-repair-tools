@@ -21,6 +21,4 @@ void PermissionsRepairThread::run()
 
         m_toolsProxy->execAsChrootAynchronous(info.mountPoint, sh, users);
     }
-
-    emit finished();
 }
