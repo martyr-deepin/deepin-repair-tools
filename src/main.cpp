@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
     app.setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     DLogManager::registerConsoleAppender();
+    DLogManager::registerFileAppender();
 
     RepairTools tools;
     tools.show();
