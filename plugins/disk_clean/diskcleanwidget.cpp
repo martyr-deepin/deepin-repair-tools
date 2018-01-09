@@ -3,6 +3,7 @@
 #include <QPainter>
 #include <QHBoxLayout>
 #include <QDebug>
+#include <QApplication>
 
 DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     : QWidget(parent)
@@ -43,7 +44,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
 
     connect(m_cleanButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanStart);
     connect(m_cancelButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanCancel);
-    connect(m_okButton, &QPushButton::clicked, this, &DiskCleanWidget::reset);
+    connect(m_okButton, &QPushButton::clicked, qApp, &QApplication::quit);
 }
 
 void DiskCleanWidget::reset()

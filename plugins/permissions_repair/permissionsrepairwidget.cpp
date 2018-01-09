@@ -4,6 +4,7 @@
 #include <QVBoxLayout>
 #include <QDebug>
 #include <QTimer>
+#include <QApplication>
 
 PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     : QWidget(parent)
@@ -46,7 +47,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     setLayout(centralLayout);
 
     connect(m_repairButton, &QPushButton::clicked, this, &PermissionsRepairWidget::onRepairButtonClicked);
-    connect(m_okButton, &QPushButton::clicked, this, &PermissionsRepairWidget::resetUi);
+    connect(m_okButton, &QPushButton::clicked, qApp, &QApplication::quit);
 
     QTimer::singleShot(1, this, &PermissionsRepairWidget::resetUi);
 }
