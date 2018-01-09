@@ -16,9 +16,9 @@ ScanningPage::ScanningPage(QWidget *parent)
     m_spinner->setFixedSize(24, 24);
     m_spinner->start();
     m_icon->setPixmap(QIcon::fromTheme("drive-harddisk").pixmap(128, 128));
-    m_centerTips->setText(tr("Scanning..."));
+    m_centerTips->setText(tr("Checking hard disk status, please wait..."));
     m_centerTips->setAlignment(Qt::AlignCenter);
-    m_bottomTips->setText(tr("Broken..."));
+    m_bottomTips->setText(tr("Hard disk error, please repair"));
     m_bottomTips->setAlignment(Qt::AlignCenter);
     m_bottomTips->setVisible(false);
 

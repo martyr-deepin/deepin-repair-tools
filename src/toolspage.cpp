@@ -138,6 +138,9 @@ void ToolsPage::refreshNavBar()
         connect(b, &QPushButton::clicked, this, [=] { onNavButtonClicked(i); });
     }
     m_navigationLayout->addStretch();
+
+    // FIXME: select first page for default
+    m_navButtonsGroup->buttons().first()->click();
 }
 
 void ToolsPage::onNavButtonClicked(const int index)

@@ -18,7 +18,7 @@ public:
 
     void init(RepairToolsProxy *toolsProxy);
     QWidget *centralWidget() { return m_centralWidget.data(); }
-    const QString name() const { return tr("Grub Repair"); }
+    const QString name() const { return tr("Boot repair"); }
 
 private:
     QPointer<GrubRepairWidget> m_centralWidget;

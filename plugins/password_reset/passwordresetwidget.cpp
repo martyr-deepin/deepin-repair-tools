@@ -22,9 +22,9 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     m_icon->setAlignment(Qt::AlignHCenter);
     m_tips->setAlignment(Qt::AlignHCenter);
     m_status->setAlignment(Qt::AlignHCenter);
-    m_resetButton->setText(tr("Password Reset"));
+    m_resetButton->setText(tr("Reset password"));
     m_confirmButton->setText(tr("Confirm"));
-    m_okButton->setText(tr("OK"));
+    m_okButton->setText(tr("Finish"));
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;
     btnsLayout->addWidget(m_resetButton);
@@ -64,7 +64,7 @@ void PasswordResetWidget::onResetClicked()
     m_resetButton->setVisible(false);
     m_confirmButton->setVisible(true);
 
-    m_tips->setText(tr("Reset password"));
+    m_tips->setText(tr("Enter the new password twice, and keep the passwords consistent"));
 
     m_userChooseBox->setVisible(true);
     m_passwordEdit->setVisible(true);

@@ -19,7 +19,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     m_cleanButton->setText(tr("Clean"));
     m_cancelButton->setText(tr("Cancel"));
     m_cancelButton->setVisible(false);
-    m_okButton->setText(tr("OK"));
+    m_okButton->setText(tr("Finish"));
     m_okButton->setVisible(false);
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;

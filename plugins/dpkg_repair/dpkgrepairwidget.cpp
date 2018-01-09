@@ -24,8 +24,8 @@ DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
 
     m_tips->setAlignment(Qt::AlignCenter);
     m_result->setAlignment(Qt::AlignCenter);
-    m_showDetail->setText(tr("Show Detail"));
-    m_hideDetail->setText(tr("Hide Detail"));
+    m_showDetail->setText(tr("Show detailed progress"));
+    m_hideDetail->setText(tr("Hide detailed progress"));
     m_spinner->setFixedSize(24, 24);
     m_icon->setPixmap(QIcon(":/resources/repair_dpkg.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);

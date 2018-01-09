@@ -68,7 +68,7 @@ void PermissionsRepairWidget::onRepairButtonClicked()
 
 void PermissionsRepairWidget::onRepairFinished()
 {
-    m_status->setText(tr("Repair Finished"));
+    m_status->setText(tr("Reset permission success"));
     m_status->setStyleSheet("color: green;");
     m_status->setVisible(true);
     m_okButton->setVisible(true);

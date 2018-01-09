@@ -18,7 +18,7 @@ public:
 
     void init(RepairToolsProxy *toolsProxy);
     QWidget *centralWidget() { return m_centralWidget.data(); }
-    const QString name() const { return tr("Permissions Repair"); }
+    const QString name() const { return tr("Permission error"); }
 
 private:
     QPointer<PermissionsRepairWidget> m_centralWidget;
