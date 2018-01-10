@@ -53,6 +53,10 @@ install(TARGETS ${BIN_NAME} DESTINATION sbin)
 # desktop
 install(FILES deepin-repair-tools.desktop DESTINATION share/applications)
 
+# icon
+install(FILES deepin-repair-tools.svg
+        DESTINATION share/icons/hicolor/scalable/apps)
+
 # scripts
 file(GLOB SCRIPTS "src/*.sh")
 install(FILES ${SCRIPTS} DESTINATION lib/deepin-repair-tools)
