@@ -67,9 +67,11 @@ void PasswordResetWidget::onResetClicked()
 
     m_tips->setText(tr("Enter the new password twice, and keep the passwords consistent"));
 
-    m_userChooseBox->setVisible(true);
     m_passwordEdit->setVisible(true);
     m_passwordRepeat->setVisible(true);
+
+    if (m_userChooseBox->count() > 1)
+        m_userChooseBox->setVisible(true);
 }
 
 void PasswordResetWidget::onPasswdSubmitted()
