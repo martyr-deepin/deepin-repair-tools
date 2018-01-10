@@ -82,6 +82,7 @@ void DPKGRepairWidget::reset()
     m_spinner->setVisible(false);
     m_okButton->setVisible(false);
     m_repairButton->setVisible(true);
+    m_icon->setVisible(true);
 }
 
 void DPKGRepairWidget::onRepairClicked()

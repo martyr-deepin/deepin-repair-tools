@@ -102,6 +102,7 @@ void GrubRepairWidget::resetUi()
     m_showDetail->setVisible(false);
     m_hideDetail->setVisible(false);
     m_spinner->setVisible(false);
+    m_icon->setVisible(true);
 }
 
 void GrubRepairWidget::showDetail()
