@@ -15,6 +15,7 @@ RepairTools::RepairTools(QWidget *parent)
 {
     auto *tbar = titlebar();
     tbar->setTitle(QString());
+    QMetaObject::invokeMethod(tbar, "setIcon", Q_ARG(const QPixmap, QIcon::fromTheme("deepin-repair-tools").pixmap(24, 24)));
 
     ScanningPage *sp = new ScanningPage;
 
