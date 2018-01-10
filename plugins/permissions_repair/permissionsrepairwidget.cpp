@@ -52,6 +52,13 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     QTimer::singleShot(1, this, &PermissionsRepairWidget::resetUi);
 }
 
+void PermissionsRepairWidget::showEvent(QShowEvent *e)
+{
+    QWidget::showEvent(e);
+
+    m_repairButton->setFocus();
+}
+
 void PermissionsRepairWidget::onRepairButtonClicked()
 {
     m_spinner->setVisible(true);

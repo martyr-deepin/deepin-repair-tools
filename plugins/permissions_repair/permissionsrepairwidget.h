@@ -20,6 +20,9 @@ public:
 
     void setToolsRroxy(RepairToolsProxy *toolsProxy) { m_toolsProxy = toolsProxy; }
 
+protected:
+    void showEvent(QShowEvent *e);
+
 private slots:
     void onRepairButtonClicked();
     void onRepairFinished();

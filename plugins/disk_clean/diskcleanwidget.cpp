@@ -47,6 +47,13 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     connect(m_okButton, &QPushButton::clicked, this, &DiskCleanWidget::reset);
 }
 
+void DiskCleanWidget::showEvent(QShowEvent *e)
+{
+    QWidget::showEvent(e);
+
+    m_cleanButton->setFocus();
+}
+
 void DiskCleanWidget::reset()
 {
     m_tips->clear();
