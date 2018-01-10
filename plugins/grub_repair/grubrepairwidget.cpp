@@ -85,7 +85,7 @@ void GrubRepairWidget::onRepairClicked()
     thrd->setToolsProxy(m_toolsProxy);
 
     connect(thrd, &GrubRepairThread::finished, thrd, &GrubRepairThread::deleteLater, Qt::QueuedConnection);
-    connect(thrd, &GrubRepairThread::finished, this, &GrubRepairWidget::onRepairFinished);
+    connect(thrd, &GrubRepairThread::commandFinished, this, &GrubRepairWidget::onRepairFinished);
     connect(thrd, &GrubRepairThread::outputPrinted, this, &GrubRepairWidget::appendOutput);
 
     thrd->start();
@@ -128,12 +128,19 @@ void GrubRepairWidget::appendOutput(const QString &output)
     m_output->append(output);
 }
 
-void GrubRepairWidget::onRepairFinished()
+void GrubRepairWidget::onRepairFinished(const bool success)
 {
+    if (success)
+    {
+        m_statusTips->setStyleSheet("color: green;");
+        m_statusTips->setText(tr("Repair succeeded"));
+    } else {
+        m_statusTips->setStyleSheet("color: #ec7b3d;");
+        m_statusTips->setText(tr("Repair failed"));
+    }
+
     m_spinner->stop();
     m_spinner->setVisible(false);
-    m_statusTips->setStyleSheet("color: green;");
-    m_statusTips->setText(tr("Repair succeeded"));
     m_statusTips->setVisible(true);
     m_okButton->setVisible(true);
 }

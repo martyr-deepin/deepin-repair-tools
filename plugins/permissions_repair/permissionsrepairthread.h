@@ -16,6 +16,9 @@ public:
 
     void run();
 
+signals:
+    void commandFinished(const bool success) const;
+
 private:
     RepairToolsProxy *m_toolsProxy;
 };

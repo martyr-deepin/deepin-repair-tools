@@ -69,15 +69,22 @@ void PermissionsRepairWidget::onRepairButtonClicked()
     thrd->setToolsProxy(m_toolsProxy);
 
     connect(thrd, &PermissionsRepairThread::finished, thrd, &PermissionsRepairThread::deleteLater, Qt::QueuedConnection);
-    connect(thrd, &PermissionsRepairThread::finished, this, &PermissionsRepairWidget::onRepairFinished);
+    connect(thrd, &PermissionsRepairThread::commandFinished, this, &PermissionsRepairWidget::onRepairFinished);
 
     thrd->start();
 }
 
-void PermissionsRepairWidget::onRepairFinished()
+void PermissionsRepairWidget::onRepairFinished(const bool success)
 {
-    m_status->setText(tr("Reset privilege successfully"));
-    m_status->setStyleSheet("color: green;");
+    if (success)
+    {
+        m_status->setText(tr("Reset privilege successfully"));
+        m_status->setStyleSheet("color: green;");
+    } else {
+        m_status->setText(tr("Reset privilege failed"));
+        m_status->setStyleSheet("color: #ec7b3d;");
+    }
+
     m_status->setVisible(true);
     m_okButton->setVisible(true);
     m_spinner->stop();

@@ -27,7 +27,7 @@ protected:
 
 private slots:
     void onRepairClicked();
-    void onRepairFinished();
+    void onRepairFinished(const bool success);
     void resetUi();
     void showDetail();
     void hideDetail();

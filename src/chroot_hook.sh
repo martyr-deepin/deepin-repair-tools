@@ -23,5 +23,9 @@ else
     chroot $DIR ./script.sh "$@"
 fi
 
+R=$?
+
 rm $DIR/script.sh
 sync
+
+exit $R

@@ -27,6 +27,8 @@ void GrubRepairThread::run()
     const auto &primary_info = primarySystemRoot();
     const QString sh = "/usr/lib/deepin-repair-tools/plugins/grub-repair/grub-repair.sh";
 
+    bool failed = false;
+
     do {
         if (primary_info.first.isEmpty() || primary_info.second.isEmpty())
         {
@@ -37,9 +39,14 @@ void GrubRepairThread::run()
         const auto &mountPath = primary_info.first;
         const auto &r = m_toolsProxy->execAsChrootAynchronous(primary_info.second, sh, QStringList() << mountPath);
 
+        failed |= r.exitCode;
+
         emit outputPrinted(r.standardOutput);
+        emit outputPrinted(r.standardError);
 
     } while (false);
+
+    emit commandFinished(!failed);
 }
 
 QPair<QString, QString> GrubRepairThread::primarySystemRoot()

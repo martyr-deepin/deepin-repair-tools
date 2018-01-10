@@ -1,5 +1,7 @@
 #include "permissionsrepairthread.h"
 
+#include <QDebug>
+
 PermissionsRepairThread::PermissionsRepairThread(QObject *parent)
     : QThread(parent)
 {
@@ -10,6 +12,8 @@ void PermissionsRepairThread::run()
 {
     const QString sh = "/usr/lib/deepin-repair-tools/plugins/permissions-repair/permissions-repair.sh";
 
+    bool failed = false;
+
     for (const auto &info : m_toolsProxy->diskInfos())
     {
         if (!info.osName.contains("deepin", Qt::CaseInsensitive))
@@ -19,6 +23,10 @@ void PermissionsRepairThread::run()
         for (const auto user : info.userList)
             users << user.name;
 
-        m_toolsProxy->execAsChrootAynchronous(info.mountPoint, sh, users);
+        const auto &r = m_toolsProxy->execAsChrootAynchronous(info.mountPoint, sh, users);
+
+        failed |= r.exitCode;
     }
+
+    emit commandFinished(!failed);
 }

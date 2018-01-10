@@ -17,6 +17,7 @@ public:
     void run();
 
 signals:
+    void commandFinished(const bool success) const;
     void outputPrinted(const QString &output) const;
 
 private:
