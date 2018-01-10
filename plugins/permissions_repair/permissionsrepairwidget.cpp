@@ -47,7 +47,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     setLayout(centralLayout);
 
     connect(m_repairButton, &QPushButton::clicked, this, &PermissionsRepairWidget::onRepairButtonClicked);
-    connect(m_okButton, &QPushButton::clicked, qApp, &QApplication::quit);
+    connect(m_okButton, &QPushButton::clicked, this, &PermissionsRepairWidget::resetUi);
 
     QTimer::singleShot(1, this, &PermissionsRepairWidget::resetUi);
 }

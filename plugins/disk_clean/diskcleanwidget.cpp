@@ -44,7 +44,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
 
     connect(m_cleanButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanStart);
     connect(m_cancelButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanCancel);
-    connect(m_okButton, &QPushButton::clicked, qApp, &QApplication::quit);
+    connect(m_okButton, &QPushButton::clicked, this, &DiskCleanWidget::reset);
 }
 
 void DiskCleanWidget::reset()

@@ -54,7 +54,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
 
     connect(m_resetButton, &QPushButton::clicked, this, &PasswordResetWidget::onResetClicked);
     connect(m_confirmButton, &QPushButton::clicked, this, &PasswordResetWidget::onPasswdSubmitted);
-    connect(m_okButton, &QPushButton::clicked, qApp, &QApplication::quit);
+    connect(m_okButton, &QPushButton::clicked, this, &PasswordResetWidget::resetUI);
 
     QTimer::singleShot(1, this, &PasswordResetWidget::initUserInfo);
     QTimer::singleShot(1, this, &PasswordResetWidget::resetUI);

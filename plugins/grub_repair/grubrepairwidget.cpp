@@ -60,7 +60,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     setLayout(centralLayout);
 
     connect(m_repairButton, &QPushButton::clicked, this, &GrubRepairWidget::onRepairClicked);
-    connect(m_okButton, &QPushButton::clicked, qApp, &QApplication::quit);
+    connect(m_okButton, &QPushButton::clicked, this, &GrubRepairWidget::resetUi);
     connect(m_showDetail, &QPushButton::clicked, this, &GrubRepairWidget::showDetail);
     connect(m_hideDetail, &QPushButton::clicked, this, &GrubRepairWidget::hideDetail);
 
@@ -87,6 +87,7 @@ void GrubRepairWidget::onRepairClicked()
 void GrubRepairWidget::resetUi()
 {
     m_output->setVisible(false);
+    m_output->clear();
     m_showDetail->setVisible(false);
     m_okButton->setVisible(false);
     m_statusTips->setVisible(false);

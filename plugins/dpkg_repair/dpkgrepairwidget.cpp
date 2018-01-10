@@ -56,7 +56,7 @@ DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
     setLayout(centralLayout);
 
     connect(m_repairButton, &QPushButton::clicked, this, &DPKGRepairWidget::onRepairClicked);
-    connect(m_okButton, &QPushButton::clicked, qApp, &QApplication::quit);
+    connect(m_okButton, &QPushButton::clicked, this, &DPKGRepairWidget::reset);
     connect(m_showDetail, &QPushButton::clicked, this, &DPKGRepairWidget::showDetail);
     connect(m_hideDetail, &QPushButton::clicked, this, &DPKGRepairWidget::hideDetail);
 
@@ -69,6 +69,7 @@ void DPKGRepairWidget::reset()
     m_tips->setVisible(true);
     m_result->setVisible(false);
     m_output->setVisible(false);
+    m_output->clear();
     m_showDetail->setVisible(false);
     m_hideDetail->setVisible(false);
     m_spinner->setVisible(false);
