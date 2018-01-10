@@ -13,7 +13,7 @@ void FSCheckThread::run()
 {
     const QString sh = "/usr/lib/deepin-repair-tools/fsck.sh";
 
-    const auto r = execAsChrootAynchronous("/", sh, QStringList());
+    const auto r = execAsChrootSynchronous("/", sh, QStringList());
 
     qDebug() << r.standardOutput << r.standardError;
 }

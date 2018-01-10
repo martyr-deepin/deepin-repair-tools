@@ -23,7 +23,7 @@ void PermissionsRepairThread::run()
         for (const auto user : info.userList)
             users << user.name;
 
-        const auto &r = m_toolsProxy->execAsChrootAynchronous(info.mountPoint, sh, users);
+        const auto &r = m_toolsProxy->execAsChrootSynchronous(info.mountPoint, sh, users);
 
         failed |= r.exitCode;
     }

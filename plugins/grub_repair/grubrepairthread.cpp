@@ -37,13 +37,16 @@ void GrubRepairThread::run()
         }
 
         const auto &mountPath = primary_info.first;
-        const auto &r = m_toolsProxy->execAsChrootAynchronous(primary_info.second, sh, QStringList() << mountPath);
+        QProcess &process = *m_toolsProxy->execAsChrootAsynchronous(primary_info.second, sh, QStringList() << mountPath);
 
-        failed |= r.exitCode;
+        connect(&process, &QProcess::readyReadStandardError, this, [&] { emit outputPrinted(process.readAllStandardError()); });
+        connect(&process, &QProcess::readyReadStandardOutput, this, [&] { emit outputPrinted(process.readAllStandardOutput()); });
 
-        emit outputPrinted(r.standardOutput);
-        emit outputPrinted(r.standardError);
+        process.start();
+        process.waitForFinished(-1);
+        process.deleteLater();
 
+        failed |= process.exitCode();
     } while (false);
 
     emit commandFinished(!failed);

@@ -1,5 +1,6 @@
 #include "toolspage.h"
 #include "chrootbindguard.h"
+#include "chrootprocess.h"
 
 #include <QTimer>
 #include <QHBoxLayout>
@@ -9,25 +10,12 @@
 #include <QProcess>
 #include <QThread>
 
-const RunResult execAsChrootAynchronous(const QString &root, const QString &script, const QStringList &args)
+const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
+
+const RunResult execAsChrootSynchronous(const QString &root, const QString &script, const QStringList &args)
 {
-    // waitting for previus operate done
-    QThread::sleep(1);
-
-    const QString chroot_hook_script = "/usr/lib/deepin-repair-tools/chroot_hook.sh";
-
-    qInfo().noquote() << Q_FUNC_INFO
-                      << root
-                      << script
-                      << args;
-
-    // bind
-    ChrootBindGuard _bind_guard(root);
-    Q_UNUSED(_bind_guard);
-
-    // run target script
-    QProcess process;
-    process.start("/bin/sh", QStringList() << chroot_hook_script << root << script << args);
+    QProcess &process = *execAsChrootAsynchronous(root, script, args);
+    process.start();
     process.waitForFinished(-1);
 
     const RunResult r { process.exitCode(), process.readAllStandardOutput(), process.readAllStandardError() };
@@ -37,7 +25,23 @@ const RunResult execAsChrootAynchronous(const QString &root, const QString &scri
                       << "output =" << r.standardOutput
                       << "error =" << r.standardError;
 
+    process.deleteLater();
+
     return r;
+}
+
+QProcess* execAsChrootAsynchronous(const QString &root, const QString &script, const QStringList &args)
+{
+    qInfo().noquote() << Q_FUNC_INFO
+                      << root
+                      << script
+                      << args;
+
+    ChrootProcess *process = new ChrootProcess(root);
+    process->setProgram("/bin/sh");
+    process->setArguments(QStringList() << chroot_hook_script << root << script << args);
+
+    return process;
 }
 
 ToolsPage::ToolsPage(QWidget *parent)

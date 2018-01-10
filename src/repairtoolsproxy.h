@@ -3,6 +3,8 @@
 
 #include <QList>
 
+class QProcess;
+
 class UserInfo
 {
 public:
@@ -34,7 +36,8 @@ public:
     virtual ~RepairToolsProxy() {}
 
     virtual const QList<DiskInfo> diskInfos() const = 0;
-    virtual const RunResult execAsChrootAynchronous(const QString &root, const QString &script, const QStringList &args = QStringList()) const = 0;
+    virtual const RunResult execAsChrootSynchronous(const QString &root, const QString &script, const QStringList &args = QStringList()) const = 0;
+    virtual QProcess* execAsChrootAsynchronous(const QString &root, const QString &script, const QStringList &args = QStringList()) const = 0;
 };
 
 #endif // REPAIRTOOLSPROXY_H

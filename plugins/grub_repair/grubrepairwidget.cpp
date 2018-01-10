@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <QApplication>
+#include <QProcess>
 
 GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     : QWidget(parent)

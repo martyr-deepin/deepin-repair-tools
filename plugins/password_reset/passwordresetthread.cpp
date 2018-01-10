@@ -14,5 +14,5 @@ void PasswordResetThread::run()
 
     qDebug() << Q_FUNC_INFO << m_root << m_user << m_pwd;
 
-    m_toolsProxy->execAsChrootAynchronous(m_root, sh, QStringList() << m_user << m_pwd);
+    m_toolsProxy->execAsChrootSynchronous(m_root, sh, QStringList() << m_user << m_pwd);
 }

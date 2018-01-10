@@ -18,7 +18,7 @@ void DPKGRepairThread::run()
         if (!info.osName.contains("deepin", Qt::CaseInsensitive))
             continue;
 
-        const auto &r = m_toolsProxy->execAsChrootAynchronous(info.mountPoint, sh);
+        const auto &r = m_toolsProxy->execAsChrootSynchronous(info.mountPoint, sh);
 
         emit outputPrinted(r.standardOutput);
     }

@@ -39,7 +39,7 @@ void DiskCleanThread::run()
             continue;
         qDebug() << "cleaning:" << p.diskPath << p.mountPoint << p.osName;
 
-        const auto r = m_toolsProxy->execAsChrootAynchronous(p.mountPoint, sh);
+        const auto r = m_toolsProxy->execAsChrootSynchronous(p.mountPoint, sh);
 
         for (const QString &line : r.standardOutput.split('\n'))
             if (line.startsWith("DiskClean:"))

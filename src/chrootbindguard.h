@@ -3,6 +3,7 @@
 
 #include <QStringList>
 
+// NOTE(sbw): using as RAII to ensure fs-bind is exception-safe.
 class ChrootBindGuard
 {
 public:
