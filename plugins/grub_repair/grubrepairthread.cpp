@@ -38,7 +38,6 @@ void GrubRepairThread::run()
         const auto &r = m_toolsProxy->execAsChrootAynchronous(primary_info.second, sh, QStringList() << mountPath);
 
         emit outputPrinted(r.standardOutput);
-        emit outputPrinted(r.standardError);
 
     } while (false);
 }

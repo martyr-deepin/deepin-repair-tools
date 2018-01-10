@@ -21,6 +21,5 @@ void DPKGRepairThread::run()
         const auto &r = m_toolsProxy->execAsChrootAynchronous(info.mountPoint, sh);
 
         emit outputPrinted(r.standardOutput);
-        emit outputPrinted(r.standardError);
     }
 }
