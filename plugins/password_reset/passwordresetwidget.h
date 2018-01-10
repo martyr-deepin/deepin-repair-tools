@@ -30,12 +30,6 @@ private slots:
     void onResetPasswordFinished();
 
 private:
-    inline void onPasswordEmpty() { showErrorTips(m_passwordEdit, tr("Password can't be empty")); }
-    inline void onPasswordRepeatEmpty() { showErrorTips(m_passwordRepeat, tr("Password can't be empty")); }
-    inline void onPasswordNotMatch() { showErrorTips(m_passwordRepeat, tr("Password not match")); }
-    inline void showErrorTips(DLineEdit * const edit, const QString &text) { edit->showAlertMessage(text); }
-
-private:
     RepairToolsProxy *m_toolsProxy;
     QLabel *m_icon;
     QLabel *m_tips;

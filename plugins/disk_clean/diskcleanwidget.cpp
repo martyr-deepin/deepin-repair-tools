@@ -57,7 +57,7 @@ void DiskCleanWidget::reset()
 
 void DiskCleanWidget::cleanStart()
 {
-    m_tips->setText(tr("Cleaning"));
+    m_tips->setText(tr("Cleaning %1"));
     m_tips->setStyleSheet("QLabel { color: black;} ");
     m_cleanButton->setVisible(false);
     m_cancelButton->setVisible(true);

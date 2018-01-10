@@ -19,9 +19,9 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     m_icon->setPixmap(QIcon(":/resources/repair_permission.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
     m_tips->setAlignment(Qt::AlignHCenter);
-    m_tips->setText(tr("Permission error"));
+    m_tips->setText(tr("Privilege error"));
     m_status->setAlignment(Qt::AlignHCenter);
-    m_repairButton->setText(tr("Permissions Repair"));
+    m_repairButton->setText(tr("Repair"));
     m_okButton->setText(tr("Finish"));
     m_okButton->setVisible(false);
     m_spinner->setFixedSize(32, 32);
@@ -69,7 +69,7 @@ void PermissionsRepairWidget::onRepairButtonClicked()
 
 void PermissionsRepairWidget::onRepairFinished()
 {
-    m_status->setText(tr("Reset permission success"));
+    m_status->setText(tr("Reset privilege successfully"));
     m_status->setStyleSheet("color: green;");
     m_status->setVisible(true);
     m_okButton->setVisible(true);

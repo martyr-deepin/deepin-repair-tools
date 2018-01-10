@@ -23,8 +23,8 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
                             "color: #1077d7;"
                             "}");
 
-    m_showDetail->setText(tr("Show Detail"));
-    m_hideDetail->setText(tr("Hide Detail"));
+    m_showDetail->setText(tr("Show details"));
+    m_hideDetail->setText(tr("Hide details"));
     m_icon->setPixmap(QIcon(":/resources/repair_grub.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
     m_repairButton->setText(tr("Repair"));
@@ -125,7 +125,7 @@ void GrubRepairWidget::onRepairFinished()
     m_spinner->stop();
     m_spinner->setVisible(false);
     m_statusTips->setStyleSheet("color: green;");
-    m_statusTips->setText(tr("Repair success"));
+    m_statusTips->setText(tr("Repair succeeded"));
     m_statusTips->setVisible(true);
     m_okButton->setVisible(true);
 }

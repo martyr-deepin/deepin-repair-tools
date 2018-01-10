@@ -25,13 +25,13 @@ DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
 
     m_tips->setAlignment(Qt::AlignCenter);
     m_result->setAlignment(Qt::AlignCenter);
-    m_showDetail->setText(tr("Show detailed progress"));
-    m_hideDetail->setText(tr("Hide detailed progress"));
+    m_showDetail->setText(tr("Show details"));
+    m_hideDetail->setText(tr("Hide details"));
     m_spinner->setFixedSize(24, 24);
     m_icon->setPixmap(QIcon(":/resources/repair_dpkg.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
     m_repairButton->setText(tr("Repair"));
-    m_okButton->setText(tr("OK"));
+    m_okButton->setText(tr("Finish"));
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;
     btnsLayout->addStretch();
@@ -103,7 +103,7 @@ void DPKGRepairWidget::onRepairClicked()
 void DPKGRepairWidget::onRepairFinished()
 {
     m_result->setStyleSheet("color: green;");
-    m_result->setText(tr("Repair success"));
+    m_result->setText(tr("Repair succeeded"));
     m_result->setVisible(true);
     m_okButton->setVisible(true);
     m_spinner->stop();
