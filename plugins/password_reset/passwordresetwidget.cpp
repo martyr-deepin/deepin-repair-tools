@@ -26,6 +26,8 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     m_resetButton->setText(tr("Reset password"));
     m_confirmButton->setText(tr("Confirm"));
     m_okButton->setText(tr("Finish"));
+    m_passwordEdit->setPlaceholderText(tr("Password"));
+    m_passwordRepeat->setPlaceholderText(tr("Confirm password"));
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;
     btnsLayout->addWidget(m_resetButton);
@@ -65,8 +67,6 @@ void PasswordResetWidget::onResetClicked()
     m_resetButton->setVisible(false);
     m_confirmButton->setVisible(true);
 
-    m_tips->setText(tr("Enter the new password twice, and keep the passwords consistent"));
-
     m_passwordEdit->setVisible(true);
     m_passwordRepeat->setVisible(true);
 
@@ -78,14 +78,14 @@ void PasswordResetWidget::onPasswdSubmitted()
 {
     const QString &pwd1 = m_passwordEdit->text();
     if (pwd1.isEmpty())
-        return onPasswordEmpty();
+        return;
 
     const QString &pwd2 = m_passwordRepeat->text();
     if (pwd2.isEmpty())
-        return onPasswordRepeatEmpty();
+        return;
 
     if (pwd1 != pwd2)
-        return onPasswordNotMatch();
+        return m_passwordRepeat->showAlertMessage(tr("The two passwords don't match"));
 
     m_confirmButton->setVisible(false);
     m_okButton->setVisible(false);
@@ -116,7 +116,7 @@ void PasswordResetWidget::onResetPasswordFinished()
 {
     m_okButton->setVisible(true);
     m_status->setVisible(true);
-    m_status->setText(tr("Reset password success"));
+    m_status->setText(tr("Reset password successfully"));
     m_status->setStyleSheet("color: green;");
 }
 
@@ -142,7 +142,7 @@ void PasswordResetWidget::resetUI()
     m_passwordEdit->clear();
     m_passwordRepeat->clear();
 
-    m_tips->setText(tr("Forgot login password"));
+    m_tips->setText(tr("Forgot password"));
     m_tips->setVisible(true);
     m_status->setVisible(false);
     m_resetButton->setVisible(true);

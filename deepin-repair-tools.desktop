@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Deepin Repair Tools
-GenericName=Deepin Repair Tools
-Comment=Deepin Repair Tools
+Name=Deepin Repair
+GenericName=Deepin Repair
+Comment=Deepin Repair
 Exec=/usr/bin/deepin-repair-tools-pkexec %u
 Icon=deepin-repair-tools
 Terminal=false
