@@ -63,6 +63,13 @@ DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
     QTimer::singleShot(1, this, &DPKGRepairWidget::reset);
 }
 
+void DPKGRepairWidget::showEvent(QShowEvent *e)
+{
+    QWidget::showEvent(e);
+
+    m_repairButton->setFocus();
+}
+
 void DPKGRepairWidget::reset()
 {
     m_tips->setText(tr("Unexpected interruption when install/upgrade"));

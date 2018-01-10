@@ -62,6 +62,13 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     QTimer::singleShot(1, this, &PasswordResetWidget::resetUI);
 }
 
+void PasswordResetWidget::showEvent(QShowEvent *e)
+{
+    QWidget::showEvent(e);
+
+    m_resetButton->setFocus();
+}
+
 void PasswordResetWidget::onResetClicked()
 {
     m_resetButton->setVisible(false);

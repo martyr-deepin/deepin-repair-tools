@@ -18,6 +18,9 @@ public:
 
     void setToolsProxy(RepairToolsProxy *proxy) { m_toolsProxy = proxy; }
 
+protected:
+    void showEvent(QShowEvent *e);
+
 private slots:
     void reset();
     void cleanStart();

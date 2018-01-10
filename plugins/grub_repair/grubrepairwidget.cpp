@@ -67,6 +67,13 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     QTimer::singleShot(1, this, &GrubRepairWidget::resetUi);
 }
 
+void GrubRepairWidget::showEvent(QShowEvent *e)
+{
+    QWidget::showEvent(e);
+
+    m_repairButton->setFocus();
+}
+
 void GrubRepairWidget::onRepairClicked()
 {
     m_repairButton->setVisible(false);
