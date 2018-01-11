@@ -3,7 +3,7 @@ host = https://www.transifex.com
 minimum_perc = 80
 mode = developer
 
-[deepin-repair.deepin-repair-tools]
+[deepin-repair.deepin-repair-toolsts]
 file_filter = translations/deepin-repair-tools_<lang>.ts
 source_file = translations/deepin-repair-tools.ts
 source_lang = en
