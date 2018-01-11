@@ -28,9 +28,11 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     m_hideDetail->setText(tr("Hide details"));
     m_icon->setPixmap(QIcon(":/resources/repair_grub.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
+    m_icon->setObjectName("PluginIcon");
     m_repairButton->setText(tr("Repair"));
     m_centerTips->setText(tr("Cannot find boot menu"));
     m_centerTips->setAlignment(Qt::AlignHCenter);
+    m_centerTips->setObjectName("TipsLabel");
     m_statusTips->setAlignment(Qt::AlignHCenter);
     m_okButton->setText(tr("Finish"));
     m_spinner->setFixedSize(32, 32);
@@ -44,6 +46,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_output);
     centralLayout->addWidget(m_icon);
+    centralLayout->addSpacing(10);
     centralLayout->addWidget(m_centerTips);
     centralLayout->addWidget(m_showDetail);
     centralLayout->setAlignment(m_showDetail, Qt::AlignHCenter);
@@ -56,7 +59,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     centralLayout->addWidget(m_spinner);
     centralLayout->setAlignment(m_spinner, Qt::AlignHCenter);
     centralLayout->setSpacing(0);
-    centralLayout->setContentsMargins(0, 60, 0, 40);
+    centralLayout->setContentsMargins(0, 0, 0, 0);
 
     setLayout(centralLayout);
 
@@ -136,7 +139,7 @@ void GrubRepairWidget::onRepairFinished(const bool success)
         m_statusTips->setStyleSheet("color: green;");
         m_statusTips->setText(tr("Repair succeeded"));
     } else {
-        m_statusTips->setStyleSheet("color: #ec7b3d;");
+        m_statusTips->setStyleSheet("color: #f3a21d;");
         m_statusTips->setText(tr("Repair failed"));
     }
 

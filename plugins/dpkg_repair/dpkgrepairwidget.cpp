@@ -20,16 +20,20 @@ DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
     , m_okButton(new QPushButton)
 {
     m_output->setStyleSheet("QTextEdit {"
-                            "color: #1077d7;"
+                            "color: #609dc8;"
+                            "font-size: 8pt;"
+                            "padding: 0 20px 0 20px;"
                             "}");
 
     m_tips->setAlignment(Qt::AlignCenter);
+    m_tips->setObjectName("TipsLabel");
     m_result->setAlignment(Qt::AlignCenter);
     m_showDetail->setText(tr("Show details"));
     m_hideDetail->setText(tr("Hide details"));
     m_spinner->setFixedSize(24, 24);
     m_icon->setPixmap(QIcon(":/resources/repair_dpkg.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
+    m_icon->setObjectName("PluginIcon");
     m_repairButton->setText(tr("Repair"));
     m_okButton->setText(tr("Finish"));
 
@@ -42,16 +46,18 @@ DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_output);
     centralLayout->addWidget(m_icon);
+    centralLayout->addSpacing(10);
     centralLayout->addWidget(m_tips);
     centralLayout->addWidget(m_showDetail);
     centralLayout->addWidget(m_hideDetail);
     centralLayout->addStretch();
     centralLayout->addWidget(m_result);
+    centralLayout->addSpacing(10);
     centralLayout->addWidget(m_spinner);
     centralLayout->setAlignment(m_spinner, Qt::AlignHCenter);
     centralLayout->addLayout(btnsLayout);
     centralLayout->setSpacing(0);
-    centralLayout->setContentsMargins(0, 60, 0, 40);
+    centralLayout->setContentsMargins(0, 0, 0, 0);
 
     setLayout(centralLayout);
 
@@ -110,7 +116,7 @@ void DPKGRepairWidget::onRepairClicked()
 
 void DPKGRepairWidget::onRepairFinished()
 {
-    m_result->setStyleSheet("color: green;");
+    m_result->setStyleSheet("color: #3da219;");
     m_result->setText(tr("Repair succeeded"));
     m_result->setVisible(true);
     m_okButton->setVisible(true);

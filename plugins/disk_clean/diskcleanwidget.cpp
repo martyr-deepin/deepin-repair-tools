@@ -14,8 +14,9 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     , m_cancelButton(new QPushButton)
     , m_okButton(new QPushButton)
 {
-    m_icon->setPixmap(QIcon::fromTheme("drive-harddisk").pixmap(128, 128));
+    m_icon->setPixmap(QIcon(":/resources/repair_deepindisk.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
+    m_icon->setObjectName("PluginIcon");
     m_tips->setAlignment(Qt::AlignHCenter);
     m_cleanButton->setText(tr("Clean"));
     m_cancelButton->setText(tr("Cancel"));
@@ -38,7 +39,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     centralLayout->addSpacing(10);
     centralLayout->addLayout(buttonsLayout);
     centralLayout->setSpacing(0);
-    centralLayout->setContentsMargins(0, 60, 0, 40);
+    centralLayout->setContentsMargins(0, 0, 0, 0);
 
     setLayout(centralLayout);
 

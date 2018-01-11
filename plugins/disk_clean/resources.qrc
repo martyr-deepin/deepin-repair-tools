@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/repair_deepindisk.svg</file>
+    </qresource>
+</RCC>

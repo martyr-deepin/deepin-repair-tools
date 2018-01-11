@@ -18,8 +18,10 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
 {
     m_icon->setPixmap(QIcon(":/resources/repair_permission.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
+    m_icon->setObjectName("PluginIcon");
     m_tips->setAlignment(Qt::AlignHCenter);
     m_tips->setText(tr("Privilege error"));
+    m_tips->setObjectName("TipsLabel");
     m_status->setAlignment(Qt::AlignHCenter);
     m_repairButton->setText(tr("Repair"));
     m_okButton->setText(tr("Finish"));
@@ -34,6 +36,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_icon);
+    centralLayout->addSpacing(10);
     centralLayout->addWidget(m_tips);
     centralLayout->addStretch();
     centralLayout->addWidget(m_spinner);
@@ -42,7 +45,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     centralLayout->addSpacing(5);
     centralLayout->addLayout(btnsLayout);
     centralLayout->setSpacing(0);
-    centralLayout->setContentsMargins(0, 60, 0, 40);
+    centralLayout->setContentsMargins(0, 0, 0, 0);
 
     setLayout(centralLayout);
 

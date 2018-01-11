@@ -21,7 +21,9 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
 {
     m_icon->setPixmap(QIcon(":/resources/repair_password.svg").pixmap(128, 128));
     m_icon->setAlignment(Qt::AlignHCenter);
+    m_icon->setObjectName("PluginIcon");
     m_tips->setAlignment(Qt::AlignHCenter);
+    m_tips->setObjectName("TipsLabel");
     m_status->setAlignment(Qt::AlignHCenter);
     m_resetButton->setText(tr("Reset password"));
     m_confirmButton->setText(tr("Confirm"));
@@ -39,6 +41,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_icon);
+    centralLayout->addSpacing(10);
     centralLayout->addWidget(m_tips);
     centralLayout->addWidget(m_userChooseBox);
     centralLayout->setAlignment(m_userChooseBox, Qt::AlignHCenter);
@@ -49,8 +52,8 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     centralLayout->addStretch();
     centralLayout->addWidget(m_status);
     centralLayout->addLayout(btnsLayout);
-    centralLayout->setSpacing(5);
-    centralLayout->setContentsMargins(0, 60, 0, 40);
+    centralLayout->setSpacing(0);
+    centralLayout->setContentsMargins(0, 0, 0, 0);
 
     setLayout(centralLayout);
 
