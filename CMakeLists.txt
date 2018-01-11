@@ -61,6 +61,11 @@ install(FILES deepin-repair-tools.svg
 file(GLOB SCRIPTS "src/*.sh")
 install(FILES ${SCRIPTS} DESTINATION lib/deepin-repair-tools)
 
+# qm files
+file(GLOB QM_FILES "translations/*.qm")
+install(FILES ${QM_FILES}
+        DESTINATION share/deepin-repair-tools/translations)
+
 # policy kit
 install(FILES com.deepin.repair-tools.policy
         DESTINATION share/polkit-1/actions/)
