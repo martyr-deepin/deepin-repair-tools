@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
     app.setApplicationAcknowledgementPage("https://www.deepin.org/acknowledgments/");
     app.loadTranslator();
     // app.loadTranslator(QList<QLocale>() << QLocale("zh_CN"));
+    app.setProductIcon(QIcon::fromTheme("deepin-repair-tools"));
     app.setProductName(QApplication::translate("main", "Deepin Repair"));
     app.setApplicationDescription(QApplication::translate("main", "Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, privilege repairing, etc."));
     app.setTheme("light");

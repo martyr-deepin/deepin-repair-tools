@@ -25,6 +25,7 @@ protected:
     void showEvent(QShowEvent *e);
 
 private slots:
+    void onPasswordChanged(const QString &pwd) { m_confirmButton->setEnabled(!pwd.isEmpty()); }
     void initUserInfo();
     void resetUI();
     void resetUserPassword();

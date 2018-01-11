@@ -90,7 +90,7 @@ void GrubRepairWidget::onRepairClicked()
 
     connect(thrd, &GrubRepairThread::finished, thrd, &GrubRepairThread::deleteLater, Qt::QueuedConnection);
     connect(thrd, &GrubRepairThread::commandFinished, this, &GrubRepairWidget::onRepairFinished);
-    connect(thrd, &GrubRepairThread::outputPrinted, this, &GrubRepairWidget::appendOutput);
+    connect(thrd, &GrubRepairThread::outputPrinted, m_output, &QTextEdit::append);
 
     thrd->start();
 }
@@ -125,11 +125,6 @@ void GrubRepairWidget::hideDetail()
     m_centerTips->setVisible(true);
     m_showDetail->setVisible(true);
     m_hideDetail->setVisible(false);
-}
-
-void GrubRepairWidget::appendOutput(const QString &output)
-{
-    m_output->append(output);
 }
 
 void GrubRepairWidget::onRepairFinished(const bool success)

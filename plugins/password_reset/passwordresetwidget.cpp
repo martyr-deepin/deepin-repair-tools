@@ -43,14 +43,18 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     centralLayout->addWidget(m_icon);
     centralLayout->addSpacing(10);
     centralLayout->addWidget(m_tips);
+    centralLayout->addSpacing(5);
     centralLayout->addWidget(m_userChooseBox);
     centralLayout->setAlignment(m_userChooseBox, Qt::AlignHCenter);
+    centralLayout->addSpacing(5);
     centralLayout->addWidget(m_passwordEdit);
     centralLayout->setAlignment(m_passwordEdit, Qt::AlignHCenter);
+    centralLayout->addSpacing(5);
     centralLayout->addWidget(m_passwordRepeat);
     centralLayout->setAlignment(m_passwordRepeat, Qt::AlignHCenter);
     centralLayout->addStretch();
     centralLayout->addWidget(m_status);
+    centralLayout->addSpacing(5);
     centralLayout->addLayout(btnsLayout);
     centralLayout->setSpacing(0);
     centralLayout->setContentsMargins(0, 0, 0, 0);
@@ -60,6 +64,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     connect(m_resetButton, &QPushButton::clicked, this, &PasswordResetWidget::onResetClicked);
     connect(m_confirmButton, &QPushButton::clicked, this, &PasswordResetWidget::onPasswdSubmitted);
     connect(m_okButton, &QPushButton::clicked, this, &PasswordResetWidget::resetUI);
+    connect(m_passwordEdit, &DPasswordEdit::textEdited, this, &PasswordResetWidget::onPasswordChanged);
 
     QTimer::singleShot(1, this, &PasswordResetWidget::initUserInfo);
     QTimer::singleShot(1, this, &PasswordResetWidget::resetUI);
@@ -87,13 +92,7 @@ void PasswordResetWidget::onResetClicked()
 void PasswordResetWidget::onPasswdSubmitted()
 {
     const QString &pwd1 = m_passwordEdit->text();
-    if (pwd1.isEmpty())
-        return;
-
     const QString &pwd2 = m_passwordRepeat->text();
-    if (pwd2.isEmpty())
-        return;
-
     if (pwd1 != pwd2)
         return m_passwordRepeat->showAlertMessage(tr("The two passwords don't match"));
 
@@ -127,7 +126,7 @@ void PasswordResetWidget::onResetPasswordFinished()
     m_okButton->setVisible(true);
     m_status->setVisible(true);
     m_status->setText(tr("Reset password successfully"));
-    m_status->setStyleSheet("color: green;");
+    m_status->setStyleSheet("color: #3da219;");
 }
 
 void PasswordResetWidget::initUserInfo()
@@ -161,4 +160,6 @@ void PasswordResetWidget::resetUI()
     m_userChooseBox->setVisible(false);
     m_passwordEdit->setVisible(false);
     m_passwordRepeat->setVisible(false);
+
+    onPasswordChanged(QString());
 }
