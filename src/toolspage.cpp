@@ -1,6 +1,7 @@
 #include "toolspage.h"
 #include "chrootbindguard.h"
 #include "chrootprocess.h"
+#include "pluginnavgation.h"
 
 #include <QTimer>
 #include <QHBoxLayout>
@@ -79,7 +80,6 @@ ToolsPage::ToolsPage(QWidget *parent)
                   "text-align: left;"
                   "padding: 5px 15px;"
                   "border: none;"
-                  "border-right: 3px solid transparent;"
                   "}"
                   ""
                   "#NavWidget > QPushButton:checked {"
@@ -87,8 +87,8 @@ ToolsPage::ToolsPage(QWidget *parent)
                   "font-weight: bold;"
                   "background-color: #d5edfe;"
                   "border: 1px solid rgba(44, 167, 248, .1);"
-                  "border-right: 3px solid #2ca7f8;"
                   "border-left: none;"
+                  "border-right: none;"
                   "}"
                   ""
                   "#PluginWidget QComboBox {"
@@ -159,7 +159,7 @@ void ToolsPage::refreshNavBar()
     m_navigationLayout->addStretch();
     for (int i(0); i != m_model->rowCount(QModelIndex()); ++i)
     {
-        QPushButton *b = new QPushButton;
+        QPushButton *b = new PluginNavgation;
         b->setCheckable(true);
         b->setText(m_model->data(m_model->index(i), ToolsModel::ToolsName).toString());
         m_navigationLayout->addWidget(b);
