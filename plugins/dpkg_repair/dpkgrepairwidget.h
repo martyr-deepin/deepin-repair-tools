@@ -28,7 +28,7 @@ protected:
 private slots:
     void reset();
     void onRepairClicked();
-    void onRepairFinished();
+    void onRepairFinished(const bool success);
     void showDetail();
     void hideDetail();
     void appendOutput(const QString &output);

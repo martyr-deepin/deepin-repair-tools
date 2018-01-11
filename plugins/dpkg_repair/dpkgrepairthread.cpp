@@ -13,13 +13,24 @@ void DPKGRepairThread::run()
 {
     const QString sh = "/usr/lib/deepin-repair-tools/plugins/dpkg-repair/dpkg_repair.sh";
 
+    bool failed = false;
+
     for (const auto &info : m_toolsProxy->diskInfos())
     {
         if (!info.osName.contains("deepin", Qt::CaseInsensitive))
             continue;
 
-        const auto &r = m_toolsProxy->execAsChrootSynchronous(info.mountPoint, sh);
+        QProcess &process = *m_toolsProxy->execAsChrootAsynchronous(info.mountPoint, sh);
 
-        emit outputPrinted(r.standardOutput);
+        connect(&process, &QProcess::readyReadStandardOutput, this, [&] { emit outputPrinted(process.readAllStandardOutput()); });
+        connect(&process, &QProcess::readyReadStandardError, this, [&] { emit outputPrinted(process.readAllStandardError()); });
+
+        process.start();
+        process.waitForFinished(-1);
+        process.deleteLater();
+
+        failed |= process.exitCode();
     }
+
+    emit processFinished(!failed);
 }

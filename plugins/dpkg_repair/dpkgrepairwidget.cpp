@@ -108,16 +108,23 @@ void DPKGRepairWidget::onRepairClicked()
     }
 
     connect(thrd, &DPKGRepairThread::finished, thrd, &DPKGRepairThread::deleteLater, Qt::QueuedConnection);
-    connect(thrd, &DPKGRepairThread::finished, this, &DPKGRepairWidget::onRepairFinished);
+    connect(thrd, &DPKGRepairThread::processFinished, this, &DPKGRepairWidget::onRepairFinished);
     connect(thrd, &DPKGRepairThread::outputPrinted, this, &DPKGRepairWidget::appendOutput);
 
     thrd->start();
 }
 
-void DPKGRepairWidget::onRepairFinished()
+void DPKGRepairWidget::onRepairFinished(const bool success)
 {
-    m_result->setStyleSheet("color: #3da219;");
-    m_result->setText(tr("Repair succeeded"));
+    if (!success)
+    {
+        m_result->setStyleSheet("color: #f3a21d;");
+        m_result->setText(tr("Repair failed"));
+    } else {
+        m_result->setStyleSheet("color: #3da219;");
+        m_result->setText(tr("Repair succeeded"));
+    }
+
     m_result->setVisible(true);
     m_okButton->setVisible(true);
     m_spinner->stop();
