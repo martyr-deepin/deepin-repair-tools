@@ -20,6 +20,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     , m_repairButton(new QPushButton)
     , m_okButton(new QPushButton)
 {
+    m_output->setReadOnly(true);
     m_output->setStyleSheet("QTextEdit {"
                             "color: #1077d7;"
                             "}");
@@ -109,6 +110,7 @@ void GrubRepairWidget::resetUi()
     m_hideDetail->setVisible(false);
     m_spinner->setVisible(false);
     m_icon->setVisible(true);
+    m_centerTips->setVisible(true);
 }
 
 void GrubRepairWidget::showDetail()
