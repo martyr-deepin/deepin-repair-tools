@@ -10,6 +10,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
 
     , m_icon(new QLabel)
     , m_tips(new QLabel)
+    , m_statusTips(new QLabel)
     , m_diskSelectBox(new QComboBox)
     , m_cleanButton(new QPushButton)
     , m_cancelButton(new QPushButton)
@@ -19,6 +20,8 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     m_icon->setAlignment(Qt::AlignHCenter);
     m_icon->setObjectName("PluginIcon");
     m_tips->setAlignment(Qt::AlignHCenter);
+    m_tips->setText(tr("System partition"));
+    m_statusTips->setAlignment(Qt::AlignHCenter);
     m_cleanButton->setText(tr("Clean"));
     m_cancelButton->setText(tr("Cancel"));
     m_cancelButton->setVisible(false);
@@ -35,10 +38,11 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_icon);
+    centralLayout->addWidget(m_tips);
     centralLayout->addWidget(m_diskSelectBox);
     centralLayout->setAlignment(m_diskSelectBox, Qt::AlignHCenter);
     centralLayout->addStretch();
-    centralLayout->addWidget(m_tips);
+    centralLayout->addWidget(m_statusTips);
     centralLayout->addSpacing(10);
     centralLayout->addLayout(buttonsLayout);
     centralLayout->setSpacing(0);
@@ -67,6 +71,7 @@ void DiskCleanWidget::setToolsProxy(RepairToolsProxy *proxy)
     }
 
     m_diskSelectBox->setVisible(m_diskSelectBox->count() > 1);
+    refreshDiskSize();
 }
 
 void DiskCleanWidget::showEvent(QShowEvent *e)
@@ -78,7 +83,7 @@ void DiskCleanWidget::showEvent(QShowEvent *e)
 
 void DiskCleanWidget::reset()
 {
-    m_tips->clear();
+    m_statusTips->clear();
     m_cleanButton->setVisible(true);
     m_cancelButton->setVisible(false);
     m_okButton->setVisible(false);
@@ -88,8 +93,8 @@ void DiskCleanWidget::cleanStart()
 {
     m_toolsProxy->registerExclusive(true);
 
-    m_tips->clear();
-    m_tips->setStyleSheet("QLabel { color: black;} ");
+    m_statusTips->clear();
+    m_statusTips->setStyleSheet("QLabel { color: black;} ");
     m_cleanButton->setVisible(false);
     m_cancelButton->setVisible(true);
 
@@ -99,7 +104,7 @@ void DiskCleanWidget::cleanStart()
 
     connect(m_worker, &DiskCleanThread::finished, m_worker, &DiskCleanThread::deleteLater, Qt::QueuedConnection);
     connect(m_worker, &DiskCleanThread::processDone, this, &DiskCleanWidget::cleanEnd);
-    connect(m_worker, &DiskCleanThread::processDisk, this, [=](const QString &disk) { m_tips->setText(tr("Cleaning %1").arg(disk)); });
+    connect(m_worker, &DiskCleanThread::processDisk, this, [=](const QString &disk) { m_statusTips->setText(tr("Cleaning %1").arg(disk)); });
 
     m_worker->start();
 }
@@ -114,6 +119,23 @@ void DiskCleanWidget::cleanCancel()
     reset();
 }
 
+void DiskCleanWidget::refreshDiskSize()
+{
+    const auto sh = "/usr/lib/deepin-repair-tools/plugins/disk-clean/disk_size.sh";
+    const DiskInfo &diskInfo = m_diskSelectBox->currentData().value<DiskInfo>();
+
+    const RunResult &r = m_toolsProxy->execAsChrootSynchronous("/", sh, QStringList() << diskInfo.diskPath);
+    const QStringList &output = r.standardOutput.split(' ');
+
+    unsigned used = 0;
+    unsigned size = 0;
+    if (output.size() == 2)
+    {
+        used = output[0].toUInt();
+        size = output[1].toUInt();
+    }
+}
+
 void DiskCleanWidget::cleanEnd(const quint64 clearedSize)
 {
     m_toolsProxy->registerExclusive(false);
@@ -124,6 +146,6 @@ void DiskCleanWidget::cleanEnd(const quint64 clearedSize)
     const double sizeMb = double(clearedSize) / 1024 / 1024;
     const QString sizeStr = QString("%1MB").arg(sizeMb, 0, 'f', 2);
 
-    m_tips->setText(tr("%1 has been cleaned up").arg(sizeStr));
-    m_tips->setStyleSheet("QLabel { color: green;} ");
+    m_statusTips->setText(tr("%1 has been cleaned up").arg(sizeStr));
+    m_statusTips->setStyleSheet("QLabel { color: green;} ");
 }

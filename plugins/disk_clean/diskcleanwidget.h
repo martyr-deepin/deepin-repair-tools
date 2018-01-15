@@ -26,6 +26,7 @@ private slots:
     void reset();
     void cleanStart();
     void cleanCancel();
+    void refreshDiskSize();
     void cleanEnd(const quint64 clearedSize);
 
 private:
@@ -33,6 +34,7 @@ private:
     RepairToolsProxy *m_toolsProxy;
     QLabel *m_icon;
     QLabel *m_tips;
+    QLabel *m_statusTips;
     QComboBox *m_diskSelectBox;
     QPushButton *m_cleanButton;
     QPushButton *m_cancelButton;
