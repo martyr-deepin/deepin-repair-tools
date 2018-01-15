@@ -32,7 +32,7 @@ find_package(Qt5Concurrent REQUIRED)
 find_package(Dtk REQUIRED Widget)
 
 # driver-manager
-add_executable(${BIN_NAME} ${SRCS})
+add_executable(${BIN_NAME} ${SRCS} resources.qrc)
 target_include_directories(${BIN_NAME} PUBLIC ${DtkWidget_INCLUDE_DIRS})
 target_link_libraries(${BIN_NAME} PRIVATE
     ${DtkWidget_LIBRARIES}

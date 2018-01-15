@@ -6,6 +6,7 @@
 #include <QWidget>
 #include <QLabel>
 #include <QPointer>
+#include <QPushButton>
 
 #include <DSpinner>
 
@@ -28,6 +29,7 @@ signals:
 
 private slots:
     void onScanFinsihed(const QString &errorPartion);
+    void repairPartion(const QString &errorPartion);
 
 private:
     QPointer<DiskUtils> m_diskUtils;
@@ -35,6 +37,8 @@ private:
     QLabel *m_icon;
     QLabel *m_centerTips;
     QLabel *m_bottomTips;
+    QPushButton *m_cancel;
+    QPushButton *m_repair;
 };
 
 #endif // SCANNINGPAGE_H
