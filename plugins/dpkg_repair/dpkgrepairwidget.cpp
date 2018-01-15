@@ -19,6 +19,7 @@ DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
     , m_repairButton(new QPushButton)
     , m_okButton(new QPushButton)
 {
+    m_output->setReadOnly(true);
     m_output->setStyleSheet("QTextEdit {"
                             "color: #609dc8;"
                             "font-size: 8pt;"
