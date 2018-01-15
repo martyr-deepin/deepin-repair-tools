@@ -1,2 +1,8 @@
 #!/bin/sh
-pkexec "/usr/sbin/deepin-repair-tools" "$@"
+
+# env test
+/usr/sbin/deepin-repair-tools -t
+
+if [ $? -eq 0 ]; then
+    pkexec "/usr/sbin/deepin-repair-tools" "$@"
+fi

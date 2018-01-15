@@ -35,11 +35,6 @@ int main(int argc, char *argv[])
     DApplication::loadDXcbPlugin();
     DApplication app(argc, argv);
 
-#ifndef QT_DEBUG
-    if (!root_check() || !app.setSingleInstance("deepin-repair-tools"))
-        return -1;
-#endif
-
     app.setOrganizationName("deepin");
     app.setApplicationName("deepin-repair-tools");
     app.setApplicationVersion("1.0");
@@ -54,6 +49,27 @@ int main(int argc, char *argv[])
 
     DLogManager::registerConsoleAppender();
     DLogManager::registerFileAppender();
+
+    // command line arguments process
+    QCommandLineOption envTestOption(QStringList() << "t" << "test", "test run environment.");
+
+    QCommandLineParser argsParser;
+    argsParser.addHelpOption();
+    argsParser.addVersionOption();
+    argsParser.addOption(envTestOption);
+    argsParser.process(app);
+
+    if (!app.setSingleInstance("deepin-repair-tools"))
+        return -1;
+
+    // env test ok, quit.
+    if (argsParser.isSet(envTestOption))
+        return 0;
+
+#ifndef QT_DEBUG
+    if (!root_check())
+        return -1;
+#endif
 
     RepairTools tools;
     tools.show();
