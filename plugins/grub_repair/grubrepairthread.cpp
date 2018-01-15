@@ -39,8 +39,8 @@ void GrubRepairThread::run()
         const auto &mountPath = primary_info.first;
         QProcess &process = *m_toolsProxy->execAsChrootAsynchronous(primary_info.second, sh, QStringList() << mountPath);
 
-        connect(&process, &QProcess::readyReadStandardError, this, [&] { emit outputPrinted(process.readAllStandardError()); });
-        connect(&process, &QProcess::readyReadStandardOutput, this, [&] { emit outputPrinted(process.readAllStandardOutput()); });
+        connect(&process, &QProcess::readyReadStandardOutput, this, [&] { processOutput(process.readAllStandardOutput()); });
+        connect(&process, &QProcess::readyReadStandardError, this, [&] { processOutput(process.readAllStandardError()); });
 
         process.start();
         process.waitForFinished(-1);
@@ -50,6 +50,13 @@ void GrubRepairThread::run()
     } while (false);
 
     emit commandFinished(!failed);
+}
+
+void GrubRepairThread::processOutput(const QString &output)
+{
+    const auto trimmed = output.trimmed();
+    if (!trimmed.isEmpty())
+        emit outputPrinted(trimmed);
 }
 
 QPair<QString, QString> GrubRepairThread::primarySystemRoot()

@@ -21,6 +21,9 @@ signals:
     void processFinished(const bool success);
     void outputPrinted(const QString &output);
 
+private slots:
+    void outputProcess(const QString &output);
+
 private:
     RepairToolsProxy *m_toolsProxy;
     QStringList m_rootList;

@@ -20,6 +20,9 @@ signals:
     void commandFinished(const bool success) const;
     void outputPrinted(const QString &output) const;
 
+private slots:
+    void processOutput(const QString &output);
+
 private:
     QPair<QString, QString> primarySystemRoot();
 

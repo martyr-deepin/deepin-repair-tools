@@ -22,8 +22,8 @@ void DPKGRepairThread::run()
 
         QProcess &process = *m_toolsProxy->execAsChrootAsynchronous(info.mountPoint, sh);
 
-        connect(&process, &QProcess::readyReadStandardOutput, this, [&] { emit outputPrinted(process.readAllStandardOutput()); });
-        connect(&process, &QProcess::readyReadStandardError, this, [&] { emit outputPrinted(process.readAllStandardError()); });
+        connect(&process, &QProcess::readyReadStandardOutput, this, [&] { outputProcess(process.readAllStandardOutput()); });
+        connect(&process, &QProcess::readyReadStandardError, this, [&] { outputProcess(process.readAllStandardError()); });
 
         process.start();
         process.waitForFinished(-1);
@@ -33,4 +33,11 @@ void DPKGRepairThread::run()
     }
 
     emit processFinished(!failed);
+}
+
+void DPKGRepairThread::outputProcess(const QString &output)
+{
+    const auto trimmed = output.trimmed();
+    if (!trimmed.isEmpty())
+        emit outputPrinted(trimmed);
 }
