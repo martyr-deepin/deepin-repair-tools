@@ -10,7 +10,10 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
 
     , m_icon(new QLabel)
     , m_tips(new QLabel)
+    , m_sysInfo(new QLabel)
+    , m_capacity(new QLabel)
     , m_statusTips(new QLabel)
+    , m_capacityBar(new QSlider(Qt::Horizontal))
     , m_diskSelectBox(new QComboBox)
     , m_cleanButton(new QPushButton)
     , m_cancelButton(new QPushButton)
@@ -27,6 +30,11 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     m_cancelButton->setVisible(false);
     m_okButton->setText(tr("Finish"));
     m_okButton->setVisible(false);
+    m_diskSelectBox->setFixedHeight(25);
+    m_capacityBar->setFixedHeight(4);
+    m_capacityBar->setMinimum(0);
+    m_capacityBar->setMaximum(1000);
+    m_capacityBar->setPageStep(1);
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;
     buttonsLayout->addWidget(m_cleanButton);
@@ -36,11 +44,45 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     buttonsLayout->addWidget(m_okButton);
     buttonsLayout->setAlignment(m_okButton, Qt::AlignHCenter);
 
+    QHBoxLayout *infoTextLayout = new QHBoxLayout;
+    infoTextLayout->addWidget(m_sysInfo);
+    infoTextLayout->addStretch();
+    infoTextLayout->addWidget(m_capacity);
+
+    QVBoxLayout *infoLayout = new QVBoxLayout;
+    infoLayout->addLayout(infoTextLayout);
+    infoLayout->addWidget(m_capacityBar);
+    infoLayout->addWidget(m_diskSelectBox);
+
+    QWidget *infoWidget = new QWidget;
+    infoWidget->setFixedWidth(210);
+    infoWidget->setLayout(infoLayout);
+    infoWidget->setStyleSheet("QLabel {"
+                              "color: #aaa;"
+                              "font-size: 7pt;"
+                              "}"
+                              ""
+                              "QSlider {"
+                              "border: none;"
+                              "}"
+                              ""
+                              "QSlider::groove {"
+                              "background-color: rgba(0, 0, 0, 0.05);"
+                              "border: 1px solid rgba(0, 0, 0, 0.1);"
+                              "border-radius: 2px;"
+                              "}"
+                              ""
+                              "QSlider::sub-page {"
+                              "background-color: rgba(255, 139, 35, 0.8);"
+                              "border-width: 0px;"
+                              "border-radius: 2px;"
+                              "}");
+
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_icon);
     centralLayout->addWidget(m_tips);
-    centralLayout->addWidget(m_diskSelectBox);
-    centralLayout->setAlignment(m_diskSelectBox, Qt::AlignHCenter);
+    centralLayout->addWidget(infoWidget);
+    centralLayout->setAlignment(infoWidget, Qt::AlignHCenter);
     centralLayout->addStretch();
     centralLayout->addWidget(m_statusTips);
     centralLayout->addSpacing(10);
@@ -53,6 +95,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     connect(m_cleanButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanStart);
     connect(m_cancelButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanCancel);
     connect(m_okButton, &QPushButton::clicked, this, &DiskCleanWidget::reset);
+    connect(m_diskSelectBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &DiskCleanWidget::refreshDiskInfo);
 }
 
 void DiskCleanWidget::setToolsProxy(RepairToolsProxy *proxy)
@@ -70,8 +113,10 @@ void DiskCleanWidget::setToolsProxy(RepairToolsProxy *proxy)
         m_diskSelectBox->addItem(tr("%1 (on %2)").arg(os_name).arg(disk), QVariant::fromValue(diskInfo));
     }
 
-    m_diskSelectBox->setVisible(m_diskSelectBox->count() > 1);
-    refreshDiskSize();
+    const int count = m_diskSelectBox->count();
+    m_diskSelectBox->setVisible(count > 1);
+    if (count)
+        m_diskSelectBox->setCurrentIndex(0);
 }
 
 void DiskCleanWidget::showEvent(QShowEvent *e)
@@ -119,7 +164,7 @@ void DiskCleanWidget::cleanCancel()
     reset();
 }
 
-void DiskCleanWidget::refreshDiskSize()
+void DiskCleanWidget::refreshDiskInfo()
 {
     const auto sh = "/usr/lib/deepin-repair-tools/plugins/disk-clean/disk_size.sh";
     const DiskInfo &diskInfo = m_diskSelectBox->currentData().value<DiskInfo>();
@@ -134,6 +179,11 @@ void DiskCleanWidget::refreshDiskSize()
         used = output[0].toUInt();
         size = output[1].toUInt();
     }
+
+    m_capacityBar->setValue(double(used) / size * m_capacityBar->maximum());
+
+    m_sysInfo->setText(tr("%1(%2)").arg(diskInfo.osName).arg(diskInfo.diskPath));
+    m_capacity->setText(tr("%1/%2G").arg(used / 1024 / 1024).arg(size / 1024 / 1024));
 }
 
 void DiskCleanWidget::cleanEnd(const quint64 clearedSize)
@@ -148,4 +198,6 @@ void DiskCleanWidget::cleanEnd(const quint64 clearedSize)
 
     m_statusTips->setText(tr("%1 has been cleaned up").arg(sizeStr));
     m_statusTips->setStyleSheet("QLabel { color: green;} ");
+
+    refreshDiskInfo();
 }
