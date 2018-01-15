@@ -18,6 +18,7 @@ RepairTools::RepairTools(QWidget *parent)
     tbar->setIcon(QIcon::fromTheme("deepin-repair-tools"));
 
     ScanningPage *sp = new ScanningPage;
+    sp->setDiskUtils(m_diskUtils);
 
     setFixedSize(700, 450);
     move(qApp->primaryScreen()->geometry().center() - rect().center());

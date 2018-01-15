@@ -1,8 +1,11 @@
 #ifndef SCANNINGPAGE_H
 #define SCANNINGPAGE_H
 
+#include "diskutils.h"
+
 #include <QWidget>
 #include <QLabel>
+#include <QPointer>
 
 #include <DSpinner>
 
@@ -15,6 +18,8 @@ class ScanningPage : public QWidget
 public:
     explicit ScanningPage(QWidget *parent = nullptr);
 
+    void setDiskUtils(QPointer<DiskUtils> &diskUtils) { m_diskUtils = diskUtils; }
+
 public slots:
     void startScan();
 
@@ -22,9 +27,10 @@ signals:
     void scanDone() const;
 
 private slots:
-    void onScanFinsihed();
+    void onScanFinsihed(const QString &errorPartion);
 
 private:
+    QPointer<DiskUtils> m_diskUtils;
     DSpinner *m_spinner;
     QLabel *m_icon;
     QLabel *m_centerTips;

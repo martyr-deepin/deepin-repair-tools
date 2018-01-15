@@ -182,8 +182,8 @@ void DiskCleanWidget::refreshDiskInfo()
 
     m_capacityBar->setValue(double(used) / size * m_capacityBar->maximum());
 
-    m_sysInfo->setText(tr("%1(%2)").arg(diskInfo.osName).arg(diskInfo.diskPath));
-    m_capacity->setText(tr("%1/%2G").arg(used / 1024 / 1024).arg(size / 1024 / 1024));
+    m_sysInfo->setText(QString("%1(%2)").arg(diskInfo.osName).arg(diskInfo.diskPath));
+    m_capacity->setText(QString("%1/%2G").arg(used / 1024 / 1024).arg(size / 1024 / 1024));
 }
 
 void DiskCleanWidget::cleanEnd(const quint64 clearedSize)

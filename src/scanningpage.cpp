@@ -4,6 +4,7 @@
 
 #include <QVBoxLayout>
 #include <QIcon>
+#include <QDebug>
 
 ScanningPage::ScanningPage(QWidget *parent)
     : QWidget(parent)
@@ -38,14 +39,21 @@ ScanningPage::ScanningPage(QWidget *parent)
 void ScanningPage::startScan()
 {
     FSCheckThread *thrd = new FSCheckThread;
+    thrd->setDiskUtils(m_diskUtils);
 
-    connect(thrd, &FSCheckThread::finished, this, &ScanningPage::onScanFinsihed);
+    connect(thrd, &FSCheckThread::checkFinished, this, &ScanningPage::onScanFinsihed);
     connect(thrd, &FSCheckThread::finished, thrd, &FSCheckThread::deleteLater, Qt::QueuedConnection);
 
     thrd->start();
 }
 
-void ScanningPage::onScanFinsihed()
+void ScanningPage::onScanFinsihed(const QString &errorPartion)
 {
-    emit scanDone();
+    qDebug() << errorPartion;
+
+    if (errorPartion.isEmpty())
+    {
+        emit scanDone();
+        return;
+    }
 }
