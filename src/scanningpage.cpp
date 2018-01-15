@@ -1,6 +1,7 @@
 #include "scanningpage.h"
 #include "toolspage.h"
 #include "fscheckthread.h"
+#include "fsrepairthread.h"
 
 #include <QVBoxLayout>
 #include <QIcon>
@@ -16,6 +17,7 @@ ScanningPage::ScanningPage(QWidget *parent)
     , m_bottomTips(new QLabel)
     , m_cancel(new QPushButton)
     , m_repair(new QPushButton)
+    , m_finish(new QPushButton)
 {
     m_spinner->setFixedSize(24, 24);
     m_spinner->start();
@@ -30,13 +32,16 @@ ScanningPage::ScanningPage(QWidget *parent)
     m_cancel->setVisible(false);
     m_repair->setText(tr("Repair"));
     m_repair->setVisible(false);
+    m_finish->setText(tr("Finish"));
+    m_finish->setVisible(false);
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;
     buttonsLayout->addStretch();
     buttonsLayout->addWidget(m_cancel);
-    buttonsLayout->addSpacing(20);
     buttonsLayout->addWidget(m_repair);
+    buttonsLayout->addWidget(m_finish);
     buttonsLayout->addStretch();
+    buttonsLayout->setSpacing(20);
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_icon);
@@ -95,6 +100,7 @@ ScanningPage::ScanningPage(QWidget *parent)
                   "");
 
     connect(m_cancel, &QPushButton::clicked, qApp, &QApplication::quit);
+    connect(m_finish, &QPushButton::clicked, qApp, &QApplication::quit);
 }
 
 void ScanningPage::startScan()
@@ -125,9 +131,31 @@ void ScanningPage::onScanFinsihed(const QString &errorPartion)
     connect(m_repair, &QPushButton::clicked, this, [=] { repairPartion(errorPartion); });
 }
 
+void ScanningPage::onRepairFinished(bool success)
+{
+    if (success)
+        m_centerTips->setText(tr("Repair succeeded"));
+    else
+        m_centerTips->setText(tr("Repair failed"));
+
+    m_spinner->stop();
+    m_spinner->setVisible(false);
+    m_finish->setVisible(true);
+}
+
 void ScanningPage::repairPartion(const QString &errorPartion)
 {
     m_repair->disconnect();
+    m_repair->setVisible(false);
+    m_cancel->setVisible(false);
+    m_spinner->start();
+    m_spinner->setVisible(true);
 
-    qDebug() << "repair" << errorPartion;
+    FSRepairThread *thrd = new FSRepairThread;
+    thrd->setRepairPartion(errorPartion);
+
+    connect(thrd, &FSRepairThread::repairFinished, this, &ScanningPage::onRepairFinished);
+    connect(thrd, &FSRepairThread::finished, thrd, &FSRepairThread::deleteLater, Qt::QueuedConnection);
+
+    thrd->start();
 }

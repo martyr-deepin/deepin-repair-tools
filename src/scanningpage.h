@@ -28,8 +28,9 @@ signals:
     void scanDone() const;
 
 private slots:
-    void onScanFinsihed(const QString &errorPartion);
     void repairPartion(const QString &errorPartion);
+    void onScanFinsihed(const QString &errorPartion);
+    void onRepairFinished(bool success);
 
 private:
     QPointer<DiskUtils> m_diskUtils;
@@ -39,6 +40,7 @@ private:
     QLabel *m_bottomTips;
     QPushButton *m_cancel;
     QPushButton *m_repair;
+    QPushButton *m_finish;
 };
 
 #endif // SCANNINGPAGE_H
