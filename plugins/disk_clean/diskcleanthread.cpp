@@ -37,27 +37,21 @@ void DiskCleanThread::run()
     QElapsedTimer elapsedTimer;
     elapsedTimer.start();
 
-    for (const auto &p : m_diskList)
-    {
-        if (p.osName.isEmpty() || !p.osName.contains("deepin", Qt::CaseInsensitive))
-            continue;
-        emit processDisk(p.diskPath);
-        qDebug() << "cleaning:" << p.diskPath << p.mountPoint << p.osName;
+    qDebug() << "cleaning:" << m_cleanInfo.diskPath << m_cleanInfo.mountPoint << m_cleanInfo.osName;
 
-        const auto r = m_toolsProxy->execAsChrootSynchronous(p.mountPoint, sh);
+    emit processDisk(m_cleanInfo.diskPath);
+    const auto r = m_toolsProxy->execAsChrootSynchronous(m_cleanInfo.mountPoint, sh);
 
-        for (const QString &line : r.standardOutput.split('\n'))
-            if (line.startsWith("DiskClean:"))
-                recordClearedSize(line);
-
-        emit processInfo(r.standardOutput);
-        emit processInfo(r.standardError);
-    }
+    for (const QString &line : r.standardOutput.split('\n'))
+        if (line.startsWith("DiskClean:"))
+            recordClearedSize(line);
 
     const int msec = elapsedTimer.elapsed();
     if (m_totalClearedSize && msec < 2 * 1000)
         msleep(2 * 1000 - msec);
 
+    emit processInfo(r.standardOutput);
+    emit processInfo(r.standardError);
     emit processDone(m_totalClearedSize);
 }
 

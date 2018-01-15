@@ -2,6 +2,7 @@
 #define REPAIRTOOLSPROXY_H
 
 #include <QList>
+#include <QMetaType>
 
 class QProcess;
 
@@ -11,6 +12,7 @@ public:
     QString name;
     QString homeDir;
 };
+Q_DECLARE_METATYPE(UserInfo)
 
 class DiskInfo
 {
@@ -21,6 +23,7 @@ public:
     QString osName;
     QList<UserInfo> userList;
 };
+Q_DECLARE_METATYPE(DiskInfo)
 
 class RunResult
 {
@@ -29,6 +32,7 @@ public:
     QString standardOutput;
     QString standardError;
 };
+Q_DECLARE_METATYPE(RunResult)
 
 class RepairToolsProxy
 {

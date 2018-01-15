@@ -208,7 +208,9 @@ DiskUtils::DiskUtils(QObject *parent)
 
     , m_scannerRunning(true)
 {
-
+    qRegisterMetaType<UserInfo>();
+    qRegisterMetaType<DiskInfo>();
+    qRegisterMetaType<RunResult>();
 }
 
 DiskUtils::~DiskUtils()

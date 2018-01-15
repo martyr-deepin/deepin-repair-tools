@@ -10,6 +10,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
 
     , m_icon(new QLabel)
     , m_tips(new QLabel)
+    , m_diskSelectBox(new QComboBox)
     , m_cleanButton(new QPushButton)
     , m_cancelButton(new QPushButton)
     , m_okButton(new QPushButton)
@@ -34,6 +35,8 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_icon);
+    centralLayout->addWidget(m_diskSelectBox);
+    centralLayout->setAlignment(m_diskSelectBox, Qt::AlignHCenter);
     centralLayout->addStretch();
     centralLayout->addWidget(m_tips);
     centralLayout->addSpacing(10);
@@ -46,6 +49,24 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     connect(m_cleanButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanStart);
     connect(m_cancelButton, &QPushButton::clicked, this, &DiskCleanWidget::cleanCancel);
     connect(m_okButton, &QPushButton::clicked, this, &DiskCleanWidget::reset);
+}
+
+void DiskCleanWidget::setToolsProxy(RepairToolsProxy *proxy)
+{
+    m_toolsProxy = proxy;
+
+    // init disk info list
+    for (const auto diskInfo : m_toolsProxy->diskInfos())
+    {
+        const QString &os_name = diskInfo.osName;
+        const QString &disk = diskInfo.diskPath;
+
+        if (!os_name.contains("deepin", Qt::CaseInsensitive))
+            continue;
+        m_diskSelectBox->addItem(tr("%1 (on %2)").arg(os_name).arg(disk), QVariant::fromValue(diskInfo));
+    }
+
+    m_diskSelectBox->setVisible(m_diskSelectBox->count() > 1);
 }
 
 void DiskCleanWidget::showEvent(QShowEvent *e)
@@ -74,11 +95,7 @@ void DiskCleanWidget::cleanStart()
 
     m_worker = new DiskCleanThread;
     m_worker->setToolsProxy(m_toolsProxy);
-    for (const auto &info : m_toolsProxy->diskInfos())
-    {
-        if (info.osName.contains("deepin", Qt::CaseInsensitive))
-            m_worker->appendDir(info);
-    }
+    m_worker->setCleanInfo(m_diskSelectBox->currentData().value<DiskInfo>());
 
     connect(m_worker, &DiskCleanThread::finished, m_worker, &DiskCleanThread::deleteLater, Qt::QueuedConnection);
     connect(m_worker, &DiskCleanThread::processDone, this, &DiskCleanWidget::cleanEnd);

@@ -8,6 +8,7 @@
 #include <QPushButton>
 #include <QPointer>
 #include <QLabel>
+#include <QComboBox>
 
 class DiskCleanWidget : public QWidget
 {
@@ -16,7 +17,7 @@ class DiskCleanWidget : public QWidget
 public:
     explicit DiskCleanWidget(QWidget *parent = nullptr);
 
-    void setToolsProxy(RepairToolsProxy *proxy) { m_toolsProxy = proxy; }
+    void setToolsProxy(RepairToolsProxy *proxy);
 
 protected:
     void showEvent(QShowEvent *e);
@@ -32,6 +33,7 @@ private:
     RepairToolsProxy *m_toolsProxy;
     QLabel *m_icon;
     QLabel *m_tips;
+    QComboBox *m_diskSelectBox;
     QPushButton *m_cleanButton;
     QPushButton *m_cancelButton;
     QPushButton *m_okButton;

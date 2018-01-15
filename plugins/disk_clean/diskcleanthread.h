@@ -12,7 +12,7 @@ class DiskCleanThread : public QThread
 
 public:
     explicit DiskCleanThread(QObject *parent = nullptr);
-    void appendDir(const DiskInfo &info) { m_diskList << info; }
+    void setCleanInfo(const DiskInfo &info) { m_cleanInfo = info; }
     void setToolsProxy(RepairToolsProxy *proxy) { m_toolsProxy = proxy; }
 
     void run();
@@ -28,7 +28,7 @@ private:
 private:
     quint64 m_totalClearedSize;
     RepairToolsProxy *m_toolsProxy;
-    QList<DiskInfo> m_diskList;
+    DiskInfo m_cleanInfo;
 };
 
 #endif // DISKCLEANTHREAD_H
