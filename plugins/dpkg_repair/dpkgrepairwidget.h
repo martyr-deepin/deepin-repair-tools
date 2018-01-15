@@ -31,7 +31,6 @@ private slots:
     void onRepairFinished(const bool success);
     void showDetail();
     void hideDetail();
-    void appendOutput(const QString &output);
 
 private:
     RepairToolsProxy *m_toolsProxy;

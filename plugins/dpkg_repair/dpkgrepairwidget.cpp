@@ -93,6 +93,8 @@ void DPKGRepairWidget::reset()
 
 void DPKGRepairWidget::onRepairClicked()
 {
+    m_toolsProxy->registerExclusive(true);
+
     m_repairButton->setVisible(false);
     m_spinner->start();
     m_spinner->setVisible(true);
@@ -109,13 +111,15 @@ void DPKGRepairWidget::onRepairClicked()
 
     connect(thrd, &DPKGRepairThread::finished, thrd, &DPKGRepairThread::deleteLater, Qt::QueuedConnection);
     connect(thrd, &DPKGRepairThread::processFinished, this, &DPKGRepairWidget::onRepairFinished);
-    connect(thrd, &DPKGRepairThread::outputPrinted, this, &DPKGRepairWidget::appendOutput);
+    connect(thrd, &DPKGRepairThread::outputPrinted, m_output, &QTextEdit::append);
 
     thrd->start();
 }
 
 void DPKGRepairWidget::onRepairFinished(const bool success)
 {
+    m_toolsProxy->registerExclusive(false);
+
     if (!success)
     {
         m_result->setStyleSheet("color: #f3a21d;");
@@ -147,9 +151,4 @@ void DPKGRepairWidget::hideDetail()
     m_output->setVisible(false);
     m_icon->setVisible(true);
     m_tips->setVisible(true);
-}
-
-void DPKGRepairWidget::appendOutput(const QString &output)
-{
-    m_output->append(output);
 }

@@ -65,6 +65,8 @@ void DiskCleanWidget::reset()
 
 void DiskCleanWidget::cleanStart()
 {
+    m_toolsProxy->registerExclusive(true);
+
     m_tips->setText(tr("Cleaning %1"));
     m_tips->setStyleSheet("QLabel { color: black;} ");
     m_cleanButton->setVisible(false);
@@ -86,6 +88,8 @@ void DiskCleanWidget::cleanStart()
 
 void DiskCleanWidget::cleanCancel()
 {
+    m_toolsProxy->registerExclusive(false);
+
     m_worker->terminate();
     m_worker->wait();
 
@@ -94,6 +98,8 @@ void DiskCleanWidget::cleanCancel()
 
 void DiskCleanWidget::cleanEnd(const quint64 clearedSize)
 {
+    m_toolsProxy->registerExclusive(false);
+
     m_cancelButton->setVisible(false);
     m_okButton->setVisible(true);
 

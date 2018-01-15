@@ -80,6 +80,8 @@ void GrubRepairWidget::showEvent(QShowEvent *e)
 
 void GrubRepairWidget::onRepairClicked()
 {
+    m_toolsProxy->registerExclusive(true);
+
     m_repairButton->setVisible(false);
     m_showDetail->setVisible(true);
     m_spinner->setVisible(true);
@@ -129,6 +131,8 @@ void GrubRepairWidget::hideDetail()
 
 void GrubRepairWidget::onRepairFinished(const bool success)
 {
+    m_toolsProxy->registerExclusive(false);
+
     if (success)
     {
         m_statusTips->setStyleSheet("color: #3da219;");

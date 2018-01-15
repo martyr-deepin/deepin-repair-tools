@@ -28,6 +28,7 @@ public:
     void setDiskUtils(const QPointer<DiskUtils> &diskUtils) { m_diskUtils = diskUtils; }
 
 public:
+    void registerExclusive(const bool exclusive) { setNavgationEnabled(!exclusive); }
     const RunResult execAsChrootSynchronous(const QString &root, const QString &script, const QStringList &args = QStringList()) const
     { return ::execAsChrootSynchronous(root, script, args); }
     QProcess* execAsChrootAsynchronous(const QString &root, const QString &script, const QStringList &args = QStringList()) const
@@ -36,6 +37,7 @@ public:
 
 private slots:
     void refreshNavBar();
+    void setNavgationEnabled(const bool enabled);
     void onNavButtonClicked(const int index);
 
 private:

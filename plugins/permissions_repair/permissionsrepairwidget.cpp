@@ -64,6 +64,8 @@ void PermissionsRepairWidget::showEvent(QShowEvent *e)
 
 void PermissionsRepairWidget::onRepairButtonClicked()
 {
+    m_toolsProxy->registerExclusive(true);
+
     m_spinner->setVisible(true);
     m_spinner->start();
     m_repairButton->setVisible(false);
@@ -79,6 +81,8 @@ void PermissionsRepairWidget::onRepairButtonClicked()
 
 void PermissionsRepairWidget::onRepairFinished(const bool success)
 {
+    m_toolsProxy->registerExclusive(false);
+
     if (success)
     {
         m_status->setText(tr("Reset privilege successfully"));

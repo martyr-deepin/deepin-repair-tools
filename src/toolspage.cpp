@@ -173,6 +173,12 @@ void ToolsPage::refreshNavBar()
     m_navButtonsGroup->buttons().first()->click();
 }
 
+void ToolsPage::setNavgationEnabled(const bool enabled)
+{
+    for (auto *button : m_navButtonsGroup->buttons())
+        button->setEnabled(enabled);
+}
+
 void ToolsPage::onNavButtonClicked(const int index)
 {
     QWidget *w = m_model->data(m_model->index(index), ToolsModel::ToolsWidget).value<QWidget *>();
