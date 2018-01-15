@@ -18,6 +18,7 @@ public:
     void run();
 
 signals:
+    void processDisk(const QString &dir) const;
     void processDone(const quint64 cleared) const;
     void processInfo(const QString &info) const;
 

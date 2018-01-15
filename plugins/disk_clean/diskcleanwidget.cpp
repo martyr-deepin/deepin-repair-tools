@@ -67,7 +67,7 @@ void DiskCleanWidget::cleanStart()
 {
     m_toolsProxy->registerExclusive(true);
 
-    m_tips->setText(tr("Cleaning %1"));
+    m_tips->clear();
     m_tips->setStyleSheet("QLabel { color: black;} ");
     m_cleanButton->setVisible(false);
     m_cancelButton->setVisible(true);
@@ -82,6 +82,7 @@ void DiskCleanWidget::cleanStart()
 
     connect(m_worker, &DiskCleanThread::finished, m_worker, &DiskCleanThread::deleteLater, Qt::QueuedConnection);
     connect(m_worker, &DiskCleanThread::processDone, this, &DiskCleanWidget::cleanEnd);
+    connect(m_worker, &DiskCleanThread::processDisk, this, [=](const QString &disk) { m_tips->setText(tr("Cleaning %1").arg(disk)); });
 
     m_worker->start();
 }

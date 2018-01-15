@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QProcess>
 #include <QRegularExpression>
+#include <QElapsedTimer>
 
 unsigned long sizeUnit(const QString &unit)
 {
@@ -33,10 +34,14 @@ void DiskCleanThread::run()
 {
     const QString sh = "/usr/lib/deepin-repair-tools/plugins/disk-clean/disk_clean.sh";
 
+    QElapsedTimer elapsedTimer;
+    elapsedTimer.start();
+
     for (const auto &p : m_diskList)
     {
         if (p.osName.isEmpty() || !p.osName.contains("deepin", Qt::CaseInsensitive))
             continue;
+        emit processDisk(p.diskPath);
         qDebug() << "cleaning:" << p.diskPath << p.mountPoint << p.osName;
 
         const auto r = m_toolsProxy->execAsChrootSynchronous(p.mountPoint, sh);
@@ -48,6 +53,10 @@ void DiskCleanThread::run()
         emit processInfo(r.standardOutput);
         emit processInfo(r.standardError);
     }
+
+    const int msec = elapsedTimer.elapsed();
+    if (m_totalClearedSize && msec < 2 * 1000)
+        msleep(2 * 1000 - msec);
 
     emit processDone(m_totalClearedSize);
 }
