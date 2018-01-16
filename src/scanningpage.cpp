@@ -26,7 +26,6 @@ ScanningPage::ScanningPage(QWidget *parent)
     m_icon->setObjectName("Icon");
     m_centerTips->setText(tr("Checking hard disk status, please wait..."));
     m_centerTips->setAlignment(Qt::AlignCenter);
-    m_bottomTips->setText(tr("Hard disk error, please repair"));
     m_bottomTips->setAlignment(Qt::AlignCenter);
     m_bottomTips->setVisible(false);
     m_bottomTips->setStyleSheet("QLabel {"
@@ -38,7 +37,7 @@ ScanningPage::ScanningPage(QWidget *parent)
     m_repair->setVisible(false);
     m_finish->setText(tr("Finish"));
     m_finish->setVisible(false);
-    m_reboot->setText(tr("Reboot"));
+    m_reboot->setText(tr("Restart Now"));
     m_reboot->setVisible(false);
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;
@@ -135,7 +134,7 @@ void ScanningPage::onScanFinsihed(const QString &errorPartion)
     m_spinner->stop();
     m_cancel->setVisible(true);
     m_repair->setVisible(true);
-    m_centerTips->setText(tr("Partion %1 error, please repair").arg(errorPartion));
+    m_centerTips->setText(tr("Hard disk partition %1 error, please repair").arg(errorPartion));
     m_bottomTips->setText(tr("The repair may cause data loss, please confirm and continue"));
     m_bottomTips->setVisible(true);
 
@@ -147,7 +146,7 @@ void ScanningPage::onRepairFinished(bool success)
     if (success)
     {
         m_centerTips->setText(tr("Repair succeeded"));
-        m_bottomTips->setText(tr("Please reboot to ensure disk sync"));
+        m_bottomTips->setText(tr("Please restart your computer to finish repairing"));
         m_reboot->setVisible(true);
     }
     else
