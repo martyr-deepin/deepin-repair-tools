@@ -5,6 +5,43 @@
 #include <QDebug>
 #include <QApplication>
 
+QString formatDiskSize(const quint64 sizeInByte)
+{
+    QString ret;
+    QString unit;
+
+    if (sizeInByte < 1024)
+    {
+        ret = QString("%1").arg(sizeInByte);
+        unit = "B";
+    }
+    else if (sizeInByte < 1024ull * 1024)
+    {
+        ret = QString("%1").arg(double(sizeInByte) / 1024, 0, 'f', 1);
+        unit = "KB";
+    }
+    else if (sizeInByte < 1024ull * 1024 * 1024)
+    {
+        ret = QString("%1").arg(double(sizeInByte) / 1024 / 1024, 0, 'f', 1);
+        unit = "MB";
+    }
+    else if (sizeInByte < 1024ull * 1024 * 1024 * 1024)
+    {
+        ret = QString("%1").arg(double(sizeInByte) / 1024 / 1024 / 1024, 0, 'f', 1);
+        unit = "GB";
+    }
+    else
+    {
+        ret = QString("%1").arg(double(sizeInByte) / 1024 / 1024 / 1024 / 1024, 0, 'f', 1);
+        unit = "TB";
+    }
+
+    ret.remove(QRegularExpression("0+$"));
+    ret.remove(QRegularExpression("\\.$"));
+
+    return ret + unit;
+}
+
 DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     : QWidget(parent)
 
@@ -197,8 +234,7 @@ void DiskCleanWidget::cleanEnd(const quint64 clearedSize)
     m_cancelButton->setVisible(false);
     m_okButton->setVisible(true);
 
-    const double sizeMb = double(clearedSize) / 1024 / 1024;
-    const QString sizeStr = QString("%1MB").arg(sizeMb, 0, 'f', 2);
+    const QString sizeStr = formatDiskSize(clearedSize);
 
     m_statusTips->setText(tr("%1 has been cleaned up").arg(sizeStr));
     m_statusTips->setStyleSheet("QLabel { color: green;} ");
