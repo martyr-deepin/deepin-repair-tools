@@ -31,6 +31,7 @@ private slots:
     void repairPartion(const QString &errorPartion);
     void onScanFinsihed(const QString &errorPartion);
     void onRepairFinished(bool success);
+    void onRebootClicked();
 
 private:
     QPointer<DiskUtils> m_diskUtils;
@@ -41,6 +42,7 @@ private:
     QPushButton *m_cancel;
     QPushButton *m_repair;
     QPushButton *m_finish;
+    QPushButton *m_reboot;
 };
 
 #endif // SCANNINGPAGE_H

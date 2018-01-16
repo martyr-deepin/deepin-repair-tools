@@ -18,6 +18,7 @@ ScanningPage::ScanningPage(QWidget *parent)
     , m_cancel(new QPushButton)
     , m_repair(new QPushButton)
     , m_finish(new QPushButton)
+    , m_reboot(new QPushButton)
 {
     m_spinner->setFixedSize(24, 24);
     m_spinner->start();
@@ -28,18 +29,24 @@ ScanningPage::ScanningPage(QWidget *parent)
     m_bottomTips->setText(tr("Hard disk error, please repair"));
     m_bottomTips->setAlignment(Qt::AlignCenter);
     m_bottomTips->setVisible(false);
+    m_bottomTips->setStyleSheet("QLabel {"
+                                "color: #f3a21d;"
+                                "}");
     m_cancel->setText(tr("Cancel"));
     m_cancel->setVisible(false);
     m_repair->setText(tr("Repair"));
     m_repair->setVisible(false);
     m_finish->setText(tr("Finish"));
     m_finish->setVisible(false);
+    m_reboot->setText(tr("Reboot"));
+    m_reboot->setVisible(false);
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;
     buttonsLayout->addStretch();
     buttonsLayout->addWidget(m_cancel);
     buttonsLayout->addWidget(m_repair);
     buttonsLayout->addWidget(m_finish);
+    buttonsLayout->addWidget(m_reboot);
     buttonsLayout->addStretch();
     buttonsLayout->setSpacing(20);
 
@@ -50,6 +57,7 @@ ScanningPage::ScanningPage(QWidget *parent)
     centralLayout->addWidget(m_centerTips);
     centralLayout->addStretch();
     centralLayout->addWidget(m_bottomTips);
+    centralLayout->addSpacing(10);
     centralLayout->addWidget(m_spinner);
     centralLayout->setAlignment(m_spinner, Qt::AlignHCenter);
     centralLayout->addLayout(buttonsLayout);
@@ -101,6 +109,7 @@ ScanningPage::ScanningPage(QWidget *parent)
 
     connect(m_cancel, &QPushButton::clicked, qApp, &QApplication::quit);
     connect(m_finish, &QPushButton::clicked, qApp, &QApplication::quit);
+    connect(m_reboot, &QPushButton::clicked, this, &ScanningPage::onRebootClicked);
 }
 
 void ScanningPage::startScan()
@@ -127,6 +136,8 @@ void ScanningPage::onScanFinsihed(const QString &errorPartion)
     m_cancel->setVisible(true);
     m_repair->setVisible(true);
     m_centerTips->setText(tr("Partion %1 error, please repair").arg(errorPartion));
+    m_bottomTips->setText(tr("The repair may cause data loss, please confirm and continue"));
+    m_bottomTips->setVisible(true);
 
     connect(m_repair, &QPushButton::clicked, this, [=] { repairPartion(errorPartion); });
 }
@@ -134,13 +145,24 @@ void ScanningPage::onScanFinsihed(const QString &errorPartion)
 void ScanningPage::onRepairFinished(bool success)
 {
     if (success)
+    {
         m_centerTips->setText(tr("Repair succeeded"));
+        m_bottomTips->setText(tr("Please reboot to ensure disk sync"));
+        m_reboot->setVisible(true);
+    }
     else
+    {
         m_centerTips->setText(tr("Repair failed"));
+        m_finish->setVisible(true);
+    }
 
     m_spinner->stop();
     m_spinner->setVisible(false);
-    m_finish->setVisible(true);
+}
+
+void ScanningPage::onRebootClicked()
+{
+    QProcess::startDetached("dbus-send --print-reply --dest=com.deepin.dde.shutdownFront /com/deepin/dde/shutdownFront com.deepin.dde.shutdownFront.Restart");
 }
 
 void ScanningPage::repairPartion(const QString &errorPartion)
@@ -150,6 +172,7 @@ void ScanningPage::repairPartion(const QString &errorPartion)
     m_cancel->setVisible(false);
     m_spinner->start();
     m_spinner->setVisible(true);
+    m_bottomTips->clear();
 
     FSRepairThread *thrd = new FSRepairThread;
     thrd->setRepairPartion(errorPartion);
