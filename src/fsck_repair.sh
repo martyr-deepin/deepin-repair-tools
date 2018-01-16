@@ -1,3 +1,3 @@
 #!/bin/sh
 
-fsck -p $1
+fsck -y $1
