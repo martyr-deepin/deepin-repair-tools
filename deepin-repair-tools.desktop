@@ -1,7 +1,10 @@
 [Desktop Entry]
 Name=Deepin Repair
+Name[zh_CN]=深度系统修复工具
 GenericName=Deepin Repair
-Comment=Deepin Repair
+GenericName[zh_CN]=深度系统修复工具
+Comment=Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, privilege repairing, etc.
+Comment[zh_CN]=深度系统修复工具是用于帮助用户快捷修复深度操作系统中某些问题的工具。包括硬盘检测、磁盘空间清理、DPKG修复、权限修复等
 Exec=/usr/bin/deepin-repair-tools-pkexec %u
 Icon=deepin-repair-tools
 Terminal=false
