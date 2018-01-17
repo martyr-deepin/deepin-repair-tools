@@ -12,8 +12,7 @@ QString formatDiskSize(const quint64 sizeInByte)
 
     if (sizeInByte < 1024)
     {
-        ret = QString("%1").arg(sizeInByte);
-        unit = "B";
+        return QString("%1B").arg(sizeInByte);
     }
     else if (sizeInByte < 1024ull * 1024)
     {
