@@ -161,7 +161,7 @@ void ScanningPage::onRepairFinished(bool success)
 
 void ScanningPage::onRebootClicked()
 {
-    QProcess::startDetached("dbus-send --print-reply --dest=com.deepin.dde.shutdownFront /com/deepin/dde/shutdownFront com.deepin.dde.shutdownFront.Restart");
+    QProcess::startDetached("reboot");
 }
 
 void ScanningPage::repairPartion(const QString &errorPartion)
