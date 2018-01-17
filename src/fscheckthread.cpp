@@ -23,7 +23,7 @@ void FSCheckThread::run()
         const QString &partion = QString("/dev/%1").arg(device);
         const RunResult &r = execAsChrootSynchronous("/", sh, QStringList() << partion);
 
-        if (r.exitCode != RET_ERROR_DETECTED)
+        if (!(r.exitCode & RET_ERROR_DETECTED))
             continue;
 
         emit checkFinished(partion);
