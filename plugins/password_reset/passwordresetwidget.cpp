@@ -54,7 +54,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     centralLayout->setAlignment(m_passwordRepeat, Qt::AlignHCenter);
     centralLayout->addStretch();
     centralLayout->addWidget(m_status);
-    centralLayout->addSpacing(5);
+    centralLayout->addSpacing(10);
     centralLayout->addLayout(btnsLayout);
     centralLayout->setSpacing(0);
     centralLayout->setContentsMargins(0, 0, 0, 0);
