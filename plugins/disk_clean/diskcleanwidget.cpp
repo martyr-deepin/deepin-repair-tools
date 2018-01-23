@@ -73,12 +73,11 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     m_capacityBar->setPageStep(1);
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;
+    buttonsLayout->addStretch();
     buttonsLayout->addWidget(m_cleanButton);
-    buttonsLayout->setAlignment(m_cleanButton, Qt::AlignHCenter);
     buttonsLayout->addWidget(m_cancelButton);
-    buttonsLayout->setAlignment(m_cancelButton, Qt::AlignHCenter);
     buttonsLayout->addWidget(m_okButton);
-    buttonsLayout->setAlignment(m_okButton, Qt::AlignHCenter);
+    buttonsLayout->addStretch();
 
     QHBoxLayout *infoTextLayout = new QHBoxLayout;
     infoTextLayout->addWidget(m_sysInfo);

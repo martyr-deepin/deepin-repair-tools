@@ -32,12 +32,11 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     m_passwordRepeat->setPlaceholderText(tr("Confirm password"));
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;
+    btnsLayout->addStretch();
     btnsLayout->addWidget(m_resetButton);
-    btnsLayout->setAlignment(m_resetButton, Qt::AlignHCenter);
     btnsLayout->addWidget(m_confirmButton);
-    btnsLayout->setAlignment(m_confirmButton, Qt::AlignHCenter);
     btnsLayout->addWidget(m_okButton);
-    btnsLayout->setAlignment(m_okButton, Qt::AlignHCenter);
+    btnsLayout->addStretch();
 
     QVBoxLayout *centralLayout = new QVBoxLayout;
     centralLayout->addWidget(m_icon);
