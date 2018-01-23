@@ -22,7 +22,9 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
 {
     m_output->setReadOnly(true);
     m_output->setStyleSheet("QTextEdit {"
-                            "color: #1077d7;"
+                            "color: #609dc8;"
+                            "font-size: 8pt;"
+                            "padding: 0 20px 0 20px;"
                             "}");
 
     m_showDetail->setText(tr("Show details"));
@@ -31,7 +33,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     m_icon->setAlignment(Qt::AlignHCenter);
     m_icon->setObjectName("PluginIcon");
     m_repairButton->setText(tr("Repair"));
-    m_centerTips->setText(tr("Cannot find boot menu"));
+    m_centerTips->setText(tr("Cannot find boot menu to enter system"));
     m_centerTips->setAlignment(Qt::AlignHCenter);
     m_centerTips->setObjectName("TipsLabel");
     m_statusTips->setAlignment(Qt::AlignHCenter);

@@ -79,6 +79,7 @@ void PasswordResetWidget::showEvent(QShowEvent *e)
 
 void PasswordResetWidget::onResetClicked()
 {
+    m_tips->setText(tr("Please enter a new password"));
     m_resetButton->setVisible(false);
     m_confirmButton->setVisible(true);
 

@@ -79,7 +79,7 @@ void DPKGRepairWidget::showEvent(QShowEvent *e)
 
 void DPKGRepairWidget::reset()
 {
-    m_tips->setText(tr("Unexpected interruption when install/upgrade"));
+    m_tips->setText(tr("Cannot install or upgrade application"));
     m_tips->setVisible(true);
     m_result->setVisible(false);
     m_output->setVisible(false);

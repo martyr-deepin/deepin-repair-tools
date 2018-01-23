@@ -20,7 +20,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     m_icon->setAlignment(Qt::AlignHCenter);
     m_icon->setObjectName("PluginIcon");
     m_tips->setAlignment(Qt::AlignHCenter);
-    m_tips->setText(tr("Privilege error"));
+    m_tips->setText(tr("Cannot enter desktop due to privilege error"));
     m_tips->setObjectName("TipsLabel");
     m_status->setAlignment(Qt::AlignHCenter);
     m_repairButton->setText(tr("Repair"));

@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 //    app.loadTranslator(QList<QLocale>() << QLocale("zh_CN"));
     app.setProductIcon(QIcon::fromTheme("deepin-repair-tools"));
     app.setProductName(QApplication::translate("main", "Deepin Repair"));
-    app.setApplicationDescription(QApplication::translate("main", "Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, privilege repairing, etc."));
+    app.setApplicationDescription(QApplication::translate("main", "Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc."));
     app.setTheme("light");
     app.setAttribute(Qt::AA_UseHighDpiPixmaps);
 

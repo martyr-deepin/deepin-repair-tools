@@ -124,7 +124,9 @@ void ScanningPage::startScan()
 
 void ScanningPage::onScanFinsihed(const QString &errorPartion)
 {
+#ifndef QT_DEBUG
     if (errorPartion.isEmpty())
+#endif
     {
         emit scanDone();
         return;
