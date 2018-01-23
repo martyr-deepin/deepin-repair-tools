@@ -39,10 +39,10 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     centralLayout->addSpacing(10);
     centralLayout->addWidget(m_tips);
     centralLayout->addStretch();
+    centralLayout->addWidget(m_status);
+    centralLayout->addSpacing(10);
     centralLayout->addWidget(m_spinner);
     centralLayout->setAlignment(m_spinner, Qt::AlignHCenter);
-    centralLayout->addWidget(m_status);
-    centralLayout->addSpacing(5);
     centralLayout->addLayout(btnsLayout);
     centralLayout->setSpacing(0);
     centralLayout->setContentsMargins(0, 0, 0, 0);
@@ -69,6 +69,9 @@ void PermissionsRepairWidget::onRepairButtonClicked()
     m_spinner->setVisible(true);
     m_spinner->start();
     m_repairButton->setVisible(false);
+    m_status->setText(tr("Repairing, please wait..."));
+    m_status->setVisible(true);
+    m_status->setStyleSheet("color: black;");
 
     PermissionsRepairThread *thrd = new PermissionsRepairThread;
     thrd->setToolsProxy(m_toolsProxy);

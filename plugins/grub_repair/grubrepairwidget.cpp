@@ -57,7 +57,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     centralLayout->setAlignment(m_hideDetail, Qt::AlignHCenter);
     centralLayout->addStretch();
     centralLayout->addWidget(m_statusTips);
-    centralLayout->addSpacing(5);
+    centralLayout->addSpacing(10);
     centralLayout->addLayout(btnsLayout);
     centralLayout->addWidget(m_spinner);
     centralLayout->setAlignment(m_spinner, Qt::AlignHCenter);
@@ -89,6 +89,9 @@ void GrubRepairWidget::onRepairClicked()
     m_showDetail->setVisible(true);
     m_spinner->setVisible(true);
     m_spinner->start();
+    m_statusTips->setText(tr("Repairing, please wait..."));
+    m_statusTips->setVisible(true);
+    m_statusTips->setStyleSheet("color: black;");
 
     GrubRepairThread *thrd = new GrubRepairThread;
     thrd->setToolsProxy(m_toolsProxy);

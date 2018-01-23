@@ -174,6 +174,7 @@ void ScanningPage::repairPartion(const QString &errorPartion)
     m_spinner->start();
     m_spinner->setVisible(true);
     m_bottomTips->clear();
+    m_centerTips->setText(tr("Repairing hard disk, please wait..."));
 
     FSRepairThread *thrd = new FSRepairThread;
     thrd->setRepairPartion(errorPartion);

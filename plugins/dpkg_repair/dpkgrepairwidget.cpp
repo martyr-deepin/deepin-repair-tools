@@ -100,6 +100,9 @@ void DPKGRepairWidget::onRepairClicked()
     m_spinner->start();
     m_spinner->setVisible(true);
     m_showDetail->setVisible(true);
+    m_result->setText(tr("Repairing, please wait..."));
+    m_result->setVisible(true);
+    m_result->setStyleSheet("color: black;");
 
     DPKGRepairThread *thrd = new DPKGRepairThread;
     thrd->setToolsProxy(m_toolsProxy);
