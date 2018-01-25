@@ -88,10 +88,10 @@ void PermissionsRepairWidget::onRepairFinished(const bool success)
     if (success)
     {
         m_status->setText(tr("Reset privilege successfully"));
-        m_status->setStyleSheet("color: green;");
+        m_status->setStyleSheet("color: #3da219;");
     } else {
         m_status->setText(tr("Reset privilege failed"));
-        m_status->setStyleSheet("color: #ec7b3d;");
+        m_status->setStyleSheet("color: #f3a21d;");
     }
 
     m_status->setVisible(true);

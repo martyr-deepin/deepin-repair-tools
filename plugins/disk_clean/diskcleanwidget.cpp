@@ -235,7 +235,7 @@ void DiskCleanWidget::cleanEnd(const quint64 clearedSize)
     const QString sizeStr = formatDiskSize(clearedSize);
 
     m_statusTips->setText(tr("%1 has been cleaned up").arg(sizeStr));
-    m_statusTips->setStyleSheet("QLabel { color: green;} ");
+    m_statusTips->setStyleSheet("QLabel { color: #3da219;} ");
 
     refreshDiskInfo();
 }
