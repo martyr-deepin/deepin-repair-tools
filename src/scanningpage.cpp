@@ -32,6 +32,7 @@ ScanningPage::ScanningPage(QWidget *parent)
                                 "color: #f3a21d;"
                                 "}");
     m_cancel->setText(tr("Cancel"));
+    m_cancel->setObjectName("DeactivedButton");
     m_cancel->setVisible(false);
     m_repair->setText(tr("Repair"));
     m_repair->setVisible(false);
@@ -89,6 +90,15 @@ ScanningPage::ScanningPage(QWidget *parent)
                   "background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #0b8cff, stop:1 #0aa1ff);"
                   "color: #FFFFFF;"
                   "border-color: rgba(29, 129, 255, 0.3);"
+                  "}"
+                  ""
+                  "#ScanPage QPushButton#DeactivedButton {"
+                  "border-color: rgba(0, 0, 0, .1);"
+                  "color: #303030;"
+                  "}"
+                  ""
+                  "#ScanPage QPushButton#DeactivedButton:hover {"
+                  "color: white;"
                   "}"
                   ""
                   "#ScanPage QLineEdit {"
