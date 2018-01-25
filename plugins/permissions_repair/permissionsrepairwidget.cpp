@@ -12,7 +12,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     , m_icon(new QLabel)
     , m_tips(new QLabel)
     , m_status(new QLabel)
-    , m_spinner(new DSpinner)
+    , m_spinnerPlaceHolder(new QWidget)
     , m_okButton(new QPushButton)
     , m_repairButton(new QPushButton)
 {
@@ -26,7 +26,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     m_repairButton->setText(tr("Repair"));
     m_okButton->setText(tr("Done"));
     m_okButton->setVisible(false);
-    m_spinner->setFixedSize(32, 32);
+    m_spinnerPlaceHolder->setFixedSize(32, 32);
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;
     btnsLayout->addStretch();
@@ -41,8 +41,8 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     centralLayout->addStretch();
     centralLayout->addWidget(m_status);
     centralLayout->addSpacing(10);
-    centralLayout->addWidget(m_spinner);
-    centralLayout->setAlignment(m_spinner, Qt::AlignHCenter);
+    centralLayout->addWidget(m_spinnerPlaceHolder);
+    centralLayout->setAlignment(m_spinnerPlaceHolder, Qt::AlignHCenter);
     centralLayout->addLayout(btnsLayout);
     centralLayout->setSpacing(0);
     centralLayout->setContentsMargins(0, 0, 0, 0);
@@ -66,8 +66,7 @@ void PermissionsRepairWidget::onRepairButtonClicked()
 {
     m_toolsProxy->registerExclusive(true);
 
-    m_spinner->setVisible(true);
-    m_spinner->start();
+    m_spinnerPlaceHolder->setVisible(true);
     m_repairButton->setVisible(false);
     m_status->setText(tr("Repairing, please wait..."));
     m_status->setVisible(true);
@@ -97,8 +96,7 @@ void PermissionsRepairWidget::onRepairFinished(const bool success)
 
     m_status->setVisible(true);
     m_okButton->setVisible(true);
-    m_spinner->stop();
-    m_spinner->setVisible(false);
+    m_spinnerPlaceHolder->setVisible(false);
 }
 
 void PermissionsRepairWidget::resetUi()
@@ -106,5 +104,5 @@ void PermissionsRepairWidget::resetUi()
     m_status->setVisible(false);
     m_okButton->setVisible(false);
     m_repairButton->setVisible(true);
-    m_spinner->setVisible(false);
+    m_spinnerPlaceHolder->setVisible(false);
 }

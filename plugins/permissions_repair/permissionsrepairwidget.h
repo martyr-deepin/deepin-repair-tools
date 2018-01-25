@@ -7,10 +7,6 @@
 #include <QPushButton>
 #include <QLabel>
 
-#include <DSpinner>
-
-DWIDGET_USE_NAMESPACE
-
 class PermissionsRepairWidget : public QWidget
 {
     Q_OBJECT
@@ -33,7 +29,7 @@ private:
     QLabel *m_icon;
     QLabel *m_tips;
     QLabel *m_status;
-    DSpinner *m_spinner;
+    QWidget *m_spinnerPlaceHolder;
     QPushButton *m_okButton;
     QPushButton *m_repairButton;
 };
