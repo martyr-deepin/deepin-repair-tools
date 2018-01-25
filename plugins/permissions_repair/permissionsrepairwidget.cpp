@@ -24,7 +24,7 @@ PermissionsRepairWidget::PermissionsRepairWidget(QWidget *parent)
     m_tips->setObjectName("TipsLabel");
     m_status->setAlignment(Qt::AlignHCenter);
     m_repairButton->setText(tr("Repair"));
-    m_okButton->setText(tr("Finish"));
+    m_okButton->setText(tr("Done"));
     m_okButton->setVisible(false);
     m_spinner->setFixedSize(32, 32);
 

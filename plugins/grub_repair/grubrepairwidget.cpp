@@ -38,7 +38,7 @@ GrubRepairWidget::GrubRepairWidget(QWidget *parent)
     m_centerTips->setAlignment(Qt::AlignHCenter);
     m_centerTips->setObjectName("TipsLabel");
     m_statusTips->setAlignment(Qt::AlignHCenter);
-    m_okButton->setText(tr("Finish"));
+    m_okButton->setText(tr("Done"));
     m_spinner->setFixedSize(32, 32);
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;

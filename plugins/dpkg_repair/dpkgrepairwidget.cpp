@@ -37,7 +37,7 @@ DPKGRepairWidget::DPKGRepairWidget(QWidget *parent)
     m_icon->setAlignment(Qt::AlignHCenter);
     m_icon->setObjectName("PluginIcon");
     m_repairButton->setText(tr("Repair"));
-    m_okButton->setText(tr("Finish"));
+    m_okButton->setText(tr("Done"));
 
     QHBoxLayout *btnsLayout = new QHBoxLayout;
     btnsLayout->addStretch();

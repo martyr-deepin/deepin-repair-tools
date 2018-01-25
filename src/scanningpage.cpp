@@ -35,7 +35,7 @@ ScanningPage::ScanningPage(QWidget *parent)
     m_cancel->setVisible(false);
     m_repair->setText(tr("Repair"));
     m_repair->setVisible(false);
-    m_finish->setText(tr("Finish"));
+    m_finish->setText(tr("Done"));
     m_finish->setVisible(false);
     m_reboot->setText(tr("Restart Now"));
     m_reboot->setVisible(false);
