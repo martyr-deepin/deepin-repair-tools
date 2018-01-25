@@ -27,7 +27,7 @@ PasswordResetWidget::PasswordResetWidget(QWidget *parent)
     m_status->setAlignment(Qt::AlignHCenter);
     m_resetButton->setText(tr("Reset password"));
     m_confirmButton->setText(tr("Confirm"));
-    m_okButton->setText(tr("Finish"));
+    m_okButton->setText(tr("Done"));
     m_passwordEdit->setPlaceholderText(tr("Password"));
     m_passwordRepeat->setPlaceholderText(tr("Confirm password"));
 
@@ -151,7 +151,7 @@ void PasswordResetWidget::resetUI()
     m_passwordEdit->clear();
     m_passwordRepeat->clear();
 
-    m_tips->setText(tr("Forgot password"));
+    m_tips->setText(tr("Forgot login password"));
     m_tips->setVisible(true);
     m_status->setVisible(false);
     m_resetButton->setVisible(true);

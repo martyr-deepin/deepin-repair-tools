@@ -12,38 +12,43 @@
 <context>
     <name>DPKGRepairWidget</name>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="32"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
         <source>Show details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="34"/>
         <source>Hide details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="38"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="39"/>
         <source>Repair</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="39"/>
-        <source>Finish</source>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
+        <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="127"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
+        <source>Cannot install or upgrade application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
+        <source>Repairing, please wait...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
         <source>Repair failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="130"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
         <source>Repair succeeded</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="82"/>
-        <source>Unexpected interruption when install/upgrade</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -74,21 +79,21 @@
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
-        <source>Finish</source>
+        <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="153"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
         <source>%1 (on %2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="192"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
         <source>Cleaning %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="238"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
         <source>%1 has been cleaned up</source>
         <translation type="unfinished"></translation>
     </message>
@@ -104,37 +109,42 @@
 <context>
     <name>GrubRepairWidget</name>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="28"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="31"/>
         <source>Show details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="29"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
         <source>Hide details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="33"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="36"/>
         <source>Repair</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="34"/>
-        <source>Cannot find boot menu</source>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
+        <source>Cannot find boot menu to enter system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="38"/>
-        <source>Finish</source>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
+        <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="141"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
+        <source>Repairing, please wait...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair succeeded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="144"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -161,7 +171,7 @@
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
-        <source>Finish</source>
+        <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -172,6 +182,11 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="32"/>
         <source>Confirm password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
+        <source>Please enter a new password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -186,7 +201,7 @@
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
-        <source>Forgot password</source>
+        <source>Forgot login password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -207,7 +222,7 @@
     <name>PermissionsRepairWidget</name>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
-        <source>Privilege error</source>
+        <source>Cannot enter desktop due to privilege error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -217,16 +232,21 @@
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
-        <source>Finish</source>
+        <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="88"/>
-        <source>Reset privilege successfully</source>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
+        <source>Repairing, please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
+        <source>Reset privilege successfully</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
         <source>Reset privilege failed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -249,37 +269,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="38"/>
-        <source>Finish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/scanningpage.cpp" line="40"/>
         <source>Restart Now</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="137"/>
+        <location filename="../src/scanningpage.cpp" line="139"/>
         <source>Hard disk partition %1 error, please repair</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="149"/>
+        <location filename="../src/scanningpage.cpp" line="151"/>
         <source>Please restart your computer to finish repairing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="138"/>
+        <location filename="../src/scanningpage.cpp" line="177"/>
+        <source>Repairing hard disk, please wait...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/scanningpage.cpp" line="140"/>
         <source>The repair may cause data loss, please confirm and continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="148"/>
+        <location filename="../src/scanningpage.cpp" line="38"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/scanningpage.cpp" line="150"/>
         <source>Repair succeeded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="154"/>
+        <location filename="../src/scanningpage.cpp" line="156"/>
         <source>Repair failed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -293,7 +318,7 @@
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>
-        <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, privilege repairing, etc.</source>
+        <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

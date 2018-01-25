@@ -64,7 +64,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     m_cleanButton->setText(tr("Clean"));
     m_cancelButton->setText(tr("Cancel"));
     m_cancelButton->setVisible(false);
-    m_okButton->setText(tr("Finish"));
+    m_okButton->setText(tr("Done"));
     m_okButton->setVisible(false);
     m_diskSelectBox->setFixedHeight(25);
     m_capacityBar->setFixedHeight(4);
