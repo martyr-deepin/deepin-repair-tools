@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     app.setOrganizationName("deepin");
     app.setApplicationName("deepin-repair-tools");
     app.setApplicationVersion("1.0");
-    app.setApplicationAcknowledgementPage("https://www.deepin.org/acknowledgments/");
+    app.setApplicationAcknowledgementPage("https://www.deepin.org/acknowledgments/repair-tools");
     app.loadTranslator();
 //    app.loadTranslator(QList<QLocale>() << QLocale("zh_CN"));
     app.setProductIcon(QIcon::fromTheme("deepin-repair-tools"));
