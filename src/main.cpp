@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     DApplication app(argc, argv);
 
     app.setOrganizationName("deepin");
-    app.setApplicationName("deepin-repair-tools");
+    app.setApplicationName("deepin-repair");
     app.setApplicationVersion("1.0");
     app.setApplicationAcknowledgementPage("https://www.deepin.org/acknowledgments/deepin-repair/");
     app.loadTranslator();

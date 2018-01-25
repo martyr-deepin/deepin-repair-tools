@@ -76,3 +76,7 @@ install (FILES
             src/repairtoolsproxy.h
             src/repairtoolsinterface.h
          DESTINATION include/deepin-repair-tools)
+
+# manual files
+install (DIRECTORY manual/
+         DESTINATION share/dman/deepin-repair)
