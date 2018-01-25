@@ -70,3 +70,9 @@ install(FILES ${QM_FILES}
 # policy kit
 install(FILES com.deepin.repair-tools.policy
         DESTINATION share/polkit-1/actions/)
+
+# dev files
+install (FILES
+            src/repairtoolsproxy.h
+            src/repairtoolsinterface.h
+         DESTINATION include/deepin-repair-tools)

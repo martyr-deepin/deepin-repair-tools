@@ -11,3 +11,9 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, os-prober
 Description: deepin system repair tools
  Deepin Repair Tools is a useful tools for system repair & clean.
+
+Package: deepin-repair-tools-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, os-prober
+Description: deepin system repair tools - dev files
+ Deepin Repair Tools is a useful tools for system repair & clean.
