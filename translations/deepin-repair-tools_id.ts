@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="tr" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="id" version="2.1">
 <context>
     <name>DPKGRepair</name>
     <message>
         <location filename="../plugins/dpkg_repair/dpkg_repair_plugin.h" line="21"/>
         <source>DPKG Repair</source>
-        <translation>DPKG Onar</translation>
+        <translation>Perbaiki DPKG</translation>
     </message>
 </context>
 <context>
@@ -12,17 +12,17 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
         <source>Show details</source>
-        <translation>Detayları göster</translation>
+        <translation>Tampilkan detail</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="34"/>
         <source>Hide details</source>
-        <translation>Detayları gizle</translation>
+        <translation>Sembunyikan Detail</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="39"/>
         <source>Repair</source>
-        <translation>Onar</translation>
+        <translation>Perbaiki</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
@@ -42,12 +42,12 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
         <source>Repair failed</source>
-        <translation>Onarım başarısız</translation>
+        <translation>Perbaikan gagal</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
         <source>Repair succeeded</source>
-        <translation>Onarım başarılı</translation>
+        <translation>Perbaikan berhasil</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>Disk Temizle</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -63,17 +63,17 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="62"/>
         <source>System partition</source>
-        <translation>Sistem bölümü</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="64"/>
         <source>Clean</source>
-        <translation>Temizle</translation>
+        <translation>Bersih</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="65"/>
         <source>Cancel</source>
-        <translation>İptal et</translation>
+        <translation>Batal</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
@@ -83,17 +83,17 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
         <source>%1 (on %2)</source>
-        <translation>%1 (%2 &apos;sinde)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
         <source>Cleaning %1</source>
-        <translation>Temizleniyor %1</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
         <source>%1 has been cleaned up</source>
-        <translation>%1 temizlendi</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation>Önyükleme Onar</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -109,17 +109,17 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="31"/>
         <source>Show details</source>
-        <translation>Detayları göster</translation>
+        <translation>Tampilkan detail</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
         <source>Hide details</source>
-        <translation>Detayları gzle</translation>
+        <translation>Sembunyikan detail</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="36"/>
         <source>Repair</source>
-        <translation>Onar</translation>
+        <translation>Perbaiki</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
@@ -139,12 +139,12 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair succeeded</source>
-        <translation>Onarım başarılı</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
-        <translation>Onarım başarısız</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../plugins/password_reset/password_reset_plugin.h" line="21"/>
         <source>Password Reset</source>
-        <translation>Parola Sıfırla</translation>
+        <translation>Reset Password</translation>
     </message>
 </context>
 <context>
@@ -160,12 +160,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="29"/>
         <source>Confirm</source>
-        <translation>Doğrula</translation>
+        <translation>Konfirmasi</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="28"/>
         <source>Reset password</source>
-        <translation>Parolayı sıfırla</translation>
+        <translation>Reset password</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
@@ -175,12 +175,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
         <source>Password</source>
-        <translation>Parola</translation>
+        <translation>Password</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="32"/>
         <source>Confirm password</source>
-        <translation>Parolayı doğrula</translation>
+        <translation>Konfirmasi Password</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
@@ -190,12 +190,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
         <source>The two passwords don&apos;t match</source>
-        <translation>İki parola eşleşmiyor</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="128"/>
         <source>Reset password successfully</source>
-        <translation>Parola sıfırlama başarılı</translation>
+        <translation>Reset password berhasil</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
         <source>%1 (on %2)</source>
-        <translation>%1 (%2 &apos;sinde)</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -213,7 +213,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissions_repair_plugin.h" line="21"/>
         <source>Privilege Repair</source>
-        <translation>İzin Onar</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -226,7 +226,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
         <source>Repair</source>
-        <translation>Onar</translation>
+        <translation>Perbaiki</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
@@ -241,12 +241,12 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
         <source>Reset privilege successfully</source>
-        <translation>İzin sıfırlama başarılı</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
         <source>Reset privilege failed</source>
-        <translation>İzin sıfırlama başarısız</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -254,32 +254,32 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="27"/>
         <source>Checking hard disk status, please wait...</source>
-        <translation>Sabit disk durumu kontrol ediliyor, lütfen bekleyiniz...</translation>
+        <translation>Memeriksa status hard disk, mohon tunggu ...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="34"/>
         <source>Cancel</source>
-        <translation>İptal et</translation>
+        <translation>Batal</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="36"/>
         <source>Repair</source>
-        <translation>Onar</translation>
+        <translation>Perbaiki</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="40"/>
         <source>Restart Now</source>
-        <translation>Şimdi Yeniden Başlat</translation>
+        <translation>Nyalakan ulang sekarang</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="139"/>
         <source>Hard disk partition %1 error, please repair</source>
-        <translation>Sabit disk %1 hatası, lütfen onarınız</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="151"/>
         <source>Please restart your computer to finish repairing</source>
-        <translation>Onarım işlemini bitirmek için lütfen bilgisayarınızı yeniden başlatınız</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="177"/>
@@ -289,7 +289,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="140"/>
         <source>The repair may cause data loss, please confirm and continue</source>
-        <translation>Onarım veri kaybına neden olabilir, lütfen onaylayarak ve devam ediniz</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="38"/>
@@ -299,12 +299,12 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
         <source>Repair succeeded</source>
-        <translation>Onarım başarılı</translation>
+        <translation>Perbaikan berhasil</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="156"/>
         <source>Repair failed</source>
-        <translation>Onarım başarısız</translation>
+        <translation>Perbaikan gagal</translation>
     </message>
 </context>
 <context>
@@ -312,7 +312,7 @@
     <message>
         <location filename="../src/main.cpp" line="45"/>
         <source>Deepin Repair</source>
-        <translation>Deepin Onarım</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>

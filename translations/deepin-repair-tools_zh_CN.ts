@@ -10,39 +10,44 @@
 <context>
     <name>DPKGRepairWidget</name>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="32"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
         <source>Show details</source>
         <translation>显示详细过程</translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="34"/>
         <source>Hide details</source>
         <translation>收起详细过程</translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="38"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="39"/>
         <source>Repair</source>
         <translation>修复</translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="39"/>
-        <source>Finish</source>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
+        <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="127"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
+        <source>Cannot install or upgrade application</source>
+        <translation>软件无法正常安装或更新</translation>
+    </message>
+    <message>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
+        <source>Repairing, please wait...</source>
+        <translation>正在修复，请稍候…</translation>
+    </message>
+    <message>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
         <source>Repair failed</source>
         <translation>修复失败</translation>
     </message>
     <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="130"/>
+        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
         <source>Repair succeeded</source>
         <translation>修复成功</translation>
-    </message>
-    <message>
-        <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="82"/>
-        <source>Unexpected interruption when install/upgrade</source>
-        <translation>安装/升级过程意外中断</translation>
     </message>
 </context>
 <context>
@@ -72,21 +77,21 @@
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
-        <source>Finish</source>
+        <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="153"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
         <source>%1 (on %2)</source>
         <translation>%1 (on %2)</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="192"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
         <source>Cleaning %1</source>
         <translation>正在清理%1</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="238"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
         <source>%1 has been cleaned up</source>
         <translation>已经成功清理%1</translation>
     </message>
@@ -102,37 +107,42 @@
 <context>
     <name>GrubRepairWidget</name>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="28"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="31"/>
         <source>Show details</source>
         <translation>显示详细过程</translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="29"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
         <source>Hide details</source>
         <translation>收起详细过程</translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="33"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="36"/>
         <source>Repair</source>
         <translation>修复</translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="34"/>
-        <source>Cannot find boot menu</source>
-        <translation>开机找不到引导菜单</translation>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
+        <source>Cannot find boot menu to enter system</source>
+        <translation>开机找不到启动菜单导致无法进入系统</translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="38"/>
-        <source>Finish</source>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
+        <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="141"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
+        <source>Repairing, please wait...</source>
+        <translation>正在修复，请稍候…</translation>
+    </message>
+    <message>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair succeeded</source>
         <translation>修复成功</translation>
     </message>
     <message>
-        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="144"/>
+        <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
         <translation>修复失败</translation>
     </message>
@@ -159,7 +169,7 @@
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
-        <source>Finish</source>
+        <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
@@ -173,6 +183,11 @@
         <translation>重复密码</translation>
     </message>
     <message>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
+        <source>Please enter a new password</source>
+        <translation>请输入新密码</translation>
+    </message>
+    <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
         <source>The two passwords don&apos;t match</source>
         <translation>两次输入密码不一致</translation>
@@ -184,7 +199,7 @@
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
-        <source>Forgot password</source>
+        <source>Forgot login password</source>
         <translation>忘记登录密码</translation>
     </message>
     <message>
@@ -205,8 +220,8 @@
     <name>PermissionsRepairWidget</name>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
-        <source>Privilege error</source>
-        <translation>权限出现错误</translation>
+        <source>Cannot enter desktop due to privilege error</source>
+        <translation>由于文件权限不正确导致无法登录桌面</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
@@ -215,16 +230,21 @@
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
-        <source>Finish</source>
+        <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="88"/>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
+        <source>Repairing, please wait...</source>
+        <translation>正在修复，请稍候…</translation>
+    </message>
+    <message>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
         <source>Reset privilege successfully</source>
         <translation>系统权限已经重置成功</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
         <source>Reset privilege failed</source>
         <translation>修复失败</translation>
     </message>
@@ -247,37 +267,42 @@
         <translation>修复</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="38"/>
-        <source>Finish</source>
-        <translation>完成</translation>
-    </message>
-    <message>
         <location filename="../src/scanningpage.cpp" line="40"/>
         <source>Restart Now</source>
         <translation>重新启动</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="137"/>
+        <location filename="../src/scanningpage.cpp" line="139"/>
         <source>Hard disk partition %1 error, please repair</source>
         <translation>检测到硬盘分区%1需要修复</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="149"/>
+        <location filename="../src/scanningpage.cpp" line="151"/>
         <source>Please restart your computer to finish repairing</source>
-        <translation>为确保硬盘同步，请重新启动</translation>
+        <translation>为确保硬盘修复生效，请重新启动</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="138"/>
+        <location filename="../src/scanningpage.cpp" line="177"/>
+        <source>Repairing hard disk, please wait...</source>
+        <translation>正在修复硬盘，请稍候…</translation>
+    </message>
+    <message>
+        <location filename="../src/scanningpage.cpp" line="140"/>
         <source>The repair may cause data loss, please confirm and continue</source>
         <translation>修复可能会造成部分数据丢失，请确认后再继续</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="148"/>
+        <location filename="../src/scanningpage.cpp" line="38"/>
+        <source>Done</source>
+        <translation>完成</translation>
+    </message>
+    <message>
+        <location filename="../src/scanningpage.cpp" line="150"/>
         <source>Repair succeeded</source>
         <translation>硬盘修复成功</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="154"/>
+        <location filename="../src/scanningpage.cpp" line="156"/>
         <source>Repair failed</source>
         <translation>硬盘修复失败</translation>
     </message>
@@ -291,8 +316,8 @@
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>
-        <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, privilege repairing, etc.</source>
-        <translation>深度系统修复工具是用于帮助用户快捷修复深度操作系统中某些问题的工具。包括硬盘检测、磁盘空间清理、DPKG修复、权限修复等</translation>
+        <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
+        <translation>深度系统修复工具是一款帮助用户快速修复深度操作系统中某些问题的工具，其中包含硬盘检测、磁盘空间清理、DPKG修复、引导修复、权限修复、登录密码重设等。</translation>
     </message>
 </context>
 </TS>
