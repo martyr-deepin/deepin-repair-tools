@@ -17,6 +17,9 @@ class RepairTools : public DMainWindow
 public:
     explicit RepairTools(QWidget *parent = nullptr);
 
+public slots:
+    bool onLinkClicked(const QUrl &link);
+
 private:
     void keyPressEvent(QKeyEvent *e);
 

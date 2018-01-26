@@ -5,8 +5,12 @@
 #include <QApplication>
 #include <QScreen>
 #include <QKeyEvent>
+#include <QDebug>
+#include <QDesktopServices>
 
 #include <DTitlebar>
+
+#include <pwd.h>
 
 RepairTools::RepairTools(QWidget *parent)
     : DMainWindow(parent)
@@ -28,6 +32,19 @@ RepairTools::RepairTools(QWidget *parent)
     connect(sp, &ScanningPage::scanDone, this, &RepairTools::onScanDone);
 
     m_diskUtils->initilize();
+}
+
+bool RepairTools::onLinkClicked(const QUrl &link)
+{
+    struct passwd *pwd = getpwuid(qEnvironmentVariableIntValue("PKEXEC_UID"));
+
+    QProcess proc;
+    proc.setProgram("bash");
+    proc.setArguments(QStringList() << "/usr/lib/deepin-repair-tools/open_link.sh" << link.toString() << pwd->pw_name);
+    proc.start();
+    proc.waitForFinished();
+
+    return true;
 }
 
 void RepairTools::keyPressEvent(QKeyEvent *e)
