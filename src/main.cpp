@@ -5,6 +5,7 @@
 #include <DLog>
 #include <QSettings>
 #include <QMessageBox>
+#include <QDesktopServices>
 
 #include <unistd.h>
 
@@ -73,6 +74,9 @@ int main(int argc, char *argv[])
 
     RepairTools tools;
     tools.show();
+
+    if (qEnvironmentVariableIsSet("PKEXEC_UID"))
+        QDesktopServices::setUrlHandler("https", &tools, "onLinkClicked");
 
    return app.exec();
 }
