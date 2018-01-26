@@ -9,3 +9,5 @@ do
     printf "\nprocess ${ts}\n"
     lrelease "${ts}"
 done
+
+rename s/deepin-repair-tools/deepin-repair/ translations/*.qm
