@@ -27,17 +27,17 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation type="unfinished"/>
+        <translation>Uygulama yüklenemiyor veya yükseltilemiyor</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Onarılıyor, lütfen bekleyiniz...</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
@@ -124,17 +124,17 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation type="unfinished"/>
+        <translation>Sisteme girmek için önyükleme menüsü bulunamıyor</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Onarılıyor, lütfen bekleyiniz...</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
@@ -185,7 +185,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
         <source>Please enter a new password</source>
-        <translation type="unfinished"/>
+        <translation>Lütfen yeni bir şifre giriniz</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
@@ -200,7 +200,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
         <source>Forgot login password</source>
-        <translation type="unfinished"/>
+        <translation>Unutulan giriş parolası</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation type="unfinished"/>
+        <translation>Ayrıcalık hatası sebebiyle masaüstüne girilemiyor</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
@@ -231,12 +231,12 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Onarılıyor, lütfen bekleyiniz...</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
@@ -284,7 +284,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="177"/>
         <source>Repairing hard disk, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Sabit disk onarılıyor, lütfen bekleyiniz...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="140"/>
@@ -294,7 +294,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="38"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
@@ -317,7 +317,7 @@
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation type="unfinished"/>
+        <translation>Deepin Onarım, kullanıcıların sabit disk algılama, disk temizleme, DPKG onarımı, önyükleme onarımı, ayrıcalık onarımı, parola sıfırlama vb. Dahil olmak üzere Deepin&apos;deki bazı sorunları hızlı bir şekilde düzeltmesine yardımcı olmak için kullanılan bir araçtır.</translation>
     </message>
 </context>
 </TS>

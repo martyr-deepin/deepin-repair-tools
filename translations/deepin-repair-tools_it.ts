@@ -27,17 +27,17 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation type="unfinished"/>
+        <translation>Impossibile installare o aggiornare le applicazioni</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Riparazione in corso, attendere prego...</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
@@ -124,17 +124,17 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation type="unfinished"/>
+        <translation>Impossibile trovare il menu di boot per entrare nel Sistema</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Riparazione in corso, attendere prego...</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
@@ -185,7 +185,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
         <source>Please enter a new password</source>
-        <translation type="unfinished"/>
+        <translation>Inserisci una nuova password</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
@@ -200,7 +200,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
         <source>Forgot login password</source>
-        <translation type="unfinished"/>
+        <translation>Password di login dimenticata</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation type="unfinished"/>
+        <translation>Impossibile entrare nel desktop per via di un errore di privilegi</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
@@ -231,12 +231,12 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Riparazione in corso, attendere prego...</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
@@ -284,7 +284,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="177"/>
         <source>Repairing hard disk, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Riparazione hard disk, attendere prego...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="140"/>
@@ -294,7 +294,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="38"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
@@ -317,7 +317,8 @@
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation type="unfinished"/>
+        <translation>Deepin Repair è un tool utile all&apos;utenza per la correzione rapida di alcune anomalie di Sistema, come l&apos;identificazione degli hard disk, la pulizia dei dischi, la riparazione DPKG, riparazione del Boot, la riparazione dei privilegi, ripristino password, ecc.
+Localizzazione italiana a cura di Massimo A. Carofano.</translation>
     </message>
 </context>
 </TS>

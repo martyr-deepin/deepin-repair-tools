@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ar" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es_419" version="2.1">
 <context>
     <name>DPKGRepair</name>
     <message>
         <location filename="../plugins/dpkg_repair/dpkg_repair_plugin.h" line="21"/>
         <source>DPKG Repair</source>
-        <translation>إصلاح DPKG</translation>
+        <translation>Reparar DPKG</translation>
     </message>
 </context>
 <context>
@@ -12,42 +12,42 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
         <source>Show details</source>
-        <translation>إظهار التفاصيل</translation>
+        <translation>Mostrar detalles</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="34"/>
         <source>Hide details</source>
-        <translation>إخفاء التفاصيل</translation>
+        <translation>Ocultar detalles</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="39"/>
         <source>Repair</source>
-        <translation>إصلاح</translation>
+        <translation>Reparar</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation>تم</translation>
+        <translation>Terminado</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation>لا يمكن تثبيت أو ترقية البرنامج</translation>
+        <translation>La aplicación no se puede instalar o actualizar</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation>يتم الإصلاح  الرجاء الانتظار ...</translation>
+        <translation>Reparando, por favor espere...</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
         <source>Repair failed</source>
-        <translation>فشل الإصلاح</translation>
+        <translation>Reparación fallida</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
         <source>Repair succeeded</source>
-        <translation>تم الإصلاح بنجاح</translation>
+        <translation>Reparación exitosa</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>تنظيف القرص</translation>
+        <translation>Limpieza de Disco</translation>
     </message>
 </context>
 <context>
@@ -63,37 +63,37 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="62"/>
         <source>System partition</source>
-        <translation>قسم النظام</translation>
+        <translation>Partición del Sistema</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="64"/>
         <source>Clean</source>
-        <translation>تنظيف</translation>
+        <translation>Limpiar</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="65"/>
         <source>Cancel</source>
-        <translation>إلغاء</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation>تم</translation>
+        <translation>Terminado</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
         <source>%1 (on %2)</source>
-        <translation>%1 ( في %2)</translation>
+        <translation>%1 (de %2)</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
         <source>Cleaning %1</source>
-        <translation>يتم التنظيف %1</translation>
+        <translation>Limpiando %1</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
         <source>%1 has been cleaned up</source>
-        <translation>%1 قد تم تنظيفه</translation>
+        <translation>%1 ha sido limpiado</translation>
     </message>
 </context>
 <context>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation>إصلاح اﻹقلاع</translation>
+        <translation>Reparación de Arranque</translation>
     </message>
 </context>
 <context>
@@ -109,42 +109,42 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="31"/>
         <source>Show details</source>
-        <translation>إظهار التفاصيل</translation>
+        <translation>Mostrar detalles</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
         <source>Hide details</source>
-        <translation>إخفاء التفاصيل</translation>
+        <translation>Ocultar detalles</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="36"/>
         <source>Repair</source>
-        <translation>إصلاح</translation>
+        <translation>Reparar</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation>لا يمكن العثور على قائمة الإقلاع للدخول إلى النظام</translation>
+        <translation>No se puede encontrar el menú de inicio para ingresar al sistema</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation>تم</translation>
+        <translation>Terminado</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation>يتم الإصلاح  الرجاء الانتظار ...</translation>
+        <translation>Reparando, por favor espere...</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair succeeded</source>
-        <translation>تم الإصلاح بنجاح</translation>
+        <translation>Reparación exitosa</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
-        <translation>فشل الإصلاح</translation>
+        <translation>Reparación fallida</translation>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../plugins/password_reset/password_reset_plugin.h" line="21"/>
         <source>Password Reset</source>
-        <translation>إعادة تعيين كلمة المرور</translation>
+        <translation>Reinicio de contraseña</translation>
     </message>
 </context>
 <context>
@@ -160,52 +160,52 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="29"/>
         <source>Confirm</source>
-        <translation>تأكيد</translation>
+        <translation>Confirmar</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="28"/>
         <source>Reset password</source>
-        <translation>إعادة تعيين كلمة المرور</translation>
+        <translation>Reiniciar contraseña</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation>تم</translation>
+        <translation>Terminado</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
         <source>Password</source>
-        <translation>كلمة المرور</translation>
+        <translation>Constraseña</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="32"/>
         <source>Confirm password</source>
-        <translation>تأكيد كلمة المرور</translation>
+        <translation>Confirmar contraseña</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
         <source>Please enter a new password</source>
-        <translation>يرجى إدخال كلمة مرور جديدة </translation>
+        <translation>Por ingrese una nueva contraseña</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
         <source>The two passwords don&apos;t match</source>
-        <translation>كلمتا المرور غير متطابقتين</translation>
+        <translation>Las dos contraseñas no coinciden</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="128"/>
         <source>Reset password successfully</source>
-        <translation>تم إعادة تعيين كلمة المرور بنجاح</translation>
+        <translation>Reinicio de contraseña exitoso</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
         <source>Forgot login password</source>
-        <translation>نسيت كلمة المرور تسجيل الدخول</translation>
+        <translation>Olvidé contraseña de inicio</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
         <source>%1 (on %2)</source>
-        <translation>%1 ( في %2)</translation>
+        <translation>%1 (de %2)</translation>
     </message>
 </context>
 <context>
@@ -213,7 +213,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissions_repair_plugin.h" line="21"/>
         <source>Privilege Repair</source>
-        <translation>إصلاح الامتيازات</translation>
+        <translation>Reparar Privilegios</translation>
     </message>
 </context>
 <context>
@@ -221,32 +221,32 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation>لا يمكن الدخول إلى سطح المكتب بسبب خطأ في الامتيازات </translation>
+        <translation>No se puede ingresar al escritorio debido a problemas de privilegios</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
         <source>Repair</source>
-        <translation>إصلاح</translation>
+        <translation>Reparar</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation>تم</translation>
+        <translation>Terminado</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
         <source>Repairing, please wait...</source>
-        <translation>يتم الإصلاح  الرجاء الانتظار ...</translation>
+        <translation>Reparando, por favor espere...</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
         <source>Reset privilege successfully</source>
-        <translation>إعادة تعيين الإمتيازات بنجاح</translation>
+        <translation>Reinicio de privilegios existoso</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
         <source>Reset privilege failed</source>
-        <translation>فشل إعادة تعيين الإمتيازات </translation>
+        <translation>Reinicio de privilegios fallido</translation>
     </message>
 </context>
 <context>
@@ -254,57 +254,57 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="27"/>
         <source>Checking hard disk status, please wait...</source>
-        <translation>جار التحقق من حالة القرص الصلب، يرجى الانتظار ...</translation>
+        <translation>Revisando el estado del disco duro, por favor espere...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="34"/>
         <source>Cancel</source>
-        <translation>إلغاء</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="36"/>
         <source>Repair</source>
-        <translation>إصلاح</translation>
+        <translation>Reparar</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="40"/>
         <source>Restart Now</source>
-        <translation>إعادة التشغيل الآن</translation>
+        <translation>Reiniciar ahora</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="139"/>
         <source>Hard disk partition %1 error, please repair</source>
-        <translation>خطأ في القسم %1 من القرص الصلب، الرجاء الإصلاح</translation>
+        <translation>Error en la partición %1 del disco duro, por favor repare</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="151"/>
         <source>Please restart your computer to finish repairing</source>
-        <translation>الرجاء إعادة تشغيل حاسوبك لإنهاء الإصلاح </translation>
+        <translation>Por favor reinicie su computador para terminar la reparación</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="177"/>
         <source>Repairing hard disk, please wait...</source>
-        <translation>يتم إصلاح القرص الصلب ، يرجى الانتظار ...</translation>
+        <translation>Reparando el disco duro, por favor espere...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="140"/>
         <source>The repair may cause data loss, please confirm and continue</source>
-        <translation>الإصلاح يمكن أن يتسبب في فقدان البيانات ، يرجى التأكيد للاستمرار </translation>
+        <translation>La reparación puede causar la pérdida de datos, por favor confirme y continúe</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="38"/>
         <source>Done</source>
-        <translation>تم</translation>
+        <translation>Terminado</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
         <source>Repair succeeded</source>
-        <translation>تم الإصلاح بنجاح</translation>
+        <translation>Reparación exitosa</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="156"/>
         <source>Repair failed</source>
-        <translation>فشل الإصلاح</translation>
+        <translation>Reparación fallida</translation>
     </message>
 </context>
 <context>
@@ -312,12 +312,12 @@
     <message>
         <location filename="../src/main.cpp" line="45"/>
         <source>Deepin Repair</source>
-        <translation>إصلاح ديبين</translation>
+        <translation>Deepin Repair</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation>مدير إصلاح ديبين أداة سريعة لمساعدة المستخدمين في حل المشاكل المتوقعة في ديبين . تتضمن فحص القرص الصلب وتنظيفه ، إصلاح مدير الحزم ، إصلاح محمل الإقلاع، إعادة تعيين كلمة المرور، وإصلاح الامتيازات ... إلخ .</translation>
+        <translation>Deepin Repair es una herramienta para ayudar a los usuarios a reparar rapidamente algunos inconvenientes en deepin, incluyendo la detección el disco duro, limpieza de disco, reparación de DPKG, reparación de inicio, reparación de privilegios, reinicio de contraseña, etc.</translation>
     </message>
 </context>
 </TS>
