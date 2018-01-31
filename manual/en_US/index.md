@@ -1,12 +1,12 @@
 # Deepin Repair|../common/deepin-repair.svg|
 
-## Overview
+## Overview|../common/icon_overview.svg|
 
 Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.
 
 ![1|overview](jpg/overview.jpg)
 
-## Basic Operations
+## Basic Operations|../common/icon_commoncoperat.svg|
 
 When you cannot find boot menu, have privilege error or forgot login password, you may not be able to enter deepin desktop, then you need to go into Live system to run Deepin Repair.
 
@@ -76,7 +76,7 @@ If you forgot account password and cannot login, you can go into Live system and
 ![1|password-reset](jpg/password-reset.jpg)
 
 
-## Main Menu
+## Main Menu|../common/icon_optionsetting.svg|
 
 In **Main Menu**, user can view manual, get application information, and exit. On Deepin Repair interface, click on![Settings](icon/icon_menu.svg) to enter **Main menu**. 
 

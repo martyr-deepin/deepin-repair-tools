@@ -1,13 +1,13 @@
 # 深度系统修复工具|../common/deepin-repair.svg|
 
-## 概述
+## 概述|../common/icon_overview.svg|
 
 深度系统修复工具是一款帮助用户快速修复深度操作系统中某些问题的工具，其中包含硬盘检测、磁盘空间清理、引导修复、权限修复、登录密码重设等。
 
 ![0|overview](jpg/overview.jpg)
 
 
-## 基本操作
+## 基本操作|../common/icon_commoncoperat.svg|
 
 当您的系统存在引导问题、权限问题或忘记密码时，可能无法登录当前系统桌面，此时您需要先进入Live系统来运行深度系统修复工具，并进行相关的修复操作。
 
@@ -76,7 +76,7 @@
 ![0|password-reset](jpg/password-reset.jpg)
 
 
-## 主菜单
+## 主菜单|../common/icon_optionsetting.svg|
 
 ### 帮助
 
@@ -86,7 +86,7 @@
 2. 点击 **帮助**。
 3. 查看关于深度系统修复工具的帮助手册。
 
-![0|help](jpg/help.jpg)
+![1|help](jpg/help.jpg)
 
 ### 关于
 
