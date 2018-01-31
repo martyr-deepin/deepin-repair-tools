@@ -1,5 +1,6 @@
 
 #include "repairtools.h"
+#include "environments.h"
 
 #include <DApplication>
 #include <DLog>
@@ -38,7 +39,7 @@ int main(int argc, char *argv[])
 
     app.setOrganizationName("deepin");
     app.setApplicationName("deepin-repair");
-    app.setApplicationVersion("1.0");
+    app.setApplicationVersion(VERSION);
     app.setApplicationAcknowledgementPage("https://www.deepin.org/acknowledgments/deepin-repair/");
     app.loadTranslator();
 //    app.loadTranslator(QList<QLocale>() << QLocale("zh_CN"));

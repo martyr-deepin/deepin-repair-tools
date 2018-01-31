@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.7)
 
+set(VERSION 1.0.1)
+
 project(deepin-repair-tools
-        VERSION 1.0.0)
+        VERSION ${VERSION})
 
 set(BIN_NAME deepin-repair-tools)
 #set(CMAKE_VERBOSE_MAKEFILE ON)
@@ -19,6 +21,8 @@ if (NOT (${CMAKE_BUILD_TYPE} MATCHES "Debug"))
                     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
 endif ()
 
+configure_file(src/environments.h.in environments.h @ONLY)
+
 # Sources files
 file(GLOB SRCS "src/*.h" "src/*.cpp")
 
@@ -34,7 +38,7 @@ pkg_check_modules(DtkWidget REQUIRED dtkwidget)
 
 # driver-manager
 add_executable(${BIN_NAME} ${SRCS} resources.qrc)
-target_include_directories(${BIN_NAME} PUBLIC ${DtkWidget_INCLUDE_DIRS})
+target_include_directories(${BIN_NAME} PUBLIC ${DtkWidget_INCLUDE_DIRS} ${PROJECT_BINARY_DIR})
 target_link_libraries(${BIN_NAME} PRIVATE
     ${DtkWidget_LIBRARIES}
     ${Qt5Widgets_LIBRARIES}
