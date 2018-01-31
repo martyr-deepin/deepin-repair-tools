@@ -71,6 +71,7 @@ DiskCleanWidget::DiskCleanWidget(QWidget *parent)
     m_capacityBar->setMinimum(0);
     m_capacityBar->setMaximum(1000);
     m_capacityBar->setPageStep(1);
+    m_capacityBar->setEnabled(false);
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;
     buttonsLayout->addStretch();
