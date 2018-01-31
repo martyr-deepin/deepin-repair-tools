@@ -1,3 +1,7 @@
+### 1.0.1
+    Fix manuals error
+    Update translation files
+
 ### 1.0.0
     Release 1.0
 
