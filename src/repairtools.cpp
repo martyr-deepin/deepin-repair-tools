@@ -20,6 +20,7 @@ RepairTools::RepairTools(QWidget *parent)
     auto *tbar = titlebar();
     tbar->setTitle(QString());
     tbar->setIcon(QIcon::fromTheme("deepin-repair-tools"));
+    tbar->setBackgroundTransparent(true);
 
     ScanningPage *sp = new ScanningPage;
     sp->setDiskUtils(m_diskUtils);
