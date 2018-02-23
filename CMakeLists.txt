@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.7)
 
-set(VERSION 1.0.1)
+if (NOT DEFINED VERSION)
+    set(VERSION 1.0.1)
+endif ()
 
-project(deepin-repair-tools
-        VERSION ${VERSION})
+project(deepin-repair-tools)
 
 set(BIN_NAME deepin-repair-tools)
 #set(CMAKE_VERBOSE_MAKEFILE ON)
