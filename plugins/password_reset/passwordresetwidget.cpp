@@ -113,7 +113,9 @@ void PasswordResetWidget::resetUserPassword()
 
     PasswordResetThread *thrd = new PasswordResetThread;
     thrd->setToolsProxy(m_toolsProxy);
-    thrd->setTaskInfo(data.first, data.second, m_passwordEdit->text());
+    // Base64 encoding password to escape characters
+    const QString encoded_password = m_passwordEdit->text().toUtf8().toBase64();
+    thrd->setTaskInfo(data.first, data.second, encoded_password);
 
     connect(thrd, &PasswordResetThread::finished, thrd, &PasswordResetThread::deleteLater, Qt::QueuedConnection);
     connect(thrd, &PasswordResetThread::finished, this, &PasswordResetWidget::onResetPasswordFinished);
