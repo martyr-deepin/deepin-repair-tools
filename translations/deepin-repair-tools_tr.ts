@@ -317,7 +317,7 @@
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation>Deepin Onarım, kullanıcıların sabit disk algılama, disk temizleme, DPKG onarımı, önyükleme onarımı, ayrıcalık onarımı, parola sıfırlama vb. Dahil olmak üzere Deepin&apos;deki bazı sorunları hızlı bir şekilde düzeltmesine yardımcı olmak için kullanılan bir araçtır.</translation>
+        <translation>Deepin Onarım, kullanıcıların sabit disk algılama, disk temizleme, DPKG onarımı, önyükleme onarımı, ayrıcalık onarımı, parola sıfırlama vb. Dahil olmak üzere Deepin&apos;deki bazı sorunların hızlı bir şekilde düzeltilmesine yardımcı olmak için kullanılan bir araçtır.</translation>
     </message>
 </context>
 </TS>

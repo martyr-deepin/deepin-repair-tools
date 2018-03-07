@@ -12,7 +12,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
         <source>Show details</source>
-        <translation>Zobrazit podrobnosti</translation>
+        <translation>Ukázat podrobnosti</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="34"/>
@@ -27,17 +27,17 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation type="unfinished"/>
+        <translation>Nelze nainstalovat nebo aktualizovat aplikaci</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Opravuje se, prosím, počkejte...</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation>Oprava bootování</translation>
+        <translation>Oprava zavádění</translation>
     </message>
 </context>
 <context>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="31"/>
         <source>Show details</source>
-        <translation>Zobrazit podrobnosti</translation>
+        <translation>Ukázat podrobnosti</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
@@ -124,17 +124,17 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation type="unfinished"/>
+        <translation>Nelze najít nabídku zavaděče pro zvolení systémů</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Opravuje se, prosím, počkejte...</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../plugins/password_reset/password_reset_plugin.h" line="21"/>
         <source>Password Reset</source>
-        <translation>Resetovat heslo</translation>
+        <translation>Znovunastavení hesla</translation>
     </message>
 </context>
 <context>
@@ -165,12 +165,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="28"/>
         <source>Reset password</source>
-        <translation>Obnovit heslo</translation>
+        <translation>Nastavit heslo znovu</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
@@ -185,22 +185,22 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
         <source>Please enter a new password</source>
-        <translation type="unfinished"/>
+        <translation>Zadejte nové heslo</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
         <source>The two passwords don&apos;t match</source>
-        <translation>Tyto dvě hesla se neshodují</translation>
+        <translation>Tato dvě hesla se neshodují</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="128"/>
         <source>Reset password successfully</source>
-        <translation>Resetování hesla bylo úspěšné</translation>
+        <translation>Znovunastavení hesla proběhlo úspěšně</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
         <source>Forgot login password</source>
-        <translation type="unfinished"/>
+        <translation>Zapomenuto heslo pro přihlášení</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation type="unfinished"/>
+        <translation>Nelze vstoupit do počítače kvůli chybě oprávnění</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
@@ -231,17 +231,17 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Opravuje se, prosím, počkejte...</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
         <source>Reset privilege successfully</source>
-        <translation>Oprávnění bylo úspěšně resetováno </translation>
+        <translation>Oprávnění bylo úspěšně znovunastaveno </translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="27"/>
         <source>Checking hard disk status, please wait...</source>
-        <translation>Kontrola stavu pevného disku, prosím čekejte...</translation>
+        <translation>Ověření stavu pevného disku, prosím, počkejte...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="34"/>
@@ -264,7 +264,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="36"/>
         <source>Repair</source>
-        <translation>Oprava</translation>
+        <translation>Opravit</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="40"/>
@@ -274,7 +274,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="139"/>
         <source>Hard disk partition %1 error, please repair</source>
-        <translation>Oddíl pevného disku %1 má chybu, opravte prosím</translation>
+        <translation>Oddíl pevného disku %1 má chybu, prosím, opravte</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="151"/>
@@ -284,7 +284,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="177"/>
         <source>Repairing hard disk, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Opravuji pevný disk, čekejte prosím...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="140"/>
@@ -294,7 +294,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="38"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
@@ -312,12 +312,12 @@
     <message>
         <location filename="../src/main.cpp" line="45"/>
         <source>Deepin Repair</source>
-        <translation>Deepin Oprava</translation>
+        <translation>Oprava</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation type="unfinished"/>
+        <translation>Opravář Deepinu je nástroj, který uživatelům pomáhá rychle řešit některé problémy v Deepinu, včetně rozpoznání pevného disku, čištění disků, opravy DPKG, zavádění systému, oprávnění, obnovení hesla apod.</translation>
     </message>
 </context>
 </TS>

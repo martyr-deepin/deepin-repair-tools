@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation>Reparar Boot</translation>
+        <translation>Reparar Aarranque</translation>
     </message>
 </context>
 <context>
@@ -317,7 +317,7 @@
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation>Deepin Repair es una herramienta para ayudar a los usuarios a solucionar rápidamente algunos problemas en profundidad, incluida la detección de discos duros, limpieza de discos, reparación de DPKG, reparación de botas, reparación de privilegios, restablecimiento de contraseñas, etc.</translation>
+        <translation>Deepin Repair es una herramienta para ayudar a los usuarios a solucionar rápidamente algunos problemas en profundidad, incluida la detección de discos duros, limpieza de discos, reparación de DPKG, reparación de arranque, reparación de privilegios, restablecimiento de contraseñas, etc.</translation>
     </message>
 </context>
 </TS>

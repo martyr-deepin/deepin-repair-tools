@@ -27,7 +27,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>ጨርሷል</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
         <source>Repair failed</source>
-        <translation type="unfinished"/>
+        <translation>መጠገኑ አልተሳካም</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
@@ -63,7 +63,7 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="62"/>
         <source>System partition</source>
-        <translation type="unfinished"/>
+        <translation>የ ስርአት ክፍልፋይ</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="64"/>
@@ -78,12 +78,12 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>ጨርሷል</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
         <source>%1 (on %2)</source>
-        <translation type="unfinished"/>
+        <translation>%1 (በ %2)</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
@@ -129,7 +129,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>ጨርሷል</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
-        <translation type="unfinished"/>
+        <translation>መጠገኑ አልተሳካም</translation>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../plugins/password_reset/password_reset_plugin.h" line="21"/>
         <source>Password Reset</source>
-        <translation type="unfinished"/>
+        <translation>የ  መግቢያ ቃል እንደገና ማሰናጃ</translation>
     </message>
 </context>
 <context>
@@ -165,12 +165,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="28"/>
         <source>Reset password</source>
-        <translation type="unfinished"/>
+        <translation>እንደገና ማሰናጃ የ መግቢያ ቃል</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>ጨርሷል</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
@@ -231,7 +231,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>ጨርሷል</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
@@ -259,17 +259,17 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="34"/>
         <source>Cancel</source>
-        <translation type="unfinished"/>
+        <translation>መሰረዣ</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="36"/>
         <source>Repair</source>
-        <translation type="unfinished"/>
+        <translation>መጠገኛ</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="40"/>
         <source>Restart Now</source>
-        <translation type="unfinished"/>
+        <translation>አሁን ዳግም ማስጀመሪያ</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="139"/>
@@ -294,17 +294,17 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="38"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>ጨርሷል</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
         <source>Repair succeeded</source>
-        <translation type="unfinished"/>
+        <translation>መጠገኑ ተሳክቷል</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="156"/>
         <source>Repair failed</source>
-        <translation type="unfinished"/>
+        <translation>መጠገኑ አልተሳካም</translation>
     </message>
 </context>
 <context>
@@ -312,7 +312,7 @@
     <message>
         <location filename="../src/main.cpp" line="45"/>
         <source>Deepin Repair</source>
-        <translation type="unfinished"/>
+        <translation>የ ዲፕኢን መጠገኛ</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>

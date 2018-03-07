@@ -200,7 +200,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
         <source>Forgot login password</source>
-        <translation type="unfinished"/>
+        <translation>Mot de passe oublié</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation type="unfinished"/>
+        <translation>Impossible d&apos;accéder au bureau en raison d&apos;une erreur de privilège</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
@@ -274,7 +274,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="139"/>
         <source>Hard disk partition %1 error, please repair</source>
-        <translation type="unfinished"/>
+        <translation>Erreur de partition de disque dur %1, veuillez réparer</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="151"/>
@@ -317,7 +317,7 @@
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation type="unfinished"/>
+        <translation>Deepin Repair est un outil pour aider les utilisateurs à résoudre rapidement certains problèmes dans deepin, y compris la détection de disque dur, nettoyage de disque, réparation DPKG, réparation de démarrage, réparation de privilèges, réinitialisation de mot de passe, etc.</translation>
     </message>
 </context>
 </TS>
