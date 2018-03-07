@@ -1,3 +1,6 @@
+### 1.0.2
+    Optimize grub install compatibility
+
 ### 1.0.1
     Fix manuals error
     Update translation files
