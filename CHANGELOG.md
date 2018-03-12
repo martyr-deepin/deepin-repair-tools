@@ -1,3 +1,13 @@
+<a name="1.0.3"></a>
+## 1.0.3 (2018-03-12)
+
+
+#### Bug Fixes
+
+* **efi:**  efi partition not mounted ([470301c4](https://github.com/linuxdeepin/deepin-repair-tools/commit/470301c4b2356ce068ea089c84c78a0070522a26))
+
+
+
 ### 1.0.2
     Optimize grub install compatibility
 
