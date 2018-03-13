@@ -32,7 +32,7 @@ if [ -d /sys/firmware/efi/vars/ ];then
 		FORCEPARAM=" --efi-directory=/boot/efi --target=x86_64-efi --bootloader-id=${BOOTLOADER_ID}"
 	fi
 else
-	FORCEPARAM=" ${BOOTLOADER_ID} --target=i386-pc ${BOOTLOADER}"
+	FORCEPARAM=" --bootloader-id=${BOOTLOADER_ID} --target=i386-pc ${BOOTLOADER}"
 fi
 
 grub-install ${FORCEPARAM} --force --recheck || exit 1
