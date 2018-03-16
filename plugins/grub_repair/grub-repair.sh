@@ -22,9 +22,10 @@ BOOTLOADER=${1}
 BOOTLOADER_ID="$(config_item GRUB_DISTRIBUTOR | tr A-Z a-z | cut -d' ' -f1)"
 BOOTLOADER_ID="${BOOTLOADER_ID:-deepin}"
 
+mount_efi_partition
+
 if [ -d /sys/firmware/efi/vars/ ];then
         # mount efi partition
-	mount_efi_partition
 
 	if [ x$(cat /sys/firmware/efi/fw_platform_size 2>/dev/null) = 'x32' ]; then
 		FORCEPARAM=" --efi-directory=/boot/efi --target=i386-efi --bootloader-id=${BOOTLOADER_ID}"
