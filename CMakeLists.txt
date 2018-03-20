@@ -12,10 +12,10 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-set(CMAKE_CXX_FLAGS -Wall)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 if (NOT (${CMAKE_BUILD_TYPE} MATCHES "Debug"))
-    set(CMAKE_CXX_FLAGS -O3)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Ofast")
 
     # generate qm
     execute_process(COMMAND bash "translate_generation.sh"
@@ -31,11 +31,9 @@ file(GLOB SRCS "src/*.h" "src/*.cpp")
 add_subdirectory("plugins")
 
 # Find the library
-find_package(PkgConfig REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Concurrent REQUIRED)
-
-pkg_check_modules(DtkWidget REQUIRED dtkwidget)
+find_package(DtkWidget REQUIRED dtkwidget)
 
 # driver-manager
 add_executable(${BIN_NAME} ${SRCS} resources.qrc)
