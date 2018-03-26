@@ -63,12 +63,13 @@ install(FILES deepin-repair-tools.svg
 
 # scripts
 file(GLOB SCRIPTS "src/*.sh")
-install(FILES ${SCRIPTS} DESTINATION lib/deepin-repair-tools)
+install(FILES ${SCRIPTS} DESTINATION lib/deepin-repair-tools
+        PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
 
 # qm files
 file(GLOB QM_FILES "translations/*.qm")
 install(FILES ${QM_FILES}
-        DESTINATION share/deepin-repair/translations)
+        DESTINATION share/deepin-repair-tools/translations)
 
 # policy kit
 install(FILES com.deepin.repair-tools.policy
@@ -82,4 +83,4 @@ install (FILES
 
 # manual files
 install (DIRECTORY manual/
-         DESTINATION share/dman/deepin-repair)
+         DESTINATION share/dman/deepin-repair-tools)

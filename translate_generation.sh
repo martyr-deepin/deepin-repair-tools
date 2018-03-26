@@ -12,4 +12,4 @@ do
     lrelease "${ts}"
 done
 
-rename s/deepin-repair-tools/deepin-repair/ translations/*.qm
+#rename s/deepin-repair-tools/deepin-repair/ translations/*.qm
