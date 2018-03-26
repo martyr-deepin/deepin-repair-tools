@@ -1,3 +1,13 @@
+<a name="1.0.6"></a>
+### 1.0.6 (2018-03-26)
+
+
+#### Bug Fixes
+
+*   translate not load ([7cfeff93](https://github.com/linuxdeepin/deepin-repair-tools/commit/7cfeff93a0b376855fa2037d8333f1e362b1714a))
+
+
+
 <a name="1.0.5"></a>
 ### 1.0.5 (2018-03-22)
 
