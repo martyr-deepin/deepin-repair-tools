@@ -17,7 +17,7 @@ ChrootBindGuard::ChrootBindGuard(const QString &rootPath)
         procBind.start("mount", QStringList() << "--bind" << "--make-shared" << bp << m_rootPath + bp);
         procBind.waitForFinished(-1);
 
-        qDebug() << "bind" << bp << procBind.exitCode() << procBind.readAllStandardOutput() << procBind.readAllStandardError();
+        qDebug() << "bind in" << m_rootPath << bp << procBind.exitCode() << procBind.readAllStandardOutput() << procBind.readAllStandardError();
     }
 }
 
@@ -33,6 +33,6 @@ ChrootBindGuard::~ChrootBindGuard()
         procBind.start("umount", QStringList() << m_rootPath + bp);
         procBind.waitForFinished(-1);
 
-        qDebug() << "unbind" << bp << procBind.exitCode() << procBind.readAllStandardOutput() << procBind.readAllStandardError();
+        qDebug() << "unbind in" << m_rootPath << bp << procBind.exitCode() << procBind.readAllStandardOutput() << procBind.readAllStandardError();
     }
 }

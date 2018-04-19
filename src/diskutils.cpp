@@ -16,7 +16,7 @@
 #include <mntent.h>
 #include <sys/stat.h>
 
-#define MOUNT_PREFIX    "/tmp"
+#define MOUNT_PREFIX    "/tmp/D.R.T./"
 #define MOUNTS_PATH     "/proc/mounts"
 #define BLOCK_DEVS_PATH "/dev/block"
 
@@ -34,7 +34,7 @@ inline bool is_block_device(const QString &path)
     return stat(path.toStdString().c_str(), &sb) || S_ISBLK(sb.st_mode);
 }
 
-const QString generate_mount_dir()
+const QString generate_mount_dir(const QString &devName)
 {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -42,7 +42,7 @@ const QString generate_mount_dir()
 
     const QDir baseDir(MOUNT_PREFIX);
     do {
-        const QString mountName = QString("mount-%1").arg(dis(gen));
+        const QString mountName = QString("mount-%1-%2").arg(devName).arg(dis(gen));
         if (!baseDir.exists(mountName) && baseDir.mkpath(mountName))
             return baseDir.absoluteFilePath(mountName);
     } while(true);
@@ -86,16 +86,28 @@ void mount_block_devices()
         for (const auto &child : children)
         {
             const auto &info = child.toObject();
-            if (!info.value("mountpoint").toString().isEmpty())
-                continue;
+            const QString &mountPoint = info.value("mountpoint").toString();
 
-            const QString &devPath = QString("/dev/%1").arg(info.value("name").toString());
-            const QString &mount_point = generate_mount_dir();
+            QProcess procMount;
+
+            if (!mountPoint.isEmpty())
+            {
+                procMount.start("mount", QStringList() << "-o" << "remount,rw" << mountPoint);
+
+                qDebug() << "remount" << mountPoint << "as rw";
+            }
+            else
+            {
+                const QString &devName = info.value("name").toString();
+                const QString &devPath = QString("/dev/%1").arg(devName);
+                const QString &dst_point = generate_mount_dir(devName);
+
+                procMount.start("mount", QStringList() << devPath << dst_point);
+
+                qDebug() << "mounting" << devPath << "to" << dst_point;
+            }
 
             // do mount
-            qDebug() << "mounting" << devPath << "to" << mount_point;
-            QProcess procMount;
-            procMount.start("mount", QStringList() << devPath << mount_point);
             procMount.waitForFinished(-1);
 
             qDebug() << "mount" << procMount.exitCode() << procMount.readAllStandardOutput() << procMount.readAllStandardError();
