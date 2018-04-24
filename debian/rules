@@ -10,3 +10,8 @@ VERSION ?= $(shell dpkg-parsechangelog -ldebian/changelog -SVersion | awk -F'-' 
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DVERSION=$(VERSION)
+
+ifeq ($(DEB_BUILD_ARCH), mips64el)
+override_dh_auto_configure:
+	dh_auto_configure -- -DVERSION=$(VERSION) -DNO_GRUB_REPAIR_PLUGIN=1
+endif
