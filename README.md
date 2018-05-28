@@ -17,6 +17,8 @@
 ```
 git clone git@github.com:sbwtw/deepin-repair-tools.git
 cd deepin-repair-tools
+mkdir build
+cd build
 cmake ..
 make -j4
 sudo make install
