@@ -109,3 +109,5 @@
 - standardError： 脚本的标准错误输出
 
 # 裁剪与定制
+
+目前的定制需求只有在某些平台上，由于平台特性，无法进行 grub 修复，可以通过添加编译选项 `NO_GRUB_REPAIR_PLUGIN` 来禁止 grub 插件。
