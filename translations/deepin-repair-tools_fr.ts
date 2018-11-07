@@ -37,7 +37,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation>Réparation, veuillez patienter…</translation>
+        <translation>Réparation en cours, veuillez patienter…</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation>Réparation, veuillez patienter…</translation>
+        <translation>Réparation en cours, veuillez patienter…</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
@@ -241,7 +241,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
         <source>Reset privilege successfully</source>
-        <translation>Réinitialisation des privilèges terminée avec succès</translation>
+        <translation>Réinitialisation des privilèges réussie</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>

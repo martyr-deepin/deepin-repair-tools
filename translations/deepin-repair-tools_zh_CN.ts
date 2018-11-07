@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>磁盘空间清理</translation>
+        <translation>磁盘清理</translation>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../plugins/password_reset/password_reset_plugin.h" line="21"/>
         <source>Password Reset</source>
-        <translation>登录密码重设</translation>
+        <translation>密码重置</translation>
     </message>
 </context>
 <context>

@@ -134,7 +134,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>እባክዎን ይቆዩ: በ መጠገን ላይ</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
@@ -226,7 +226,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
         <source>Repair</source>
-        <translation>ማረጋገጫ</translation>
+        <translation>መጠገኛ </translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>

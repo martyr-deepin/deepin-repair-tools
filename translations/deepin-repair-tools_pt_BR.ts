@@ -32,7 +32,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation>Não foi possível instalar ou atualizar a aplicação</translation>
+        <translation>Não foi possível instalar ou atualizar o aplicativo</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>Limpeza de disco</translation>
+        <translation>Limpeza do disco</translation>
     </message>
 </context>
 <context>
@@ -88,7 +88,7 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
         <source>Cleaning %1</source>
-        <translation>Limpeza %1</translation>
+        <translation>Limpando %1</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
@@ -312,12 +312,12 @@
     <message>
         <location filename="../src/main.cpp" line="45"/>
         <source>Deepin Repair</source>
-        <translation>Deepin Reparo</translation>
+        <translation>Reparador</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation>Deepin Repair é uma ferramente para ajudar os usuários a concertarem alguns problemas rapidamente, incluindo detector de disco rígido, limpeza de disco, reparação do DPKG, reparação de boot, recuperação de privilégios, reset de senha, etc.</translation>
+        <translation>Reparador é uma ferramente para ajudar os usuários a concertarem alguns problemas rapidamente, incluindo detector de disco rígido, limpeza de disco, reparação do DPKG, reparação de boot, recuperação de privilégios, redefinição de senha, etc.</translation>
     </message>
 </context>
 </TS>

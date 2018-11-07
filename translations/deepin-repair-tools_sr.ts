@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="uk" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sr" version="2.1">
 <context>
     <name>DPKGRepair</name>
     <message>
         <location filename="../plugins/dpkg_repair/dpkg_repair_plugin.h" line="21"/>
         <source>DPKG Repair</source>
-        <translation>Відновлення DPKG</translation>
+        <translation>ДПКГ Поправка</translation>
     </message>
 </context>
 <context>
@@ -12,42 +12,42 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
         <source>Show details</source>
-        <translation>Показати подробиці</translation>
+        <translation>Прикажи детаље</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="34"/>
         <source>Hide details</source>
-        <translation>Приховати подробиці</translation>
+        <translation>Сакриј детаље</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="39"/>
         <source>Repair</source>
-        <translation>Відновити</translation>
+        <translation>Поправи</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation>Завершити</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation>Не вдалося встановити чи оновити додаток</translation>
+        <translation>Немогуће инсталирати или ажурирати програм</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation>Відновлення, зачекайте будь ласка...</translation>
+        <translation>Поправка, молимо сачекајте...</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
         <source>Repair failed</source>
-        <translation>Не вдалося відновити</translation>
+        <translation>Поправка није успела</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
         <source>Repair succeeded</source>
-        <translation>Успішне відновлення</translation>
+        <translation>Поправка је успела</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>Чищення диска</translation>
+        <translation>Чишћење Диска</translation>
     </message>
 </context>
 <context>
@@ -63,22 +63,22 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="62"/>
         <source>System partition</source>
-        <translation>Системний розділ</translation>
+        <translation>Системска партиција</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="64"/>
         <source>Clean</source>
-        <translation>Очистити</translation>
+        <translation>Очисти</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="65"/>
         <source>Cancel</source>
-        <translation>Скасувати</translation>
+        <translation>Откажи</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation>Завершити</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
@@ -88,12 +88,12 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
         <source>Cleaning %1</source>
-        <translation>Очищуємо %1</translation>
+        <translation>Чишћење %1</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
         <source>%1 has been cleaned up</source>
-        <translation>%1 очищено</translation>
+        <translation>%1 је очишћено</translation>
     </message>
 </context>
 <context>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation>Відновлення завантажувача</translation>
+        <translation>Поправка Покретача</translation>
     </message>
 </context>
 <context>
@@ -109,42 +109,42 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="31"/>
         <source>Show details</source>
-        <translation>Показати подробиці</translation>
+        <translation>Прикажи детаље</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
         <source>Hide details</source>
-        <translation>Приховати подробиці</translation>
+        <translation>Сакриј детаље</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="36"/>
         <source>Repair</source>
-        <translation>Відновити</translation>
+        <translation>Поправи</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation>Не вдалося знайти меню завантаження</translation>
+        <translation>Не могу пронаћи изборник покретача да приступим систему</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation>Завершити</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation>Відновлення, зачекайте будь ласка...</translation>
+        <translation>Поправка, молимо сачекајте...</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair succeeded</source>
-        <translation>Успішне відновлення</translation>
+        <translation>Поправка је успела</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
-        <translation>Не вдалося відновити</translation>
+        <translation>Поправка није успела</translation>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../plugins/password_reset/password_reset_plugin.h" line="21"/>
         <source>Password Reset</source>
-        <translation>Скидання пароля</translation>
+        <translation>Реизбор Лозинке</translation>
     </message>
 </context>
 <context>
@@ -160,47 +160,47 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="29"/>
         <source>Confirm</source>
-        <translation>Підтвердити</translation>
+        <translation>Потврди</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="28"/>
         <source>Reset password</source>
-        <translation>Скинути пароль</translation>
+        <translation>Поново постави лозинку</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation>Завершити</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
         <source>Password</source>
-        <translation>Пароль</translation>
+        <translation>Лозинка</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="32"/>
         <source>Confirm password</source>
-        <translation>Підтвердження пароля</translation>
+        <translation>Потврди лозинку</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
         <source>Please enter a new password</source>
-        <translation>Введіть новий пароль</translation>
+        <translation>Молимо унесите нову лозинку</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
         <source>The two passwords don&apos;t match</source>
-        <translation>Вказані паролі не збігаються</translation>
+        <translation>Две лозинке се не подударају</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="128"/>
         <source>Reset password successfully</source>
-        <translation>Успішно скинуто пароль</translation>
+        <translation>Поновно постављање лозинке је успешно</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
         <source>Forgot login password</source>
-        <translation>На пам&apos;ятаю пароль</translation>
+        <translation>Заборавио сам лозинку за пријаву</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
@@ -213,7 +213,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissions_repair_plugin.h" line="21"/>
         <source>Privilege Repair</source>
-        <translation>Відновлення прав доступу</translation>
+        <translation>Поправка Овлашћења</translation>
     </message>
 </context>
 <context>
@@ -221,32 +221,32 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation>Не вдалося відкрити стільницю, помилка привілегій</translation>
+        <translation>Не могу приступити радној површини због грешке овлашћења</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
         <source>Repair</source>
-        <translation>Відновити</translation>
+        <translation>Поправи</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation>Завершити</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
         <source>Repairing, please wait...</source>
-        <translation>Відновлення, зачекайте будь ласка...</translation>
+        <translation>Поправка, молимо сачекајте...</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
         <source>Reset privilege successfully</source>
-        <translation>Успішно скинуто права доступу</translation>
+        <translation>Поновно постављање овлашћења је успешно</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
         <source>Reset privilege failed</source>
-        <translation>Не вдалося скинути права доступу</translation>
+        <translation>Поновно постављање овлашћења није успело</translation>
     </message>
 </context>
 <context>
@@ -254,57 +254,57 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="27"/>
         <source>Checking hard disk status, please wait...</source>
-        <translation>Перевіряємо стан диска, будь ласка, зачекайте…</translation>
+        <translation>Провера статуса тврдог диска, молимо сачекајте...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="34"/>
         <source>Cancel</source>
-        <translation>Скасувати</translation>
+        <translation>Откажи</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="36"/>
         <source>Repair</source>
-        <translation>Відновити</translation>
+        <translation>Поправи</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="40"/>
         <source>Restart Now</source>
-        <translation>Перезапустити зараз</translation>
+        <translation>Поново Покрени Сад</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="139"/>
         <source>Hard disk partition %1 error, please repair</source>
-        <translation>Помилка на розділі диску %1, будь ласка, відновіть розділ</translation>
+        <translation>Грешка на партицији %1 тврдог диска, молимо поправите</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="151"/>
         <source>Please restart your computer to finish repairing</source>
-        <translation>Будь ласка, перезавантажте ваш комп&apos;ютер, щоб завершити відновлення</translation>
+        <translation>Молимо поново покрените рачунар да завршите поправку</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="177"/>
         <source>Repairing hard disk, please wait...</source>
-        <translation>Відновлення жорсткого диска, зачекайте будь ласка...</translation>
+        <translation>Поправка тврдог диска, молимо сачекајте...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="140"/>
         <source>The repair may cause data loss, please confirm and continue</source>
-        <translation>Відновлення може призвести до втрати даних. Будь ласка, підтвердьте вашу згоду і продовжіть</translation>
+        <translation>Поправка може изазвти губитак података, молимо потврдите и наставите</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="38"/>
         <source>Done</source>
-        <translation>Завершити</translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
         <source>Repair succeeded</source>
-        <translation>Успішно відновлено</translation>
+        <translation>Поправка је успела</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="156"/>
         <source>Repair failed</source>
-        <translation>Помилка відновлення</translation>
+        <translation>Поправка није успела</translation>
     </message>
 </context>
 <context>
@@ -312,12 +312,12 @@
     <message>
         <location filename="../src/main.cpp" line="45"/>
         <source>Deepin Repair</source>
-        <translation>Відновлення Deepin</translation>
+        <translation>Дипин Поправка</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation>Відновлення Deepin — програма, яка допомагає користувачам швидко виправити деякі проблеми у deepin, зокрема виявити диск, очистити диск, відновити систему DPKG, відновити права доступу тощо.</translation>
+        <translation>Дипин Поправка је алат који корисницима омогућава брзо решавање неких проблема у Дипину, укључујући откривање тврдих дискова, чишћење диска, ДПКГ поправке, поправке покретача, поправке овлашћења, поновно постављање лозинке, итд.</translation>
     </message>
 </context>
 </TS>
