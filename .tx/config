@@ -8,3 +8,9 @@ file_filter = translations/deepin-repair-tools_<lang>.ts
 source_file = translations/deepin-repair-tools.ts
 source_lang = en
 type = QT
+
+[deepin-repair.deepin-repair-toolsts_desktop]
+file_filter = translations/desktop/desktop_<lang>.ts
+source_file = translations/desktop/desktop.ts
+source_lang = en
+type = QT
