@@ -4,7 +4,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkg_repair_plugin.h" line="21"/>
         <source>DPKG Repair</source>
-        <translation type="unfinished"/>
+        <translation>DPKG parandamine</translation>
     </message>
 </context>
 <context>
@@ -88,12 +88,12 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
         <source>Cleaning %1</source>
-        <translation type="unfinished"/>
+        <translation>Puhastamine %1</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
         <source>%1 has been cleaned up</source>
-        <translation type="unfinished"/>
+        <translation>%1 on puhastatud</translation>
     </message>
 </context>
 <context>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
         <source>Hide details</source>
-        <translation type="unfinished"/>
+        <translation>Peida üksikasjad</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="36"/>
@@ -312,7 +312,7 @@
     <message>
         <location filename="../src/main.cpp" line="45"/>
         <source>Deepin Repair</source>
-        <translation type="unfinished"/>
+        <translation>Deepin parandamine</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>

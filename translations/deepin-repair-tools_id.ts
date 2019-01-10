@@ -27,17 +27,17 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Selesai</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation type="unfinished"/>
+        <translation>Tidak dapat install dan meningkatkan aplikasi</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Memperbaiki, mohon tunggu...</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation type="unfinished"/>
+        <translation>Disk bersih</translation>
     </message>
 </context>
 <context>
@@ -63,7 +63,7 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="62"/>
         <source>System partition</source>
-        <translation type="unfinished"/>
+        <translation>Partisi Sistem</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="64"/>
@@ -78,22 +78,22 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Selesai</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
         <source>%1 (on %2)</source>
-        <translation type="unfinished"/>
+        <translation>%1 (dari %2)</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
         <source>Cleaning %1</source>
-        <translation type="unfinished"/>
+        <translation>Membersihkan %1</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
         <source>%1 has been cleaned up</source>
-        <translation type="unfinished"/>
+        <translation>%1 telah dibersihkan</translation>
     </message>
 </context>
 <context>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation type="unfinished"/>
+        <translation>Perbaiki Boot</translation>
     </message>
 </context>
 <context>
@@ -124,27 +124,27 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation type="unfinished"/>
+        <translation>Tidak dapat menemukan menu boot untuk masuk ke sistem</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Selesai</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Memperbaiki, mohon tunggu...</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair succeeded</source>
-        <translation type="unfinished"/>
+        <translation>Perbaikan berhasil</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
-        <translation type="unfinished"/>
+        <translation>Perbaikan gagal</translation>
     </message>
 </context>
 <context>
@@ -170,12 +170,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Selesai</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
         <source>Password</source>
-        <translation>Password</translation>
+        <translation>Kata sandi</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="32"/>
@@ -185,12 +185,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
         <source>Please enter a new password</source>
-        <translation type="unfinished"/>
+        <translation>Mohon masukan sebuah password baru</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
         <source>The two passwords don&apos;t match</source>
-        <translation type="unfinished"/>
+        <translation>Kedua password tidak sama </translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="128"/>
@@ -200,12 +200,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
         <source>Forgot login password</source>
-        <translation type="unfinished"/>
+        <translation>Lupa login kata kunci</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
         <source>%1 (on %2)</source>
-        <translation type="unfinished"/>
+        <translation>%1 (dari %2)</translation>
     </message>
 </context>
 <context>
@@ -213,7 +213,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissions_repair_plugin.h" line="21"/>
         <source>Privilege Repair</source>
-        <translation type="unfinished"/>
+        <translation>Hak istimewa diperbaiki</translation>
     </message>
 </context>
 <context>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation type="unfinished"/>
+        <translation>Tidak dapat masuk ke desktop dikarenakan hak istimewa bermasalah</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
@@ -231,22 +231,22 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Selesai</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
         <source>Repairing, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Memperbaiki, mohon tunggu</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
         <source>Reset privilege successfully</source>
-        <translation type="unfinished"/>
+        <translation>Reset hak istimewa berhasil</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
         <source>Reset privilege failed</source>
-        <translation type="unfinished"/>
+        <translation>Reset hak istimewa gagal</translation>
     </message>
 </context>
 <context>
@@ -274,27 +274,27 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="139"/>
         <source>Hard disk partition %1 error, please repair</source>
-        <translation type="unfinished"/>
+        <translation>Partisi hard disk %1 bermasalah, mohon perbaiki</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="151"/>
         <source>Please restart your computer to finish repairing</source>
-        <translation type="unfinished"/>
+        <translation>Mohon matikan ulang komputer anda untuk menyelesaikan perbaikan</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="177"/>
         <source>Repairing hard disk, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Memperbaiki hard disk, mohon tunggu...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="140"/>
         <source>The repair may cause data loss, please confirm and continue</source>
-        <translation type="unfinished"/>
+        <translation>Perbaikan akan mengakibatkan data hilang, mohon konfirmasi dan lanjutkan</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="38"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>Selesai</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
@@ -312,12 +312,12 @@
     <message>
         <location filename="../src/main.cpp" line="45"/>
         <source>Deepin Repair</source>
-        <translation type="unfinished"/>
+        <translation>Perbaikan Deepin</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="46"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation type="unfinished"/>
+        <translation>Perbaikan Deepin adalah sebuah alat untuk membantu para pengguna secara cepat dalam perbaiki berbagai macam masalah di Deepin, termasuk pembacaan hard disk, pembersihan disk, perbaikan DPKG, perbaikan boot, perbaikan hak istimewa, reset kata kunci, dan lain sebagainya.</translation>
     </message>
 </context>
 </TS>

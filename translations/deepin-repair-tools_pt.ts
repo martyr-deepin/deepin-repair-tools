@@ -32,7 +32,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation>Não consigo instalar ou atualizar uma aplicação</translation>
+        <translation>Não se consegue instalar ou atualizar uma aplicação</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation>Não consigo encontrar o menu de arranque para entrar no sistema</translation>
+        <translation>Não se consegue encontrar o menu de arranque para entrar no sistema</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
@@ -221,7 +221,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation>Não consigo entrar no ambiente de trabalho devido a um erro de permissões</translation>
+        <translation>Não se consegue entrar no ambiente de trabalho devido a um erro de permissões</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
@@ -269,7 +269,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="40"/>
         <source>Restart Now</source>
-        <translation>Reiniciar agora</translation>
+        <translation>Reiniciar Agora</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="139"/>
