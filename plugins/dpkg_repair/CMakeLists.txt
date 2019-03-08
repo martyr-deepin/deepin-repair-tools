@@ -11,7 +11,7 @@ find_package(DtkWidget REQUIRED dtkwidget)
 
 add_definitions(-DQT_PLUGIN)
 add_definitions(${QT_DEFINITIONS})
-add_library(${PLUGIN_NAME} SHARED ${SRCS} resources.qrc)
+add_library(${PLUGIN_NAME} SHARED ${SRCS} resources_dpkg_repair.qrc)
 set_target_properties(${PLUGIN_NAME} PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../)
 target_include_directories(${PLUGIN_NAME} PUBLIC ${DtkWidget_INCLUDE_DIRS})
 target_link_libraries(${PLUGIN_NAME} PRIVATE
