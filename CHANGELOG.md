@@ -1,3 +1,13 @@
+<a name="1.0.12"></a>
+## 1.0.12 (2019-03-11)
+
+
+#### Bug Fixes
+
+*   resources can not find in longson platform ([78f54224](https://github.com/linuxdeepin/deepin-repair-tools/commit/78f542245439c72cb80adff9e9a64408168b43c2))
+
+
+
 <a name="1.0.11"></a>
 ## 1.0.11 (2019-01-24)
 
