@@ -131,7 +131,7 @@ void DPKGRepairWidget::onRepairFinished(const bool success)
         m_result->setText(tr("Repair failed"));
     } else {
         m_result->setStyleSheet("color: #3da219;");
-        m_result->setText(tr("Repair succeeded"));
+        m_result->setText(tr("Repair successful"));
     }
 
     m_result->setVisible(true);

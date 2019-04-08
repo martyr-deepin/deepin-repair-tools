@@ -144,7 +144,7 @@ void GrubRepairWidget::onRepairFinished(const bool success)
     if (success)
     {
         m_statusTips->setStyleSheet("color: #3da219;");
-        m_statusTips->setText(tr("Repair succeeded"));
+        m_statusTips->setText(tr("Repair successful"));
     } else {
         m_statusTips->setStyleSheet("color: #f3a21d;");
         m_statusTips->setText(tr("Repair failed"));
