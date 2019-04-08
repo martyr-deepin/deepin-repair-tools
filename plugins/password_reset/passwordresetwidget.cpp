@@ -94,7 +94,7 @@ void PasswordResetWidget::onPasswdSubmitted()
     const QString &pwd1 = m_passwordEdit->text();
     const QString &pwd2 = m_passwordRepeat->text();
     if (pwd1 != pwd2)
-        return m_passwordRepeat->showAlertMessage(tr("The two passwords don't match"));
+        return m_passwordRepeat->showAlertMessage(tr("Passwords do not match"));
 
     m_confirmButton->setVisible(false);
     m_okButton->setVisible(false);

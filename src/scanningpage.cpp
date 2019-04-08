@@ -157,7 +157,7 @@ void ScanningPage::onRepairFinished(bool success)
 {
     if (success)
     {
-        m_centerTips->setText(tr("Repair succeeded"));
+        m_centerTips->setText(tr("Repair successful"));
         m_bottomTips->setText(tr("Please restart your computer to finish repairing"));
         m_reboot->setVisible(true);
     }
