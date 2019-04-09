@@ -12,7 +12,7 @@
       <allow_inactive>auth_admin</allow_inactive>
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
-    <message xml:lang="zh_CN">启动修复工具需要授权</message>
+    <message xml:lang="zh_CN">使用系统修复工具需要认证</message>
     <annotate key="org.freedesktop.policykit.exec.path">/usr/sbin/deepin-repair-tools</annotate>
     <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
   </action>
