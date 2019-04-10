@@ -46,7 +46,7 @@
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
-        <source>Repair succeeded</source>
+        <source>Repair successful</source>
         <translation>Поправка је успела</translation>
     </message>
 </context>
@@ -81,17 +81,17 @@
         <translation>Готово</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="153"/>
         <source>%1 (on %2)</source>
         <translation>%1 (на %2)</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="192"/>
         <source>Cleaning %1</source>
         <translation>Чишћење %1</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="238"/>
         <source>%1 has been cleaned up</source>
         <translation>%1 је очишћено</translation>
     </message>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation>Не могу пронаћи изборник покретача да приступим систему</translation>
+        <translation>Не могу да пронађем изборник покретача и приступим систему</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
@@ -138,7 +138,7 @@
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
-        <source>Repair succeeded</source>
+        <source>Repair successful</source>
         <translation>Поправка је успела</translation>
     </message>
     <message>
@@ -189,21 +189,21 @@
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
-        <source>The two passwords don&apos;t match</source>
-        <translation>Две лозинке се не подударају</translation>
+        <source>Passwords do not match</source>
+        <translation>Лозинке се не подударају</translation>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="128"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="130"/>
         <source>Reset password successfully</source>
         <translation>Поновно постављање лозинке је успешно</translation>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="156"/>
         <source>Forgot login password</source>
         <translation>Заборавио сам лозинку за пријаву</translation>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="144"/>
         <source>%1 (on %2)</source>
         <translation>%1 (на %2)</translation>
     </message>
@@ -234,19 +234,19 @@
         <translation>Готово</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="71"/>
         <source>Repairing, please wait...</source>
         <translation>Поправка, молимо сачекајте...</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="90"/>
         <source>Reset privilege successfully</source>
-        <translation>Поновно постављање овлашћења је успешно</translation>
+        <translation>Поновно постављање овлашћења је успело</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
-        <source>Reset privilege failed</source>
-        <translation>Поновно постављање овлашћења није успело</translation>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="93"/>
+        <source>Reset failed</source>
+        <translation> Поновно постављање није успело</translation>
     </message>
 </context>
 <context>
@@ -262,47 +262,47 @@
         <translation>Откажи</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="36"/>
+        <location filename="../src/scanningpage.cpp" line="37"/>
         <source>Repair</source>
         <translation>Поправи</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="40"/>
+        <location filename="../src/scanningpage.cpp" line="41"/>
         <source>Restart Now</source>
-        <translation>Поново Покрени Сад</translation>
+        <translation>Поново покрени сад</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="139"/>
+        <location filename="../src/scanningpage.cpp" line="149"/>
         <source>Hard disk partition %1 error, please repair</source>
         <translation>Грешка на партицији %1 тврдог диска, молимо поправите</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="151"/>
+        <location filename="../src/scanningpage.cpp" line="160"/>
+        <source>Repair successful</source>
+        <translation>Поправка је успела</translation>
+    </message>
+    <message>
+        <location filename="../src/scanningpage.cpp" line="161"/>
         <source>Please restart your computer to finish repairing</source>
         <translation>Молимо поново покрените рачунар да завршите поправку</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="177"/>
+        <location filename="../src/scanningpage.cpp" line="187"/>
         <source>Repairing hard disk, please wait...</source>
         <translation>Поправка тврдог диска, молимо сачекајте...</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="140"/>
+        <location filename="../src/scanningpage.cpp" line="150"/>
         <source>The repair may cause data loss, please confirm and continue</source>
         <translation>Поправка може изазвти губитак података, молимо потврдите и наставите</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="38"/>
+        <location filename="../src/scanningpage.cpp" line="39"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="150"/>
-        <source>Repair succeeded</source>
-        <translation>Поправка је успела</translation>
-    </message>
-    <message>
-        <location filename="../src/scanningpage.cpp" line="156"/>
+        <location filename="../src/scanningpage.cpp" line="166"/>
         <source>Repair failed</source>
         <translation>Поправка није успела</translation>
     </message>
@@ -310,12 +310,12 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../src/main.cpp" line="45"/>
+        <location filename="../src/main.cpp" line="47"/>
         <source>Deepin Repair</source>
         <translation>Дипин Поправка</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="46"/>
+        <location filename="../src/main.cpp" line="48"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
         <translation>Дипин Поправка је алат који корисницима омогућава брзо решавање неких проблема у Дипину, укључујући откривање тврдих дискова, чишћење диска, ДПКГ поправке, поправке покретача, поправке овлашћења, поновно постављање лозинке, итд.</translation>
     </message>

@@ -1,10 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.1">
 <context>
     <name>DPKGRepair</name>
     <message>
         <location filename="../plugins/dpkg_repair/dpkg_repair_plugin.h" line="21"/>
         <source>DPKG Repair</source>
-        <translation>Восстановление DPKG</translation>
+        <translation>DPKG korjaus</translation>
     </message>
 </context>
 <context>
@@ -12,42 +12,42 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
         <source>Show details</source>
-        <translation>Показать детали</translation>
+        <translation>Näytä tiedot</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="34"/>
         <source>Hide details</source>
-        <translation>Скрыть детали</translation>
+        <translation>Piilota tiedot</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="39"/>
         <source>Repair</source>
-        <translation>Восстановление</translation>
+        <translation>Korjaa</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation>Tehty</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation>Не удается  установить или обновить приложение</translation>
+        <translation>Sovellusta ei voi asentaa tai päivittää</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation>Восстановление, пожалуйста ждите...</translation>
+        <translation>Korjaa, odota ...</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
         <source>Repair failed</source>
-        <translation>Восстановить не удалось</translation>
+        <translation>Korjaus epäonnistui</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
         <source>Repair successful</source>
-        <translation>Восстановление успешно завершено</translation>
+        <translation>Korjaus onnistunut</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>Очистка Диска</translation>
+        <translation>Levyn puhdistus</translation>
     </message>
 </context>
 <context>
@@ -63,37 +63,37 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="62"/>
         <source>System partition</source>
-        <translation>Системный раздел</translation>
+        <translation>Järjestelmän osio</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="64"/>
         <source>Clean</source>
-        <translation>Очистить</translation>
+        <translation>Puhdistus</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="65"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Peru</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation>Tehty</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="153"/>
         <source>%1 (on %2)</source>
-        <translation>%1 (на %2)</translation>
+        <translation>%1 (on %2)</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="192"/>
         <source>Cleaning %1</source>
-        <translation>Очистка %1</translation>
+        <translation>Puhdistus %1</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="238"/>
         <source>%1 has been cleaned up</source>
-        <translation>%1 было очищено</translation>
+        <translation>%1 on puhdistettu</translation>
     </message>
 </context>
 <context>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation>Восстановление Загрузчика</translation>
+        <translation>Käynnistyksen korjaus</translation>
     </message>
 </context>
 <context>
@@ -109,42 +109,42 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="31"/>
         <source>Show details</source>
-        <translation>Показать детали</translation>
+        <translation>Näytä tiedot</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
         <source>Hide details</source>
-        <translation>Скрыть детали</translation>
+        <translation>Piilota tiedot</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="36"/>
         <source>Repair</source>
-        <translation>Восстановление</translation>
+        <translation>Korjaa</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation>Не удается найти меню загрузки для входа в систему</translation>
+        <translation>Käynnistysvalikkoa ei löydy järjestelmästä</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation>Tehty</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation>Восстановление, пожалуйста ждите...</translation>
+        <translation>Korjaa, odota ...</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair successful</source>
-        <translation>Восстановление успешно завершено</translation>
+        <translation>Korjaus onnistunut</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
-        <translation>Восстановить не удалось</translation>
+        <translation>Korjaus epäonnistui</translation>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../plugins/password_reset/password_reset_plugin.h" line="21"/>
         <source>Password Reset</source>
-        <translation>Сброс Пароля</translation>
+        <translation>Salasanan nollaus</translation>
     </message>
 </context>
 <context>
@@ -160,52 +160,52 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="29"/>
         <source>Confirm</source>
-        <translation>Подтвердить</translation>
+        <translation>Vahvista</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="28"/>
         <source>Reset password</source>
-        <translation>Сброс пароля</translation>
+        <translation>Nollaa salasana</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation>Tehty</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
         <source>Password</source>
-        <translation>Пароль</translation>
+        <translation>Salasana</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="32"/>
         <source>Confirm password</source>
-        <translation>Подтвердить пароль</translation>
+        <translation>Vahvista salasana</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
         <source>Please enter a new password</source>
-        <translation>Пожалуйста введите новый пароль</translation>
+        <translation>Anna uusi salasana</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
         <source>Passwords do not match</source>
-        <translation>Пароли не совпадают</translation>
+        <translation>Salasanat eivät täsmää</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="130"/>
         <source>Reset password successfully</source>
-        <translation>Сброс пароля - успешно</translation>
+        <translation>Salasana nollattu onnistuneesti</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="156"/>
         <source>Forgot login password</source>
-        <translation>Забыли логин пароль</translation>
+        <translation>Salasana unohtunut</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="144"/>
         <source>%1 (on %2)</source>
-        <translation>%1 (на %2)</translation>
+        <translation>%1 (on %2)</translation>
     </message>
 </context>
 <context>
@@ -213,7 +213,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissions_repair_plugin.h" line="21"/>
         <source>Privilege Repair</source>
-        <translation>Восстановление Привилегий</translation>
+        <translation>Oikeuksien korjaus</translation>
     </message>
 </context>
 <context>
@@ -221,32 +221,32 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="23"/>
         <source>Cannot enter desktop due to privilege error</source>
-        <translation>Не удается войти на рабочий стол из-за ошибки привилегий</translation>
+        <translation>Et voi kirjautua työpöytään oikeusvirheen vuoksi</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="26"/>
         <source>Repair</source>
-        <translation>Восстановление</translation>
+        <translation>Korjaa</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation>Tehty</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="71"/>
         <source>Repairing, please wait...</source>
-        <translation>Восстановление, пожалуйста ждите...</translation>
+        <translation>Korjaa, odota ...</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="90"/>
         <source>Reset privilege successfully</source>
-        <translation>Восстановление привилегий успешно завершено</translation>
+        <translation>Oikeudet nollattu onnistuneesti</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="93"/>
         <source>Reset failed</source>
-        <translation>Сброс не удался</translation>
+        <translation>Palautus epäonnistui</translation>
     </message>
 </context>
 <context>
@@ -254,57 +254,57 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="27"/>
         <source>Checking hard disk status, please wait...</source>
-        <translation>Проверка состояния жесткого диска, пожалуйста ждите...</translation>
+        <translation>Kiintolevyn tilan tarkistaminen, odota ...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="34"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Peru</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="37"/>
         <source>Repair</source>
-        <translation>Восстановление</translation>
+        <translation>Korjaa</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="41"/>
         <source>Restart Now</source>
-        <translation>Перезагрузить Сейчас</translation>
+        <translation>Käynnistä nyt</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="149"/>
         <source>Hard disk partition %1 error, please repair</source>
-        <translation>Ошибка раздела жесткого диска %1, пожалуйста восстановите</translation>
+        <translation>Kiintolevyn osio %1 -vika, korjaa</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="160"/>
         <source>Repair successful</source>
-        <translation>Восстановление успешно завершено</translation>
+        <translation>Korjaus onnistunut</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="161"/>
         <source>Please restart your computer to finish repairing</source>
-        <translation>Пожалуйста перезагрузите компьютер для завершения восстановления</translation>
+        <translation>Käynnistä tietokone uudelleen, jotta voit viimeistellä korjauksen</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="187"/>
         <source>Repairing hard disk, please wait...</source>
-        <translation>Восстановление жесткого диска, пожалуйста ждите...</translation>
+        <translation>Kiintolevyn korjaaminen, odota ...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
         <source>The repair may cause data loss, please confirm and continue</source>
-        <translation>Восстановление может привести к потере данных, пожалуйста подтвердите для продолжения </translation>
+        <translation>Korjaus voi aiheuttaa tietojen häviämisen, vahvista ja jatka</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="39"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation>Tehty</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="166"/>
         <source>Repair failed</source>
-        <translation>Восстановить не удалось</translation>
+        <translation>Korjaus epäonnistui</translation>
     </message>
 </context>
 <context>
@@ -312,12 +312,12 @@
     <message>
         <location filename="../src/main.cpp" line="47"/>
         <source>Deepin Repair</source>
-        <translation>Программа Восстановления Deepin</translation>
+        <translation>Deepin Repair</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="48"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation>Deepin Repair - это инструмент, который поможет пользователям быстро исправить некоторые проблемы в Deepin, включая обнаружение жесткого диска, очистку диска, восстановление DPKG, восстановление прав и т. д.</translation>
+        <translation>Deepin-korjaus on työkalu, jonka avulla käyttäjät voivat nopeasti korjata joitakin ongelmia, kuten kiintolevyn havaitsemista, levyn puhdistusta, DPKG-korjausta, oikeuksien korjaamista jne.</translation>
     </message>
 </context>
 </TS>

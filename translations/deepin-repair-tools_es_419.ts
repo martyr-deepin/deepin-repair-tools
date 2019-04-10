@@ -46,8 +46,8 @@
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
-        <source>Repair succeeded</source>
-        <translation>Reparación exitosa</translation>
+        <source>Repair successful</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>Limpieza de Disco</translation>
+        <translation>Limpiar Disco</translation>
     </message>
 </context>
 <context>
@@ -81,17 +81,17 @@
         <translation>Terminado</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="153"/>
         <source>%1 (on %2)</source>
         <translation>%1 (de %2)</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="192"/>
         <source>Cleaning %1</source>
         <translation>Limpiando %1</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="238"/>
         <source>%1 has been cleaned up</source>
         <translation>%1 ha sido limpiado</translation>
     </message>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation>Reparación de Arranque</translation>
+        <translation>Reparar Arranque</translation>
     </message>
 </context>
 <context>
@@ -138,8 +138,8 @@
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
-        <source>Repair succeeded</source>
-        <translation>Reparación exitosa</translation>
+        <source>Repair successful</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
@@ -189,21 +189,21 @@
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
-        <source>The two passwords don&apos;t match</source>
-        <translation>Las dos contraseñas no coinciden</translation>
+        <source>Passwords do not match</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="128"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="130"/>
         <source>Reset password successfully</source>
         <translation>Reinicio de contraseña exitoso</translation>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="156"/>
         <source>Forgot login password</source>
         <translation>Olvidé contraseña de inicio</translation>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="144"/>
         <source>%1 (on %2)</source>
         <translation>%1 (de %2)</translation>
     </message>
@@ -234,19 +234,19 @@
         <translation>Terminado</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="71"/>
         <source>Repairing, please wait...</source>
         <translation>Reparando, por favor espere...</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="90"/>
         <source>Reset privilege successfully</source>
         <translation>Reinicio de privilegios existoso</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
-        <source>Reset privilege failed</source>
-        <translation>Reinicio de privilegios fallido</translation>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="93"/>
+        <source>Reset failed</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -262,47 +262,47 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="36"/>
+        <location filename="../src/scanningpage.cpp" line="37"/>
         <source>Repair</source>
         <translation>Reparar</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="40"/>
+        <location filename="../src/scanningpage.cpp" line="41"/>
         <source>Restart Now</source>
         <translation>Reiniciar ahora</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="139"/>
+        <location filename="../src/scanningpage.cpp" line="149"/>
         <source>Hard disk partition %1 error, please repair</source>
         <translation>Error en la partición %1 del disco duro, por favor repare</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="151"/>
+        <location filename="../src/scanningpage.cpp" line="160"/>
+        <source>Repair successful</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/scanningpage.cpp" line="161"/>
         <source>Please restart your computer to finish repairing</source>
         <translation>Por favor reinicie su computador para terminar la reparación</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="177"/>
+        <location filename="../src/scanningpage.cpp" line="187"/>
         <source>Repairing hard disk, please wait...</source>
         <translation>Reparando el disco duro, por favor espere...</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="140"/>
+        <location filename="../src/scanningpage.cpp" line="150"/>
         <source>The repair may cause data loss, please confirm and continue</source>
         <translation>La reparación puede causar la pérdida de datos, por favor confirme y continúe</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="38"/>
+        <location filename="../src/scanningpage.cpp" line="39"/>
         <source>Done</source>
         <translation>Terminado</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="150"/>
-        <source>Repair succeeded</source>
-        <translation>Reparación exitosa</translation>
-    </message>
-    <message>
-        <location filename="../src/scanningpage.cpp" line="156"/>
+        <location filename="../src/scanningpage.cpp" line="166"/>
         <source>Repair failed</source>
         <translation>Reparación fallida</translation>
     </message>
@@ -310,14 +310,14 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../src/main.cpp" line="45"/>
+        <location filename="../src/main.cpp" line="47"/>
         <source>Deepin Repair</source>
-        <translation>Deepin Repair</translation>
+        <translation>Reparar Deepin</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="46"/>
+        <location filename="../src/main.cpp" line="48"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation>Deepin Repair es una herramienta para ayudar a los usuarios a reparar rapidamente algunos inconvenientes en deepin, incluyendo la detección el disco duro, limpieza de disco, reparación de DPKG, reparación de inicio, reparación de privilegios, reinicio de contraseña, etc.</translation>
+        <translation>Reparar Deepin es una herramienta para ayudar a los usuarios a reparar rapidamente algunos inconvenientes en deepin, incluyendo la detección el disco duro, limpieza de disco, reparación de DPKG, reparación de inicio, reparación de privilegios, reinicio de contraseña, etc.</translation>
     </message>
 </context>
 </TS>

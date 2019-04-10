@@ -46,7 +46,7 @@
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
-        <source>Repair succeeded</source>
+        <source>Repair successful</source>
         <translation>Reparatie voltooid</translation>
     </message>
 </context>
@@ -81,17 +81,17 @@
         <translation>Klaar</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="152"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="153"/>
         <source>%1 (on %2)</source>
         <translation>%1 (op %2)</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="191"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="192"/>
         <source>Cleaning %1</source>
         <translation>Bezig met schoonmaken van %1...</translation>
     </message>
     <message>
-        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="237"/>
+        <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="238"/>
         <source>%1 has been cleaned up</source>
         <translation>%1 is opgeschoond</translation>
     </message>
@@ -138,7 +138,7 @@
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
-        <source>Repair succeeded</source>
+        <source>Repair successful</source>
         <translation>Reparatie voltooid</translation>
     </message>
     <message>
@@ -189,21 +189,21 @@
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
-        <source>The two passwords don&apos;t match</source>
-        <translation>De wachtwoorden komen niet overeen</translation>
+        <source>Passwords do not match</source>
+        <translation>Wachtwoorden komen niet overeen</translation>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="128"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="130"/>
         <source>Reset password successfully</source>
         <translation>Wachtwoord opnieuw ingesteld</translation>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="154"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="156"/>
         <source>Forgot login password</source>
         <translation>Inlogwachtwoord vergeten</translation>
     </message>
     <message>
-        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="142"/>
+        <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="144"/>
         <source>%1 (on %2)</source>
         <translation>%1 (op %2)</translation>
     </message>
@@ -234,19 +234,19 @@
         <translation>Klaar</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="72"/>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="71"/>
         <source>Repairing, please wait...</source>
         <translation>Bezig met repareren; even geduld...</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="91"/>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="90"/>
         <source>Reset privilege successfully</source>
         <translation>Machtigingen hersteld</translation>
     </message>
     <message>
-        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="94"/>
-        <source>Reset privilege failed</source>
-        <translation>Machtigingen herstellen mislukt</translation>
+        <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="93"/>
+        <source>Reset failed</source>
+        <translation>Reparatie mislukt</translation>
     </message>
 </context>
 <context>
@@ -262,47 +262,47 @@
         <translation>Annuleren</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="36"/>
+        <location filename="../src/scanningpage.cpp" line="37"/>
         <source>Repair</source>
         <translation>Repareren</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="40"/>
+        <location filename="../src/scanningpage.cpp" line="41"/>
         <source>Restart Now</source>
         <translation>Nu opnieuw opstarten</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="139"/>
+        <location filename="../src/scanningpage.cpp" line="149"/>
         <source>Hard disk partition %1 error, please repair</source>
         <translation>Harde schijf-partitie %1 fout; herstel dit</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="151"/>
+        <location filename="../src/scanningpage.cpp" line="160"/>
+        <source>Repair successful</source>
+        <translation>Reparatie voltooid</translation>
+    </message>
+    <message>
+        <location filename="../src/scanningpage.cpp" line="161"/>
         <source>Please restart your computer to finish repairing</source>
         <translation>Start je computer opnieuw op om de reparatie te voltooien</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="177"/>
+        <location filename="../src/scanningpage.cpp" line="187"/>
         <source>Repairing hard disk, please wait...</source>
         <translation>Bezig met repareren van harde schijf; even geduld...</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="140"/>
+        <location filename="../src/scanningpage.cpp" line="150"/>
         <source>The repair may cause data loss, please confirm and continue</source>
         <translation>De reparatie kan gegevensverlies veroorzaken. Bevestig en ga door.</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="38"/>
+        <location filename="../src/scanningpage.cpp" line="39"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
     <message>
-        <location filename="../src/scanningpage.cpp" line="150"/>
-        <source>Repair succeeded</source>
-        <translation>Reparatie voltooid</translation>
-    </message>
-    <message>
-        <location filename="../src/scanningpage.cpp" line="156"/>
+        <location filename="../src/scanningpage.cpp" line="166"/>
         <source>Repair failed</source>
         <translation>Reparatie mislukt</translation>
     </message>
@@ -310,12 +310,12 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../src/main.cpp" line="45"/>
+        <location filename="../src/main.cpp" line="47"/>
         <source>Deepin Repair</source>
         <translation>Deepin Reparatie</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="46"/>
+        <location filename="../src/main.cpp" line="48"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
         <translation>Deepin Reparatie is een hulpmiddel om gebruikers snel een aantal problemen te laten oplossen, waaronder detectie en opschonen van schijven, DPKG-reparatie, opstartreparatie, machtigingsherstel, wachtwoordherstel, enz.</translation>
     </message>
