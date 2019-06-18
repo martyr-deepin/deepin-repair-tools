@@ -17,9 +17,29 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 if (NOT (${CMAKE_BUILD_TYPE} MATCHES "Debug"))
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Ofast")
 
+    # generate policy file translations
+    execute_process (
+        COMMAND deepin-policy-ts-convert policy2ts com.deepin.repair-tools.policy.tmp translations/policy
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    )
+
+    # generate back to policy file
+    execute_process (
+        COMMAND deepin-policy-ts-convert ts2policy com.deepin.repair-tools.policy.tmp translations/policy com.deepin.repair-tools.policy
+        RESULT_VARIABLE POLICY_FILE_GENERATED
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    )
+
+    # fallback
+    if (NOT ${POLICY_TS_GENERATED} EQUAL 0)
+        execute_process(COMMAND cp com.deepin.repair-tools.policy.tmp com.deepin.repair-tools.policy WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
+    endif ()
+
     # generate qm
     execute_process(COMMAND bash "translate_generation.sh"
                     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
+else ()
+    message("Building debug mode, translation files will not generated")
 endif ()
 
 configure_file(src/environments.h.in environments.h @ONLY)
