@@ -38,6 +38,8 @@ if (NOT (${CMAKE_BUILD_TYPE} MATCHES "Debug"))
     # generate qm
     execute_process(COMMAND bash "translate_generation.sh"
                     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
+else ()
+    message("Building debug mode, translation files will not generated")
 endif ()
 
 configure_file(src/environments.h.in environments.h @ONLY)
