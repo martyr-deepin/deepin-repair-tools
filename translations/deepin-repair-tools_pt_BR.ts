@@ -12,7 +12,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="33"/>
         <source>Show details</source>
-        <translation>Exibir detalhes</translation>
+        <translation>Mostrar detalhes</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="34"/>
@@ -27,27 +27,27 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="40"/>
         <source>Done</source>
-        <translation>Pronto</translation>
+        <translation>Concluído</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="83"/>
         <source>Cannot install or upgrade application</source>
-        <translation>Não foi possível instalar ou atualizar o aplicativo</translation>
+        <translation>Não é possível instalar ou atualizar o aplicativo</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="104"/>
         <source>Repairing, please wait...</source>
-        <translation>Reparando, por favor aguarde...</translation>
+        <translation>Reparando, aguarde...</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="131"/>
         <source>Repair failed</source>
-        <translation>Falha ao reparar</translation>
+        <translation>Reparação falhou</translation>
     </message>
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
         <source>Repair successful</source>
-        <translation>Reparo finalizado</translation>
+        <translation>Reparação bem sucedida</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>Limpeza do disco</translation>
+        <translation>Limpar do Disco</translation>
     </message>
 </context>
 <context>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="67"/>
         <source>Done</source>
-        <translation>Pronto</translation>
+        <translation>Concluído</translation>
     </message>
     <message>
         <location filename="../plugins/disk_clean/diskcleanwidget.cpp" line="153"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../plugins/grub_repair/grub_repair_plugin.h" line="21"/>
         <source>Boot Repair</source>
-        <translation>Reparo da inicialização</translation>
+        <translation>Reparo da Inicialização</translation>
     </message>
 </context>
 <context>
@@ -109,7 +109,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="31"/>
         <source>Show details</source>
-        <translation>Exibir detalhes</translation>
+        <translation>Mostrar detalhes</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="32"/>
@@ -124,27 +124,27 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="37"/>
         <source>Cannot find boot menu to enter system</source>
-        <translation>Não foi possível encontrar o menu de boot para entrar no sistema</translation>
+        <translation>Não é possível encontrar o menu de inicialização para entrar no sistema</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="41"/>
         <source>Done</source>
-        <translation>Pronto</translation>
+        <translation>Concluído</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="93"/>
         <source>Repairing, please wait...</source>
-        <translation>Reparando, por favor aguarde...</translation>
+        <translation>Reparando, aguarde...</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair successful</source>
-        <translation>Reparo finalizado</translation>
+        <translation>Reparação bem sucedida</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
         <source>Repair failed</source>
-        <translation>Falha ao reparar</translation>
+        <translation>Reparação falhou</translation>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@
     <message>
         <location filename="../plugins/password_reset/password_reset_plugin.h" line="21"/>
         <source>Password Reset</source>
-        <translation>Senha Redefinida</translation>
+        <translation>Resetar a Senha</translation>
     </message>
 </context>
 <context>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="30"/>
         <source>Done</source>
-        <translation>Pronto</translation>
+        <translation>Concluído</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="31"/>
@@ -180,12 +180,12 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="32"/>
         <source>Confirm password</source>
-        <translation>Confirma senha</translation>
+        <translation>Confirme a senha</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="81"/>
         <source>Please enter a new password</source>
-        <translation>Por favor, digite uma nova senha</translation>
+        <translation>Digite a nova senha</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
@@ -200,7 +200,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="156"/>
         <source>Forgot login password</source>
-        <translation>Esqueceu a senha</translation>
+        <translation>Esqueceu a senha de login</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="144"/>
@@ -213,7 +213,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissions_repair_plugin.h" line="21"/>
         <source>Privilege Repair</source>
-        <translation>Reparo de privilégios</translation>
+        <translation>Reparar Privilégios</translation>
     </message>
 </context>
 <context>
@@ -231,17 +231,17 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="27"/>
         <source>Done</source>
-        <translation>Pronto</translation>
+        <translation>Concluído</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="71"/>
         <source>Repairing, please wait...</source>
-        <translation>Reparando, por favor aguarde</translation>
+        <translation>Reparando, aguarde</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="90"/>
         <source>Reset privilege successfully</source>
-        <translation>Privilégio redefinido com sucesso</translation>
+        <translation>Privilégios redefinidos com sucesso</translation>
     </message>
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="93"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="27"/>
         <source>Checking hard disk status, please wait...</source>
-        <translation>Verificando o estado do disco rígido, por favor aguarde...</translation>
+        <translation>Verificando o estado do disco, aguarde...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="34"/>
@@ -269,27 +269,27 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="41"/>
         <source>Restart Now</source>
-        <translation>Reiniciar agora</translation>
+        <translation>Reiniciar Agora</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="149"/>
         <source>Hard disk partition %1 error, please repair</source>
-        <translation>Erro na partição %1 do disco rígido, por favor repare</translation>
+        <translation>Erro na partição %1, favor corrigir</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="160"/>
         <source>Repair successful</source>
-        <translation>Reparo finalizado</translation>
+        <translation>Reparação bem sucedida</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="161"/>
         <source>Please restart your computer to finish repairing</source>
-        <translation>Por favor reinicie o seu computador para concluir a reparação</translation>
+        <translation>Por favor, reinicie o computador para finalizar o reparo</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="187"/>
         <source>Repairing hard disk, please wait...</source>
-        <translation>Reparando o disco rígido, por favor aguarde...</translation>
+        <translation>Reparando o disco, aguarde...</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="150"/>
@@ -299,7 +299,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="39"/>
         <source>Done</source>
-        <translation>Pronto</translation>
+        <translation>Concluído</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="166"/>
@@ -312,12 +312,12 @@
     <message>
         <location filename="../src/main.cpp" line="47"/>
         <source>Deepin Repair</source>
-        <translation>Reparador</translation>
+        <translation>Reparar</translation>
     </message>
     <message>
         <location filename="../src/main.cpp" line="48"/>
         <source>Deepin Repair is a tool to help users quickly fix some issues in deepin, including hard disk detecting, disk cleaning, DPKG repairing, boot repairing, privilege repairing, password reset, etc.</source>
-        <translation>Reparador é uma ferramente para ajudar os usuários a concertarem alguns problemas rapidamente, incluindo detector de disco rígido, limpeza de disco, reparação do DPKG, reparação de boot, recuperação de privilégios, redefinição de senha, etc.</translation>
+        <translation>O Deepin Reparar é uma ferramenta para ajudar os usuários a corrigir rapidamente alguns problemas no deepin, incluindo detecção de disco, limpeza de disco, reparo do DPKG, reparo da inicialização, reparo de privilégios, redefinição de senha, etc.</translation>
     </message>
 </context>
 </TS>

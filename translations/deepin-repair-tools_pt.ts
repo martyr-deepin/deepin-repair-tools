@@ -47,7 +47,7 @@
     <message>
         <location filename="../plugins/dpkg_repair/dpkgrepairwidget.cpp" line="134"/>
         <source>Repair successful</source>
-        <translation type="unfinished"/>
+        <translation>Reparado com sucesso</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location filename="../plugins/disk_clean/disk_clean_plugin.h" line="22"/>
         <source>Disk Clean</source>
-        <translation>Limpeza de Disco</translation>
+        <translation>Limpeza de disco</translation>
     </message>
 </context>
 <context>
@@ -139,7 +139,7 @@
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="147"/>
         <source>Repair successful</source>
-        <translation type="unfinished"/>
+        <translation>Reparado com sucesso</translation>
     </message>
     <message>
         <location filename="../plugins/grub_repair/grubrepairwidget.cpp" line="150"/>
@@ -190,7 +190,7 @@
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="97"/>
         <source>Passwords do not match</source>
-        <translation type="unfinished"/>
+        <translation>As palavras-passe não coincidem</translation>
     </message>
     <message>
         <location filename="../plugins/password_reset/passwordresetwidget.cpp" line="130"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../plugins/permissions_repair/permissionsrepairwidget.cpp" line="93"/>
         <source>Reset failed</source>
-        <translation type="unfinished"/>
+        <translation>A redefinição de permissões falhou</translation>
     </message>
 </context>
 <context>
@@ -279,7 +279,7 @@
     <message>
         <location filename="../src/scanningpage.cpp" line="160"/>
         <source>Repair successful</source>
-        <translation type="unfinished"/>
+        <translation>Reparado com sucesso</translation>
     </message>
     <message>
         <location filename="../src/scanningpage.cpp" line="161"/>
